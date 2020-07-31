@@ -61,7 +61,6 @@ class LoginViewModel: ViewModelType {
                 .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()
         }.do(onNext: { _ in
-            self.navigator.toListChannel()
         })
         
         return Output(login: login,

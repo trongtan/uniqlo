@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCategory" representedClassName="CDCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryIdx" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="insDate" optional="YES" attributeType="String"/>
+        <relationship name="channels" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDChannel" inverseName="category" inverseEntity="CDChannel"/>
+    </entity>
+    <entity name="CDChannel" representedClassName="CDChannel" syncable="YES" codeGenerationType="class">
+        <attribute name="boardIdx" optional="YES" attributeType="String"/>
+        <attribute name="boardType" optional="YES" attributeType="String"/>
+        <attribute name="category_" optional="YES" attributeType="String"/>
+        <attribute name="contents" optional="YES" attributeType="String"/>
+        <attribute name="contentsYN" optional="YES" attributeType="String"/>
+        <attribute name="imgPath" optional="YES" attributeType="String"/>
+        <attribute name="insDate" optional="YES" attributeType="String"/>
+        <attribute name="likeCnt" optional="YES" attributeType="String"/>
+        <attribute name="myLikeYN" optional="YES" attributeType="String"/>
+        <attribute name="replyCnt" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCategory" inverseName="channels" inverseEntity="CDCategory"/>
+    </entity>
+    <elements>
+        <element name="CDCategory" positionX="-8.41015625" positionY="9.3046875" width="128" height="103"/>
+        <element name="CDChannel" positionX="-281.4296875" positionY="29.23046875" width="128" height="223"/>
+    </elements>
 </model>

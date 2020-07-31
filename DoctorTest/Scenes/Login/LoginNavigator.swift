@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol LoginNavigatorType: NavigatorType {
-    func toListChannel()
 }
 
 struct LoginNavigator: LoginNavigatorType {
@@ -20,10 +19,5 @@ struct LoginNavigator: LoginNavigatorType {
 
     var navigator: UINavigationController? {
         return viewController.navigationController
-    }
-    
-    func toListChannel() {
-        let vc: ListChannelsViewController = defaultAssembler.resolveViewController()
-        navigator?.pushViewController(vc, animated: true)
     }
 }

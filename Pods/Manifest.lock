@@ -7,6 +7,7 @@ PODS:
   - Nuke (9.1.1)
   - ObjectMapper (3.5.3)
   - Pageboy (3.5.1)
+  - QueryKit (0.14.1)
   - Realm (3.20.0):
     - Realm/Headers (= 3.20.0)
   - Realm/Headers (3.20.0)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - Nuke
   - ObjectMapper (~> 3.3)
   - Pageboy (~> 3.2)
+  - QueryKit
   - RealmSwift (~> 3.20.0)
   - Reusable (~> 4.0)
   - RxAlamofire (~> 4.0)
@@ -77,6 +79,7 @@ SPEC REPOS:
     - Nuke
     - ObjectMapper
     - Pageboy
+    - QueryKit
     - Realm
     - RealmSwift
     - Reusable
@@ -100,6 +103,7 @@ SPEC CHECKSUMS:
   Nuke: af4301b154d3afd8a3b045a5194a9a773a00b7a8
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   Pageboy: 288353d4cc848c24deec2f7542f325089247c136
+  QueryKit: 60dae8ff75d5805f9c703c68c0ef4294c9dd7de6
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
@@ -115,6 +119,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: eb4d063c3cc79ec03b5d851033eb112069d4d1f6
+PODFILE CHECKSUM: c2647cce1607df5f041565d722225e17c5793f84
 
 COCOAPODS: 1.8.4

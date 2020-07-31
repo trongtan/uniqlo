@@ -7,9 +7,7 @@
 //
 
 protocol Assembler: class,
-    LoginAssembler,
-    ListChannelsAssembler,
-    ChannelDetailsAssembler
+    LoginAssembler
 {
 }
 

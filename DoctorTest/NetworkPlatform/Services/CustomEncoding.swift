@@ -8,7 +8,7 @@
 
 import Alamofire
 
-struct DoctorTestEncoding: ParameterEncoding {
+struct CustomEncoding: ParameterEncoding {
     
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         

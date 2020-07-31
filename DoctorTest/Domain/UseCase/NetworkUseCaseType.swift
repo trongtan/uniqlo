@@ -9,13 +9,10 @@
 import Foundation
 import RxSwift
 
-protocol NetworkUseCaseAssembler {
-    func resolve() -> NetworkUseCaseType
-}
+//protocol NetworkUseCaseAssembler {
+//    func resolve() -> NetworkUseCaseType
+//}
 
-protocol NetworkUseCaseType {
+protocol NetworkUseCaseType: UseCaseType {
     func login(email: String, password: String) ->  Observable<Login>
-    func getChannelCategoryList() -> Observable<[ChannelCategory]>
-    func channelList(memberIdx: String, cateogoryIdx: String, pageNum: String) -> Observable<[Channel]>
-    func channelDetail(memberIdx: String, categoryIdx: String) -> Observable<Channel>
 }

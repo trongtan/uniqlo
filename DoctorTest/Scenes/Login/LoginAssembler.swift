@@ -23,11 +23,11 @@ protocol LoginAssembler {
 extension LoginAssembler {
     func resolveViewController() -> LoginViewController {
         let vc = LoginViewController.instantiate()
-//        let navigator = resolveNavigator(viewController: vc)
-//        let interactor = resolveInteractor()
-//        let vm: LoginViewModel = resolveViewModel(navigator: navigator, interactor: interactor)
+        let navigator = resolveNavigator(viewController: vc)
+        let interactor = resolveInteractor()
+        let vm: LoginViewModel = resolveViewModel(navigator: navigator, interactor: interactor)
 
-//        vc.bindViewModel()
+        vc.bindViewModel(vm: vm)
         return vc
     }
 
@@ -42,6 +42,6 @@ extension LoginAssembler where Self: DefaultAssembler {
     }
 
     func resolveInteractor() -> LoginInteractorType {
-        return LoginInteractor(usecase: DefaultUseCaseAssembler.shared.resolve())
+        return LoginInteractor(usecase: NetworkUseCase.make() as! NetworkUseCase)
     }
 }

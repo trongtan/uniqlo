@@ -10,11 +10,16 @@ import Foundation
 import RxSwift
 
 class NetworkUseCase: NetworkUseCaseType {
+    static func make() -> UseCaseType {
+        return NetworkUseCase(networkRepository: NetworkRepository.make() as! NetworkRepositoryType)
+    }
+    
     
     private let networkRepository: NetworkRepositoryType
+    private let disposeBag = DisposeBag()
     
-    init(authenRepository: NetworkRepositoryType) {
-        self.networkRepository = authenRepository
+    init(networkRepository: NetworkRepositoryType) {
+        self.networkRepository = networkRepository
     }
     
     func login(email: String, password: String) -> Observable<Login> {
@@ -24,18 +29,6 @@ class NetworkUseCase: NetworkUseCaseType {
             }
             return login!
         }
-    }
-    
-    func getChannelCategoryList() -> Observable<[ChannelCategory]> {
-        return self.networkRepository.getChannelCategoryList()
-    }
-    
-    func channelList(memberIdx: String, cateogoryIdx: String, pageNum: String) -> Observable<[Channel]> {
-        return self.networkRepository.channelList(memberIdx: memberIdx, cateogoryIdx: cateogoryIdx, pageNum: pageNum)
-    }
-    
-    func channelDetail(memberIdx: String, categoryIdx: String) -> Observable<Channel> {
-        return self.networkRepository.channelDetail(memberIdx: memberIdx, categoryIdx: categoryIdx)
     }
 }
 

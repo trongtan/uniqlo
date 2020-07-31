@@ -26,7 +26,8 @@ target 'DoctorTest' do
     pod "RxAppState"
     pod "SwiftDate"
     pod "Nuke"
-
+    pod 'QueryKit'
+    
   # Pods for DoctorTest
 
   target 'DoctorTestTests' do

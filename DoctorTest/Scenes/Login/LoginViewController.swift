@@ -15,8 +15,6 @@ import RxGesture
 
 class LoginViewController: ViewController, BindableType {
     var viewModel: LoginViewModel!
-    var disposeBag: DisposeBag = DisposeBag()
-    var trainingDays: [TrainingDay] = []
     
     @IBOutlet weak var loginButton: UIButton!
 
@@ -33,18 +31,18 @@ class LoginViewController: ViewController, BindableType {
             let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             
-            vc.show(alert, sender: nil)
+            vc.present(alert, animated: true, completion: nil)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModel()
+//        bindViewModel()
         
         // TEST
         self.emailTextField.text = "ttt@gmail.com"
         self.passwordTextField.text = "12122012gv!"
-        
+//
         self.view.rx.tapGesture().subscribe(onNext: { _ in
             self.view.endEditing(true)
         }).disposed(by: disposeBag)
@@ -53,10 +51,6 @@ class LoginViewController: ViewController, BindableType {
     // MARK: BindableType
     
     func bindViewModel() {
-        let navigator: LoginNavigatorType = DefaultAssembler.shared.resolveNavigator(viewController: self)
-        let interactor: LoginInteractorType = DefaultAssembler.shared.resolveInteractor()
-        self.viewModel = DefaultAssembler.shared.resolveViewModel(navigator: navigator, interactor: interactor)
-        
         let inputBuilder = LoginViewModel.InputBuilder().then {
             $0.emailTrigger = emailTextField.rx.text.orEmpty.asDriver()
             $0.passwordTrigger = passwordTextField.rx.text.orEmpty.asDriver()

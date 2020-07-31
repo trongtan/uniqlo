@@ -10,14 +10,19 @@ import Foundation
 import RxSwift
 import SwiftDate
 
-protocol NetworkRepositoryType {
+protocol RepositoryType {
+    static func make() -> RepositoryType
+}
+
+protocol NetworkRepositoryType: RepositoryType {
     func login(email: String, password: String) ->  Observable<Login?>
-    func getChannelCategoryList() -> Observable<[ChannelCategory]>
-    func channelList(memberIdx: String, cateogoryIdx: String, pageNum: String) -> Observable<[Channel]>
-    func channelDetail(memberIdx: String, categoryIdx: String) -> Observable<Channel>
 }
 
 final class NetworkRepository: NetworkRepositoryType {
+    static func make() -> RepositoryType {
+        return NetworkRepository(api: API.shared)
+    }
+    
     private let api: API
     
     init(api: API) {
@@ -32,35 +37,5 @@ final class NetworkRepository: NetworkRepositoryType {
             }
             return login
         }
-    }
-    
-    func getChannelCategoryList() -> Observable<[ChannelCategory]> {
-        let input = API.ChannelCategoryListInput()
-        return api.channelCategoryList(input).map { output -> [ChannelCategory] in
-            guard let channelCategoryList = output.channelCategoryList else {
-                throw API.APIError.invalidResponseData
-            }
-            return channelCategoryList
-        }
-    }
-    
-    func channelList(memberIdx: String, cateogoryIdx: String, pageNum: String) -> Observable<[Channel]> {
-        let input = API.ChannelListInput(memberId: memberIdx, categoryIdx: cateogoryIdx, pageNum: Int(pageNum) ?? 1)
-        return api.channelList(input).map { output -> [Channel] in
-            guard let channelList = output.channelList else {
-                throw API.APIError.invalidResponseData
-            }
-            return channelList
-        }
-    }
-    
-    func channelDetail(memberIdx: String, categoryIdx: String) -> Observable<Channel> {
-        let input = API.ChannelDetailInput(memberIdx: memberIdx, categoryIdx: categoryIdx)
-        return api.channelDetail(input).map { output -> Channel in
-            guard let channel = output.channel else {
-                 throw API.APIError.invalidResponseData
-             }
-             return channel
-         }
     }
 }

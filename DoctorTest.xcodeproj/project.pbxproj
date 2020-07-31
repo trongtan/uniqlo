@@ -10,7 +10,6 @@
 		30228ED37061057E9AB1A040 /* Pods_DoctorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6F12DE34035818AD152964 /* Pods_DoctorTest.framework */; };
 		CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
-		EC460BB124C5395E00771F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB024C5395E00771F34 /* SceneDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
 		EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */; };
 		EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC460BBA24C5396000771F34 /* Assets.xcassets */; };
@@ -21,22 +20,15 @@
 		EC460BDB24C53A0D00771F34 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BD724C53A0C00771F34 /* ViewModelType.swift */; };
 		EC460BDF24C53A1B00771F34 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BDE24C53A1B00771F34 /* Assembler.swift */; };
 		EC460BE224C53A3B00771F34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE124C53A3B00771F34 /* Constants.swift */; };
-		EC460BEA24C53A4000771F34 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE524C53A4000771F34 /* Assignment.swift */; };
-		EC460BEB24C53A4000771F34 /* TrainingDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE624C53A4000771F34 /* TrainingDay.swift */; };
 		EC460BEC24C53A4000771F34 /* NetworkUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE824C53A4000771F34 /* NetworkUseCaseType.swift */; };
-		EC460BED24C53A4000771F34 /* UseCaseAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE924C53A4000771F34 /* UseCaseAssemblerType.swift */; };
+		EC460BED24C53A4000771F34 /* UseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BE924C53A4000771F34 /* UseCaseType.swift */; };
 		EC460BF524C53A4700771F34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BEF24C53A4700771F34 /* Date+Extension.swift */; };
 		EC460BF624C53A4700771F34 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BF024C53A4700771F34 /* UIViewController+Extension.swift */; };
 		EC460BF724C53A4700771F34 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BF124C53A4700771F34 /* String+Extension.swift */; };
 		EC460BF824C53A4700771F34 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BF224C53A4700771F34 /* UIColor+Ext.swift */; };
 		EC460BF924C53A4700771F34 /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BF324C53A4700771F34 /* Observable+.swift */; };
 		EC460BFA24C53A4700771F34 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BF424C53A4700771F34 /* UIView+Ext.swift */; };
-		EC460C1224C53A4D00771F34 /* TrainingDay+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BFD24C53A4D00771F34 /* TrainingDay+Mapping.swift */; };
-		EC460C1324C53A4D00771F34 /* Assignment+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BFE24C53A4D00771F34 /* Assignment+Mapping.swift */; };
 		EC460C1424C53A4D00771F34 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0124C53A4D00771F34 /* NetworkRepository.swift */; };
-		EC460C1524C53A4D00771F34 /* NetworkRepositoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0224C53A4D00771F34 /* NetworkRepositoryAssembler.swift */; };
-		EC460C1624C53A4D00771F34 /* RepositoriesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0324C53A4D00771F34 /* RepositoriesAssembler.swift */; };
-		EC460C1724C53A4D00771F34 /* UseCaseAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0524C53A4D00771F34 /* UseCaseAssembler.swift */; };
 		EC460C1824C53A4D00771F34 /* NetworkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0624C53A4D00771F34 /* NetworkUseCase.swift */; };
 		EC460C1924C53A4D00771F34 /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0824C53A4D00771F34 /* API+Login.swift */; };
 		EC460C1A24C53A4D00771F34 /* APIInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C0A24C53A4D00771F34 /* APIInputBase.swift */; };
@@ -61,28 +53,7 @@
 		EC460C4824C53A6300771F34 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C4624C53A6300771F34 /* Utilities.swift */; };
 		EC460C5A24C6971100771F34 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5924C6971100771F34 /* Login.swift */; };
 		EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5B24C6976300771F34 /* Login+Mapping.swift */; };
-		EC460C6324C817F400771F34 /* ListChannelsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5E24C817F400771F34 /* ListChannelsAssembler.swift */; };
-		EC460C6424C817F400771F34 /* ListChannelsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5F24C817F400771F34 /* ListChannelsNavigator.swift */; };
-		EC460C6524C817F400771F34 /* ListChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C6024C817F400771F34 /* ListChannelsViewController.swift */; };
-		EC460C6624C817F400771F34 /* ListChannelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C6124C817F400771F34 /* ListChannelsInteractor.swift */; };
-		EC460C6724C817F400771F34 /* ListChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C6224C817F400771F34 /* ListChannelsViewModel.swift */; };
-		EC460C6E24C82A9500771F34 /* HeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C6D24C82A9500771F34 /* HeaderItemView.swift */; };
-		EC460C7024C82AA700771F34 /* HeaderItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC460C6F24C82AA700771F34 /* HeaderItemView.xib */; };
-		EC460C7324C839F500771F34 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7124C839F500771F34 /* ItemTableViewCell.swift */; };
-		EC460C7624C9251900771F34 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7524C9251800771F34 /* MenuCollectionViewCell.swift */; };
-		EC460C7D24C92BE200771F34 /* ChannelDetailsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7824C92BE200771F34 /* ChannelDetailsAssembler.swift */; };
-		EC460C7E24C92BE200771F34 /* ChannelDetailsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7924C92BE200771F34 /* ChannelDetailsNavigator.swift */; };
-		EC460C7F24C92BE200771F34 /* ChannelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7A24C92BE200771F34 /* ChannelDetailsViewController.swift */; };
-		EC460C8024C92BE200771F34 /* ChannelDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7B24C92BE200771F34 /* ChannelDetailsInteractor.swift */; };
-		EC460C8124C92BE200771F34 /* ChannelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C7C24C92BE200771F34 /* ChannelDetailsViewModel.swift */; };
-		EC460C8324C9707400771F34 /* DoctorTestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8224C9707400771F34 /* DoctorTestEncoding.swift */; };
-		EC460C8524C970E400771F34 /* API+ChannelCategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8424C970E400771F34 /* API+ChannelCategoryList.swift */; };
-		EC460C8724C9718000771F34 /* ChannelCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8624C9718000771F34 /* ChannelCategory.swift */; };
-		EC460C8924C971CD00771F34 /* ChannelCategoryList+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8824C971CD00771F34 /* ChannelCategoryList+Mapping.swift */; };
-		EC460C8B24C9724900771F34 /* API+ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8A24C9724900771F34 /* API+ChannelList.swift */; };
-		EC460C8D24C973A700771F34 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8C24C973A700771F34 /* Channel.swift */; };
-		EC460C8F24C974A700771F34 /* Channel+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8E24C974A700771F34 /* Channel+Mapping.swift */; };
-		EC460C9124C9777100771F34 /* API+ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C9024C9777100771F34 /* API+ChannelDetail.swift */; };
+		EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8224C9707400771F34 /* CustomEncoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +72,8 @@
 		2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.debug.xcconfig"; sourceTree = "<group>"; };
 		91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.release.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.release.xcconfig"; sourceTree = "<group>"; };
-		EC460BAB24C5395E00771F34 /* DoctorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC460BAB24C5395E00771F34 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAE24C5395E00771F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC460BB024C5395E00771F34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC460BB224C5395E00771F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC460BB824C5395E00771F34 /* DoctorTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoctorTest.xcdatamodel; sourceTree = "<group>"; };
 		EC460BBA24C5396000771F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,22 +87,15 @@
 		EC460BD724C53A0C00771F34 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		EC460BDE24C53A1B00771F34 /* Assembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		EC460BE124C53A3B00771F34 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EC460BE524C53A4000771F34 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
-		EC460BE624C53A4000771F34 /* TrainingDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingDay.swift; sourceTree = "<group>"; };
 		EC460BE824C53A4000771F34 /* NetworkUseCaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUseCaseType.swift; sourceTree = "<group>"; };
-		EC460BE924C53A4000771F34 /* UseCaseAssemblerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseAssemblerType.swift; sourceTree = "<group>"; };
+		EC460BE924C53A4000771F34 /* UseCaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseType.swift; sourceTree = "<group>"; };
 		EC460BEF24C53A4700771F34 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		EC460BF024C53A4700771F34 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EC460BF124C53A4700771F34 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		EC460BF224C53A4700771F34 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		EC460BF324C53A4700771F34 /* Observable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		EC460BF424C53A4700771F34 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		EC460BFD24C53A4D00771F34 /* TrainingDay+Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrainingDay+Mapping.swift"; sourceTree = "<group>"; };
-		EC460BFE24C53A4D00771F34 /* Assignment+Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+Mapping.swift"; sourceTree = "<group>"; };
 		EC460C0124C53A4D00771F34 /* NetworkRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
-		EC460C0224C53A4D00771F34 /* NetworkRepositoryAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRepositoryAssembler.swift; sourceTree = "<group>"; };
-		EC460C0324C53A4D00771F34 /* RepositoriesAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembler.swift; sourceTree = "<group>"; };
-		EC460C0524C53A4D00771F34 /* UseCaseAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseAssembler.swift; sourceTree = "<group>"; };
 		EC460C0624C53A4D00771F34 /* NetworkUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUseCase.swift; sourceTree = "<group>"; };
 		EC460C0824C53A4D00771F34 /* API+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Login.swift"; sourceTree = "<group>"; };
 		EC460C0A24C53A4D00771F34 /* APIInputBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInputBase.swift; sourceTree = "<group>"; };
@@ -157,28 +120,7 @@
 		EC460C4624C53A6300771F34 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EC460C5924C6971100771F34 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EC460C5B24C6976300771F34 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
-		EC460C5E24C817F400771F34 /* ListChannelsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChannelsAssembler.swift; sourceTree = "<group>"; };
-		EC460C5F24C817F400771F34 /* ListChannelsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChannelsNavigator.swift; sourceTree = "<group>"; };
-		EC460C6024C817F400771F34 /* ListChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChannelsViewController.swift; sourceTree = "<group>"; };
-		EC460C6124C817F400771F34 /* ListChannelsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChannelsInteractor.swift; sourceTree = "<group>"; };
-		EC460C6224C817F400771F34 /* ListChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChannelsViewModel.swift; sourceTree = "<group>"; };
-		EC460C6D24C82A9500771F34 /* HeaderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderItemView.swift; sourceTree = "<group>"; };
-		EC460C6F24C82AA700771F34 /* HeaderItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderItemView.xib; sourceTree = "<group>"; };
-		EC460C7124C839F500771F34 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		EC460C7524C9251800771F34 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
-		EC460C7824C92BE200771F34 /* ChannelDetailsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsAssembler.swift; sourceTree = "<group>"; };
-		EC460C7924C92BE200771F34 /* ChannelDetailsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsNavigator.swift; sourceTree = "<group>"; };
-		EC460C7A24C92BE200771F34 /* ChannelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsViewController.swift; sourceTree = "<group>"; };
-		EC460C7B24C92BE200771F34 /* ChannelDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsInteractor.swift; sourceTree = "<group>"; };
-		EC460C7C24C92BE200771F34 /* ChannelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsViewModel.swift; sourceTree = "<group>"; };
-		EC460C8224C9707400771F34 /* DoctorTestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTestEncoding.swift; sourceTree = "<group>"; };
-		EC460C8424C970E400771F34 /* API+ChannelCategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ChannelCategoryList.swift"; sourceTree = "<group>"; };
-		EC460C8624C9718000771F34 /* ChannelCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCategory.swift; sourceTree = "<group>"; };
-		EC460C8824C971CD00771F34 /* ChannelCategoryList+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelCategoryList+Mapping.swift"; sourceTree = "<group>"; };
-		EC460C8A24C9724900771F34 /* API+ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ChannelList.swift"; sourceTree = "<group>"; };
-		EC460C8C24C973A700771F34 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		EC460C8E24C974A700771F34 /* Channel+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Mapping.swift"; sourceTree = "<group>"; };
-		EC460C9024C9777100771F34 /* API+ChannelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ChannelDetail.swift"; sourceTree = "<group>"; };
+		EC460C8224C9707400771F34 /* CustomEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncoding.swift; sourceTree = "<group>"; };
 		FB6F12DE34035818AD152964 /* Pods_DoctorTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -227,7 +169,7 @@
 		EC460BAC24C5395E00771F34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC460BAB24C5395E00771F34 /* DoctorTest.app */,
+				EC460BAB24C5395E00771F34 /* BaseProject.app */,
 				EC460BC424C5396100771F34 /* DoctorTestTests.xctest */,
 			);
 			name = Products;
@@ -245,7 +187,6 @@
 				EC460BDD24C53A1B00771F34 /* Assembler */,
 				EC460BD324C53A0C00771F34 /* Architecture */,
 				EC460BAE24C5395E00771F34 /* AppDelegate.swift */,
-				EC460BB024C5395E00771F34 /* SceneDelegate.swift */,
 				EC460BB224C5395E00771F34 /* ViewController.swift */,
 				EC460BBA24C5396000771F34 /* Assets.xcassets */,
 				EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */,
@@ -310,11 +251,7 @@
 		EC460BE424C53A4000771F34 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				EC460BE524C53A4000771F34 /* Assignment.swift */,
-				EC460BE624C53A4000771F34 /* TrainingDay.swift */,
 				EC460C5924C6971100771F34 /* Login.swift */,
-				EC460C8624C9718000771F34 /* ChannelCategory.swift */,
-				EC460C8C24C973A700771F34 /* Channel.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -322,8 +259,8 @@
 		EC460BE724C53A4000771F34 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				EC460BE924C53A4000771F34 /* UseCaseType.swift */,
 				EC460BE824C53A4000771F34 /* NetworkUseCaseType.swift */,
-				EC460BE924C53A4000771F34 /* UseCaseAssemblerType.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -355,11 +292,7 @@
 		EC460BFC24C53A4D00771F34 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				EC460BFD24C53A4D00771F34 /* TrainingDay+Mapping.swift */,
-				EC460BFE24C53A4D00771F34 /* Assignment+Mapping.swift */,
 				EC460C5B24C6976300771F34 /* Login+Mapping.swift */,
-				EC460C8824C971CD00771F34 /* ChannelCategoryList+Mapping.swift */,
-				EC460C8E24C974A700771F34 /* Channel+Mapping.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -368,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				EC460C0024C53A4D00771F34 /* Network */,
-				EC460C0324C53A4D00771F34 /* RepositoriesAssembler.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -377,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				EC460C0124C53A4D00771F34 /* NetworkRepository.swift */,
-				EC460C0224C53A4D00771F34 /* NetworkRepositoryAssembler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -385,7 +316,6 @@
 		EC460C0424C53A4D00771F34 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				EC460C0524C53A4D00771F34 /* UseCaseAssembler.swift */,
 				EC460C0624C53A4D00771F34 /* NetworkUseCase.swift */,
 			);
 			path = UseCases;
@@ -395,11 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				EC460C0824C53A4D00771F34 /* API+Login.swift */,
-				EC460C8424C970E400771F34 /* API+ChannelCategoryList.swift */,
 				EC460C0924C53A4D00771F34 /* API */,
-				EC460C8224C9707400771F34 /* DoctorTestEncoding.swift */,
-				EC460C8A24C9724900771F34 /* API+ChannelList.swift */,
-				EC460C9024C9777100771F34 /* API+ChannelDetail.swift */,
+				EC460C8224C9707400771F34 /* CustomEncoding.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -422,8 +349,6 @@
 		EC460C2224C53A5300771F34 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				EC460C7724C92BBB00771F34 /* ChannelDetails */,
-				EC460C5D24C817DA00771F34 /* ListChannel */,
 				EC460C2324C53A5300771F34 /* App */,
 				EC460C2824C53A5300771F34 /* Storyboard */,
 				EC460C2B24C53A5300771F34 /* Login */,
@@ -471,42 +396,6 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		EC460C5D24C817DA00771F34 /* ListChannel */ = {
-			isa = PBXGroup;
-			children = (
-				EC460C6824C826BA00771F34 /* Cells */,
-				EC460C5E24C817F400771F34 /* ListChannelsAssembler.swift */,
-				EC460C5F24C817F400771F34 /* ListChannelsNavigator.swift */,
-				EC460C6024C817F400771F34 /* ListChannelsViewController.swift */,
-				EC460C6124C817F400771F34 /* ListChannelsInteractor.swift */,
-				EC460C6224C817F400771F34 /* ListChannelsViewModel.swift */,
-			);
-			path = ListChannel;
-			sourceTree = "<group>";
-		};
-		EC460C6824C826BA00771F34 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				EC460C6D24C82A9500771F34 /* HeaderItemView.swift */,
-				EC460C6F24C82AA700771F34 /* HeaderItemView.xib */,
-				EC460C7124C839F500771F34 /* ItemTableViewCell.swift */,
-				EC460C7524C9251800771F34 /* MenuCollectionViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		EC460C7724C92BBB00771F34 /* ChannelDetails */ = {
-			isa = PBXGroup;
-			children = (
-				EC460C7824C92BE200771F34 /* ChannelDetailsAssembler.swift */,
-				EC460C7924C92BE200771F34 /* ChannelDetailsNavigator.swift */,
-				EC460C7A24C92BE200771F34 /* ChannelDetailsViewController.swift */,
-				EC460C7B24C92BE200771F34 /* ChannelDetailsInteractor.swift */,
-				EC460C7C24C92BE200771F34 /* ChannelDetailsViewModel.swift */,
-			);
-			path = ChannelDetails;
-			sourceTree = "<group>";
-		};
 		EF0CFB17F99A6BADE399704B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,9 +408,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC460BAA24C5395E00771F34 /* DoctorTest */ = {
+		EC460BAA24C5395E00771F34 /* BaseProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "DoctorTest" */;
+			buildConfigurationList = EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "BaseProject" */;
 			buildPhases = (
 				41E3882893942D753CC31BD4 /* [CP] Check Pods Manifest.lock */,
 				EC460BA724C5395E00771F34 /* Sources */,
@@ -533,9 +422,9 @@
 			);
 			dependencies = (
 			);
-			name = DoctorTest;
+			name = BaseProject;
 			productName = DoctorTest;
-			productReference = EC460BAB24C5395E00771F34 /* DoctorTest.app */;
+			productReference = EC460BAB24C5395E00771F34 /* BaseProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC460BC324C5396100771F34 /* DoctorTestTests */ = {
@@ -589,7 +478,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC460BAA24C5395E00771F34 /* DoctorTest */,
+				EC460BAA24C5395E00771F34 /* BaseProject */,
 				EC460BC324C5396100771F34 /* DoctorTestTests */,
 			);
 		};
@@ -600,7 +489,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC460C7024C82AA700771F34 /* HeaderItemView.xib in Resources */,
 				EC460BBE24C5396000771F34 /* LaunchScreen.storyboard in Resources */,
 				EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */,
 				EC460C3B24C53A5300771F34 /* AppDoctor.storyboard in Resources */,
@@ -687,49 +575,29 @@
 			files = (
 				EC460C5A24C6971100771F34 /* Login.swift in Sources */,
 				EC460BF624C53A4700771F34 /* UIViewController+Extension.swift in Sources */,
-				EC460C6624C817F400771F34 /* ListChannelsInteractor.swift in Sources */,
-				EC460C8024C92BE200771F34 /* ChannelDetailsInteractor.swift in Sources */,
 				EC460C2024C53A4D00771F34 /* ArrayEncoding.swift in Sources */,
-				EC460C6524C817F400771F34 /* ListChannelsViewController.swift in Sources */,
 				EC460C4324C53A5300771F34 /* LoginViewModel.swift in Sources */,
-				EC460C8724C9718000771F34 /* ChannelCategory.swift in Sources */,
-				EC460C7F24C92BE200771F34 /* ChannelDetailsViewController.swift in Sources */,
-				EC460C8124C92BE200771F34 /* ChannelDetailsViewModel.swift in Sources */,
 				EC460BEC24C53A4000771F34 /* NetworkUseCaseType.swift in Sources */,
 				EC460BB324C5395E00771F34 /* ViewController.swift in Sources */,
 				EC460BDA24C53A0D00771F34 /* ErrorTracker.swift in Sources */,
 				EC460C3E24C53A5300771F34 /* LoginNavigator.swift in Sources */,
 				EC460C1424C53A4D00771F34 /* NetworkRepository.swift in Sources */,
 				EC460C1A24C53A4D00771F34 /* APIInputBase.swift in Sources */,
-				EC460C6324C817F400771F34 /* ListChannelsAssembler.swift in Sources */,
-				EC460BEB24C53A4000771F34 /* TrainingDay.swift in Sources */,
-				EC460C8924C971CD00771F34 /* ChannelCategoryList+Mapping.swift in Sources */,
-				EC460C1524C53A4D00771F34 /* NetworkRepositoryAssembler.swift in Sources */,
-				EC460C1324C53A4D00771F34 /* Assignment+Mapping.swift in Sources */,
 				EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */,
-				EC460C1224C53A4D00771F34 /* TrainingDay+Mapping.swift in Sources */,
 				EC460C3F24C53A5300771F34 /* LoginViewController.swift in Sources */,
 				EC460BF524C53A4700771F34 /* Date+Extension.swift in Sources */,
 				EC460C1924C53A4D00771F34 /* API+Login.swift in Sources */,
 				EC460C1E24C53A4D00771F34 /* APIInput.swift in Sources */,
-				EC460BEA24C53A4000771F34 /* Assignment.swift in Sources */,
 				EC460C4024C53A5300771F34 /* LoginInteractor.swift in Sources */,
 				EC460C1D24C53A4D00771F34 /* APIResource.swift in Sources */,
 				EC460BF724C53A4700771F34 /* String+Extension.swift in Sources */,
-				EC460C6E24C82A9500771F34 /* HeaderItemView.swift in Sources */,
 				EC460C1F24C53A4D00771F34 /* APIOutput.swift in Sources */,
-				EC460C8324C9707400771F34 /* DoctorTestEncoding.swift in Sources */,
-				EC460C8D24C973A700771F34 /* Channel.swift in Sources */,
+				EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */,
 				EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */,
 				EC460C3624C53A5300771F34 /* AppAssembler.swift in Sources */,
 				EC460BDF24C53A1B00771F34 /* Assembler.swift in Sources */,
 				EC460BE224C53A3B00771F34 /* Constants.swift in Sources */,
-				EC460C8B24C9724900771F34 /* API+ChannelList.swift in Sources */,
-				EC460C7E24C92BE200771F34 /* ChannelDetailsNavigator.swift in Sources */,
-				EC460C6424C817F400771F34 /* ListChannelsNavigator.swift in Sources */,
 				EC460C3724C53A5300771F34 /* AppNavigator.swift in Sources */,
-				EC460C1724C53A4D00771F34 /* UseCaseAssembler.swift in Sources */,
-				EC460C8F24C974A700771F34 /* Channel+Mapping.swift in Sources */,
 				EC460BFA24C53A4700771F34 /* UIView+Ext.swift in Sources */,
 				EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */,
 				EC460C3A24C53A5300771F34 /* Storyboard.swift in Sources */,
@@ -737,19 +605,11 @@
 				EC460BF924C53A4700771F34 /* Observable+.swift in Sources */,
 				EC460C3824C53A5300771F34 /* AppViewModel.swift in Sources */,
 				EC460C3D24C53A5300771F34 /* LoginAssembler.swift in Sources */,
-				EC460C7324C839F500771F34 /* ItemTableViewCell.swift in Sources */,
-				EC460C7624C9251900771F34 /* MenuCollectionViewCell.swift in Sources */,
-				EC460C6724C817F400771F34 /* ListChannelsViewModel.swift in Sources */,
 				EC460C1B24C53A4D00771F34 /* APIError.swift in Sources */,
-				EC460BED24C53A4000771F34 /* UseCaseAssemblerType.swift in Sources */,
-				EC460BB124C5395E00771F34 /* SceneDelegate.swift in Sources */,
-				EC460C7D24C92BE200771F34 /* ChannelDetailsAssembler.swift in Sources */,
+				EC460BED24C53A4000771F34 /* UseCaseType.swift in Sources */,
 				EC460C1C24C53A4D00771F34 /* APIService.swift in Sources */,
-				EC460C9124C9777100771F34 /* API+ChannelDetail.swift in Sources */,
-				EC460C8524C970E400771F34 /* API+ChannelCategoryList.swift in Sources */,
 				EC460BF824C53A4700771F34 /* UIColor+Ext.swift in Sources */,
 				EC460C2124C53A4D00771F34 /* APIOutputBase.swift in Sources */,
-				EC460C1624C53A4D00771F34 /* RepositoriesAssembler.swift in Sources */,
 				EC460C3924C53A5300771F34 /* AppUseCase.swift in Sources */,
 				EC460BD924C53A0D00771F34 /* BindableType.swift in Sources */,
 				EC460C4824C53A6300771F34 /* Utilities.swift in Sources */,
@@ -770,7 +630,7 @@
 /* Begin PBXTargetDependency section */
 		EC460BC624C5396100771F34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC460BAA24C5395E00771F34 /* DoctorTest */;
+			target = EC460BAA24C5395E00771F34 /* BaseProject */;
 			targetProxy = EC460BC524C5396100771F34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -909,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 295283YKBX;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -928,6 +789,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 295283YKBX;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -997,7 +859,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "DoctorTest" */ = {
+		EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "BaseProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC460BCE24C5396100771F34 /* Debug */,

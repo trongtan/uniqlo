@@ -22,25 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        navigationController = initNavi()
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
         
+        navigationController = initNavi()
+    
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         
         return true
     }
     
     func goSystemConfigMenu() {
         
-    }
-    
-    func initNavi() -> UINavigationController {
-        var viewControler: UIViewController = UIViewController()
-       let loginVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
-        viewControler = loginVC
-        
-        let navigationVc = UINavigationController(rootViewController: loginVC)
-        navigationVc.navigationBar.tintColor = .white
-        self.window?.rootViewController = loginVC
-        return navigationVc
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -107,6 +101,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+extension AppDelegate {
+    func initNavi() -> UINavigationController {
+        let loginVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
+        
+        let navigationVc = UINavigationController(rootViewController: loginVC)
+        navigationVc.navigationBar.tintColor = .white
+        return navigationVc
+    }
+}
+
+
 
 extension UIApplication {
     func topNav() -> UINavigationController? {

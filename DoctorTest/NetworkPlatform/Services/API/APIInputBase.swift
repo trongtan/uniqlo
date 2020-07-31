@@ -35,7 +35,7 @@ class APIInputBase: Then {
         self.urlString = urlString
         self.parameters = parameters
         self.requestType = requestType
-        self.encoding = requestType == .get ? URLEncoding.default : DoctorTestEncoding()
+        self.encoding = requestType == .get ? URLEncoding.default : CustomEncoding()
         self.requireAccessToken = requireAccessToken
     }
 }
