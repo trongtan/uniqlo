@@ -16,21 +16,24 @@ extension API {
     
     enum APIResource {
         case login
-        case channelCategoryList
-        case channelList
-        case channelDetail
+        case receipt
+        case information
+        case networkConfig
+        case verifyNetworkConfig
 
         
         var resource: (method: HTTPMethod, route: String) {
             switch self {
             case .login:
                 return (.post, "login_v_1_0_0/member_login")
-            case .channelCategoryList:
-                return (.get, "board_v_1_0_0/channel_category_list")
-            case .channelList:
-                return (.post, "board_v_1_0_0/channel_list")
-            case .channelDetail:
-                return (.post, "board_v_1_0_0/channel_detail")
+            case .receipt:
+                return (.post, "login_v_1_0_0/member_login")
+            case .information:
+                return (.post, "login_v_1_0_0/member_login")
+            case .networkConfig:
+                return (.post, "login_v_1_0_0/member_login")
+            case .verifyNetworkConfig:
+                return (.post, "login_v_1_0_0/member_login")
             }
         }
     }

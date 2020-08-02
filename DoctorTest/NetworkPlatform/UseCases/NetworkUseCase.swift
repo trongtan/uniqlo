@@ -30,6 +30,18 @@ class NetworkUseCase: NetworkUseCaseType {
             return login!
         }
     }
+    
+    func receipt(barcode: String) -> Observable<Receipt> {
+        return self.networkRepository.receipt(barcode: barcode)
+    }
+    
+    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void> {
+        return self.networkRepository.submitCustomerInfo(info: info)
+    }
+    
+    func verifyServerConfig(password: String) -> Observable<Void> {
+        return self.networkRepository.verifyServerConfig(password: password)
+    }
 }
 
 

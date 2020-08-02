@@ -9,10 +9,9 @@
 import Foundation
 import RxSwift
 
-//protocol NetworkUseCaseAssembler {
-//    func resolve() -> NetworkUseCaseType
-//}
-
 protocol NetworkUseCaseType: UseCaseType {
     func login(email: String, password: String) ->  Observable<Login>
+    func receipt(barcode: String) -> Observable<Receipt>
+    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void>
+    func verifyServerConfig(password: String) -> Observable<Void>
 }

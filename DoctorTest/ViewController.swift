@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationItem.backBarButtonItem?.title = ""
+        
+        self.view.rx.tapGesture().subscribe(onNext: { _ in
+            self.view.endEditing(true)
+        }).disposed(by: disposeBag)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -33,5 +37,14 @@ class ViewController: UIViewController {
         // Restore the navigation bar to default
 //        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
 //        navigationController?.navigationBar.shadowImage = nil
+    }
+}
+
+extension ViewController {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(defaultButton)
+        self.present(alert, animated: true, completion: nil)
     }
 }

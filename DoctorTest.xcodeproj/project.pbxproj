@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30228ED37061057E9AB1A040 /* Pods_DoctorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6F12DE34035818AD152964 /* Pods_DoctorTest.framework */; };
+		B572506F2B7DDD2167C23AA0 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */; };
 		CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
@@ -54,6 +54,38 @@
 		EC460C5A24C6971100771F34 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5924C6971100771F34 /* Login.swift */; };
 		EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5B24C6976300771F34 /* Login+Mapping.swift */; };
 		EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8224C9707400771F34 /* CustomEncoding.swift */; };
+		EC7EFCA824D3B94F002AA9F3 /* BarcodeReaderAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */; };
+		EC7EFCA924D3B94F002AA9F3 /* BarcodeReaderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */; };
+		EC7EFCAA24D3B94F002AA9F3 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */; };
+		EC7EFCAB24D3B94F002AA9F3 /* BarcodeReaderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA624D3B94F002AA9F3 /* BarcodeReaderInteractor.swift */; };
+		EC7EFCAC24D3B94F002AA9F3 /* BarcodeReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA724D3B94F002AA9F3 /* BarcodeReaderViewModel.swift */; };
+		EC7EFCB324D457C5002AA9F3 /* InformationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCAE24D457C5002AA9F3 /* InformationAssembler.swift */; };
+		EC7EFCB424D457C5002AA9F3 /* InformationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCAF24D457C5002AA9F3 /* InformationNavigator.swift */; };
+		EC7EFCB524D457C5002AA9F3 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCB024D457C5002AA9F3 /* InformationViewController.swift */; };
+		EC7EFCB624D457C5002AA9F3 /* InformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCB124D457C5002AA9F3 /* InformationInteractor.swift */; };
+		EC7EFCB724D457C5002AA9F3 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCB224D457C5002AA9F3 /* InformationViewModel.swift */; };
+		EC7EFCBE24D457F7002AA9F3 /* FinishAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCB924D457F7002AA9F3 /* FinishAssembler.swift */; };
+		EC7EFCBF24D457F7002AA9F3 /* FinishNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCBA24D457F7002AA9F3 /* FinishNavigator.swift */; };
+		EC7EFCC024D457F7002AA9F3 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCBB24D457F7002AA9F3 /* FinishViewController.swift */; };
+		EC7EFCC124D457F7002AA9F3 /* FinishInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCBC24D457F7002AA9F3 /* FinishInteractor.swift */; };
+		EC7EFCC224D457F7002AA9F3 /* FinishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCBD24D457F7002AA9F3 /* FinishViewModel.swift */; };
+		EC7EFCC924D4582B002AA9F3 /* ServerConfigAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCC424D4582B002AA9F3 /* ServerConfigAssembler.swift */; };
+		EC7EFCCA24D4582B002AA9F3 /* ServerConfigNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCC524D4582B002AA9F3 /* ServerConfigNavigator.swift */; };
+		EC7EFCCB24D4582B002AA9F3 /* ServerConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCC624D4582B002AA9F3 /* ServerConfigViewController.swift */; };
+		EC7EFCCC24D4582B002AA9F3 /* ServerConfigInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCC724D4582B002AA9F3 /* ServerConfigInteractor.swift */; };
+		EC7EFCCD24D4582B002AA9F3 /* ServerConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCC824D4582B002AA9F3 /* ServerConfigViewModel.swift */; };
+		EC7EFCD624D46ACC002AA9F3 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCD524D46ACC002AA9F3 /* Receipt.swift */; };
+		EC7EFCD824D46AF4002AA9F3 /* CustomerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCD724D46AF4002AA9F3 /* CustomerInfo.swift */; };
+		EC7EFCDA24D50066002AA9F3 /* API+Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCD924D50066002AA9F3 /* API+Receipt.swift */; };
+		EC7EFCDC24D500F2002AA9F3 /* Receipt+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDB24D500F2002AA9F3 /* Receipt+Mapping.swift */; };
+		EC7EFCDE24D52412002AA9F3 /* API+CustomerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */; };
+		EC7EFCE024D52486002AA9F3 /* CustomerInfo+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDF24D52486002AA9F3 /* CustomerInfo+Mapping.swift */; };
+		EC7EFCE224D5B392002AA9F3 /* API+VerfifyServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */; };
+		EC7EFCE824D65539002AA9F3 /* VerifyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE324D65538002AA9F3 /* VerifyAssembler.swift */; };
+		EC7EFCE924D65539002AA9F3 /* VerifyNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE424D65538002AA9F3 /* VerifyNavigator.swift */; };
+		EC7EFCEA24D65539002AA9F3 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */; };
+		EC7EFCEB24D65539002AA9F3 /* VerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */; };
+		EC7EFCEC24D65539002AA9F3 /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,11 +99,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.debug.xcconfig"; sourceTree = "<group>"; };
 		91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.release.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.release.xcconfig"; sourceTree = "<group>"; };
+		E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAB24C5395E00771F34 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAE24C5395E00771F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC460BB224C5395E00771F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +155,39 @@
 		EC460C5924C6971100771F34 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EC460C5B24C6976300771F34 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
 		EC460C8224C9707400771F34 /* CustomEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncoding.swift; sourceTree = "<group>"; };
-		FB6F12DE34035818AD152964 /* Pods_DoctorTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderAssembler.swift; sourceTree = "<group>"; };
+		EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderNavigator.swift; sourceTree = "<group>"; };
+		EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
+		EC7EFCA624D3B94F002AA9F3 /* BarcodeReaderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderInteractor.swift; sourceTree = "<group>"; };
+		EC7EFCA724D3B94F002AA9F3 /* BarcodeReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewModel.swift; sourceTree = "<group>"; };
+		EC7EFCAE24D457C5002AA9F3 /* InformationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAssembler.swift; sourceTree = "<group>"; };
+		EC7EFCAF24D457C5002AA9F3 /* InformationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationNavigator.swift; sourceTree = "<group>"; };
+		EC7EFCB024D457C5002AA9F3 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		EC7EFCB124D457C5002AA9F3 /* InformationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationInteractor.swift; sourceTree = "<group>"; };
+		EC7EFCB224D457C5002AA9F3 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		EC7EFCB924D457F7002AA9F3 /* FinishAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishAssembler.swift; sourceTree = "<group>"; };
+		EC7EFCBA24D457F7002AA9F3 /* FinishNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishNavigator.swift; sourceTree = "<group>"; };
+		EC7EFCBB24D457F7002AA9F3 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		EC7EFCBC24D457F7002AA9F3 /* FinishInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishInteractor.swift; sourceTree = "<group>"; };
+		EC7EFCBD24D457F7002AA9F3 /* FinishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewModel.swift; sourceTree = "<group>"; };
+		EC7EFCC424D4582B002AA9F3 /* ServerConfigAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigAssembler.swift; sourceTree = "<group>"; };
+		EC7EFCC524D4582B002AA9F3 /* ServerConfigNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigNavigator.swift; sourceTree = "<group>"; };
+		EC7EFCC624D4582B002AA9F3 /* ServerConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigViewController.swift; sourceTree = "<group>"; };
+		EC7EFCC724D4582B002AA9F3 /* ServerConfigInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigInteractor.swift; sourceTree = "<group>"; };
+		EC7EFCC824D4582B002AA9F3 /* ServerConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigViewModel.swift; sourceTree = "<group>"; };
+		EC7EFCD524D46ACC002AA9F3 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		EC7EFCD724D46AF4002AA9F3 /* CustomerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfo.swift; sourceTree = "<group>"; };
+		EC7EFCD924D50066002AA9F3 /* API+Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Receipt.swift"; sourceTree = "<group>"; };
+		EC7EFCDB24D500F2002AA9F3 /* Receipt+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+Mapping.swift"; sourceTree = "<group>"; };
+		EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+CustomerInfo.swift"; sourceTree = "<group>"; };
+		EC7EFCDF24D52486002AA9F3 /* CustomerInfo+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+Mapping.swift"; sourceTree = "<group>"; };
+		EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+VerfifyServerConfig.swift"; sourceTree = "<group>"; };
+		EC7EFCE324D65538002AA9F3 /* VerifyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAssembler.swift; sourceTree = "<group>"; };
+		EC7EFCE424D65538002AA9F3 /* VerifyNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNavigator.swift; sourceTree = "<group>"; };
+		EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyInteractor.swift; sourceTree = "<group>"; };
+		EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
+		F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30228ED37061057E9AB1A040 /* Pods_DoctorTest.framework in Frameworks */,
+				B572506F2B7DDD2167C23AA0 /* Pods_BaseProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +217,8 @@
 				92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */,
 				1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */,
 				91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */,
+				F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */,
+				07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -252,6 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				EC460C5924C6971100771F34 /* Login.swift */,
+				EC7EFCD524D46ACC002AA9F3 /* Receipt.swift */,
+				EC7EFCD724D46AF4002AA9F3 /* CustomerInfo.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -293,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				EC460C5B24C6976300771F34 /* Login+Mapping.swift */,
+				EC7EFCDB24D500F2002AA9F3 /* Receipt+Mapping.swift */,
+				EC7EFCDF24D52486002AA9F3 /* CustomerInfo+Mapping.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -325,8 +397,11 @@
 			isa = PBXGroup;
 			children = (
 				EC460C0824C53A4D00771F34 /* API+Login.swift */,
+				EC7EFCD924D50066002AA9F3 /* API+Receipt.swift */,
+				EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */,
 				EC460C0924C53A4D00771F34 /* API */,
 				EC460C8224C9707400771F34 /* CustomEncoding.swift */,
+				EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,6 +424,11 @@
 		EC460C2224C53A5300771F34 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EC7EFCCE24D45973002AA9F3 /* Verify */,
+				EC7EFCC324D45813002AA9F3 /* ServerConfig */,
+				EC7EFCB824D457E3002AA9F3 /* Finish */,
+				EC7EFCAD24D457AB002AA9F3 /* Information */,
+				EC7EFCA224D3B932002AA9F3 /* BarcodeReader */,
 				EC460C2324C53A5300771F34 /* App */,
 				EC460C2824C53A5300771F34 /* Storyboard */,
 				EC460C2B24C53A5300771F34 /* Login */,
@@ -396,11 +476,71 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		EC7EFCA224D3B932002AA9F3 /* BarcodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */,
+				EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */,
+				EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */,
+				EC7EFCA624D3B94F002AA9F3 /* BarcodeReaderInteractor.swift */,
+				EC7EFCA724D3B94F002AA9F3 /* BarcodeReaderViewModel.swift */,
+			);
+			path = BarcodeReader;
+			sourceTree = "<group>";
+		};
+		EC7EFCAD24D457AB002AA9F3 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFCAE24D457C5002AA9F3 /* InformationAssembler.swift */,
+				EC7EFCAF24D457C5002AA9F3 /* InformationNavigator.swift */,
+				EC7EFCB024D457C5002AA9F3 /* InformationViewController.swift */,
+				EC7EFCB124D457C5002AA9F3 /* InformationInteractor.swift */,
+				EC7EFCB224D457C5002AA9F3 /* InformationViewModel.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		EC7EFCB824D457E3002AA9F3 /* Finish */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFCB924D457F7002AA9F3 /* FinishAssembler.swift */,
+				EC7EFCBA24D457F7002AA9F3 /* FinishNavigator.swift */,
+				EC7EFCBB24D457F7002AA9F3 /* FinishViewController.swift */,
+				EC7EFCBC24D457F7002AA9F3 /* FinishInteractor.swift */,
+				EC7EFCBD24D457F7002AA9F3 /* FinishViewModel.swift */,
+			);
+			path = Finish;
+			sourceTree = "<group>";
+		};
+		EC7EFCC324D45813002AA9F3 /* ServerConfig */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFCC424D4582B002AA9F3 /* ServerConfigAssembler.swift */,
+				EC7EFCC524D4582B002AA9F3 /* ServerConfigNavigator.swift */,
+				EC7EFCC624D4582B002AA9F3 /* ServerConfigViewController.swift */,
+				EC7EFCC724D4582B002AA9F3 /* ServerConfigInteractor.swift */,
+				EC7EFCC824D4582B002AA9F3 /* ServerConfigViewModel.swift */,
+			);
+			path = ServerConfig;
+			sourceTree = "<group>";
+		};
+		EC7EFCCE24D45973002AA9F3 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFCE324D65538002AA9F3 /* VerifyAssembler.swift */,
+				EC7EFCE424D65538002AA9F3 /* VerifyNavigator.swift */,
+				EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */,
+				EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */,
+				EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
 		EF0CFB17F99A6BADE399704B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB6F12DE34035818AD152964 /* Pods_DoctorTest.framework */,
 				1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */,
+				E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -520,7 +660,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DoctorTest-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BaseProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -555,15 +695,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoctorTest/Pods-DoctorTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoctorTest/Pods-DoctorTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoctorTest/Pods-DoctorTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -573,24 +713,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7EFCDE24D52412002AA9F3 /* API+CustomerInfo.swift in Sources */,
 				EC460C5A24C6971100771F34 /* Login.swift in Sources */,
 				EC460BF624C53A4700771F34 /* UIViewController+Extension.swift in Sources */,
 				EC460C2024C53A4D00771F34 /* ArrayEncoding.swift in Sources */,
+				EC7EFCB624D457C5002AA9F3 /* InformationInteractor.swift in Sources */,
 				EC460C4324C53A5300771F34 /* LoginViewModel.swift in Sources */,
+				EC7EFCAC24D3B94F002AA9F3 /* BarcodeReaderViewModel.swift in Sources */,
 				EC460BEC24C53A4000771F34 /* NetworkUseCaseType.swift in Sources */,
+				EC7EFCB424D457C5002AA9F3 /* InformationNavigator.swift in Sources */,
+				EC7EFCEA24D65539002AA9F3 /* VerifyViewController.swift in Sources */,
 				EC460BB324C5395E00771F34 /* ViewController.swift in Sources */,
+				EC7EFCAA24D3B94F002AA9F3 /* BarcodeReaderViewController.swift in Sources */,
 				EC460BDA24C53A0D00771F34 /* ErrorTracker.swift in Sources */,
+				EC7EFCD824D46AF4002AA9F3 /* CustomerInfo.swift in Sources */,
+				EC7EFCE924D65539002AA9F3 /* VerifyNavigator.swift in Sources */,
+				EC7EFCC024D457F7002AA9F3 /* FinishViewController.swift in Sources */,
 				EC460C3E24C53A5300771F34 /* LoginNavigator.swift in Sources */,
+				EC7EFCDA24D50066002AA9F3 /* API+Receipt.swift in Sources */,
+				EC7EFCB324D457C5002AA9F3 /* InformationAssembler.swift in Sources */,
 				EC460C1424C53A4D00771F34 /* NetworkRepository.swift in Sources */,
 				EC460C1A24C53A4D00771F34 /* APIInputBase.swift in Sources */,
 				EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */,
 				EC460C3F24C53A5300771F34 /* LoginViewController.swift in Sources */,
+				EC7EFCB524D457C5002AA9F3 /* InformationViewController.swift in Sources */,
 				EC460BF524C53A4700771F34 /* Date+Extension.swift in Sources */,
+				EC7EFCBE24D457F7002AA9F3 /* FinishAssembler.swift in Sources */,
+				EC7EFCC224D457F7002AA9F3 /* FinishViewModel.swift in Sources */,
+				EC7EFCE024D52486002AA9F3 /* CustomerInfo+Mapping.swift in Sources */,
+				EC7EFCAB24D3B94F002AA9F3 /* BarcodeReaderInteractor.swift in Sources */,
 				EC460C1924C53A4D00771F34 /* API+Login.swift in Sources */,
 				EC460C1E24C53A4D00771F34 /* APIInput.swift in Sources */,
 				EC460C4024C53A5300771F34 /* LoginInteractor.swift in Sources */,
 				EC460C1D24C53A4D00771F34 /* APIResource.swift in Sources */,
+				EC7EFCCB24D4582B002AA9F3 /* ServerConfigViewController.swift in Sources */,
+				EC7EFCEC24D65539002AA9F3 /* VerifyViewModel.swift in Sources */,
 				EC460BF724C53A4700771F34 /* String+Extension.swift in Sources */,
+				EC7EFCD624D46ACC002AA9F3 /* Receipt.swift in Sources */,
+				EC7EFCE824D65539002AA9F3 /* VerifyAssembler.swift in Sources */,
+				EC7EFCA824D3B94F002AA9F3 /* BarcodeReaderAssembler.swift in Sources */,
 				EC460C1F24C53A4D00771F34 /* APIOutput.swift in Sources */,
 				EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */,
 				EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */,
@@ -600,18 +761,29 @@
 				EC460C3724C53A5300771F34 /* AppNavigator.swift in Sources */,
 				EC460BFA24C53A4700771F34 /* UIView+Ext.swift in Sources */,
 				EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */,
+				EC7EFCE224D5B392002AA9F3 /* API+VerfifyServerConfig.swift in Sources */,
+				EC7EFCCD24D4582B002AA9F3 /* ServerConfigViewModel.swift in Sources */,
+				EC7EFCA924D3B94F002AA9F3 /* BarcodeReaderNavigator.swift in Sources */,
+				EC7EFCDC24D500F2002AA9F3 /* Receipt+Mapping.swift in Sources */,
 				EC460C3A24C53A5300771F34 /* Storyboard.swift in Sources */,
+				EC7EFCCA24D4582B002AA9F3 /* ServerConfigNavigator.swift in Sources */,
+				EC7EFCBF24D457F7002AA9F3 /* FinishNavigator.swift in Sources */,
 				EC460C1824C53A4D00771F34 /* NetworkUseCase.swift in Sources */,
 				EC460BF924C53A4700771F34 /* Observable+.swift in Sources */,
 				EC460C3824C53A5300771F34 /* AppViewModel.swift in Sources */,
+				EC7EFCB724D457C5002AA9F3 /* InformationViewModel.swift in Sources */,
+				EC7EFCC924D4582B002AA9F3 /* ServerConfigAssembler.swift in Sources */,
 				EC460C3D24C53A5300771F34 /* LoginAssembler.swift in Sources */,
 				EC460C1B24C53A4D00771F34 /* APIError.swift in Sources */,
+				EC7EFCEB24D65539002AA9F3 /* VerifyInteractor.swift in Sources */,
 				EC460BED24C53A4000771F34 /* UseCaseType.swift in Sources */,
 				EC460C1C24C53A4D00771F34 /* APIService.swift in Sources */,
 				EC460BF824C53A4700771F34 /* UIColor+Ext.swift in Sources */,
 				EC460C2124C53A4D00771F34 /* APIOutputBase.swift in Sources */,
 				EC460C3924C53A5300771F34 /* AppUseCase.swift in Sources */,
+				EC7EFCCC24D4582B002AA9F3 /* ServerConfigInteractor.swift in Sources */,
 				EC460BD924C53A0D00771F34 /* BindableType.swift in Sources */,
+				EC7EFCC124D457F7002AA9F3 /* FinishInteractor.swift in Sources */,
 				EC460C4824C53A6300771F34 /* Utilities.swift in Sources */,
 				EC460BDB24C53A0D00771F34 /* ViewModelType.swift in Sources */,
 			);
@@ -763,18 +935,18 @@
 		};
 		EC460BCE24C5396100771F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */;
+			baseConfigurationReference = F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 295283YKBX;
+				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.DoctorTest;
+				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.barcoderreadere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,18 +955,18 @@
 		};
 		EC460BCF24C5396100771F34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */;
+			baseConfigurationReference = 07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 295283YKBX;
+				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.DoctorTest;
+				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.barcoderreadere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -27,7 +27,7 @@ extension LoginAssembler {
         let interactor = resolveInteractor()
         let vm: LoginViewModel = resolveViewModel(navigator: navigator, interactor: interactor)
 
-        vc.bindViewModel(vm: vm)
+        vc.bindViewModel(to: vm)
         return vc
     }
 

@@ -14,6 +14,7 @@ protocol LoginInteractorType: InteractorType {
     func validateEmail(email: String) -> (isValid: Bool, message: String)
     func validatePassword(pass: String) -> (isValid: Bool, message: String)
     func login(email: String, password: String) -> Observable<Login>
+    func verifyServerConfig(password: String) -> Observable<Void>
     
 }
 
@@ -37,5 +38,9 @@ struct LoginInteractor: LoginInteractorType {
             .do(onNext: { login in
                 UserDefaults.standard.setValue(login.memberIdx, forKey: "MemberIdx")
             })
+    }
+    
+    func verifyServerConfig(password: String) -> Observable<Void> {
+        return usecase.verifyServerConfig(password: password)
     }
 }

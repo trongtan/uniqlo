@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 
 protocol LoginNavigatorType: NavigatorType {
+    func toBarCodeReader()
+    func toVerifyServerConfig()
 }
 
 struct LoginNavigator: LoginNavigatorType {
@@ -19,5 +21,16 @@ struct LoginNavigator: LoginNavigatorType {
 
     var navigator: UINavigationController? {
         return viewController.navigationController
+    }
+    
+    func toBarCodeReader() {
+        let vc: BarcodeReaderViewController = defaultAssembler.resolveViewController()
+        navigator?.pushViewController(vc, animated: true)
+    }
+    
+    func toVerifyServerConfig() {
+         let vc: VerifyViewController = defaultAssembler.resolveViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        navigator?.present(nav, animated: true, completion: nil)
     }
 }

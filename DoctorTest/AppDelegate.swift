@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
-        
         navigationController = initNavi()
     
         window?.rootViewController = navigationController
@@ -104,9 +103,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func initNavi() -> UINavigationController {
-        let loginVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
+        let rootVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
         
-        let navigationVc = UINavigationController(rootViewController: loginVC)
+        let navigationVc = UINavigationController(rootViewController: rootVC)
         navigationVc.navigationBar.tintColor = .white
         return navigationVc
     }

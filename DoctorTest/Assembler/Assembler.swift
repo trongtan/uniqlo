@@ -7,7 +7,12 @@
 //
 
 protocol Assembler: class,
-    LoginAssembler
+    LoginAssembler,
+    BarcodeReaderAssembler,
+    InformationAssembler,
+    FinishAssembler,
+    ServerConfigAssembler,
+    VerifyAssembler
 {
 }
 
