@@ -106,7 +106,7 @@
 		91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.release.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.release.xcconfig"; sourceTree = "<group>"; };
 		E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC460BAB24C5395E00771F34 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC460BAB24C5395E00771F34 /* UNIQLO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNIQLO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAE24C5395E00771F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC460BB224C5395E00771F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC460BB824C5395E00771F34 /* DoctorTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoctorTest.xcdatamodel; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		EC460BAC24C5395E00771F34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC460BAB24C5395E00771F34 /* BaseProject.app */,
+				EC460BAB24C5395E00771F34 /* UNIQLO.app */,
 				EC460BC424C5396100771F34 /* DoctorTestTests.xctest */,
 			);
 			name = Products;
@@ -548,9 +548,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC460BAA24C5395E00771F34 /* BaseProject */ = {
+		EC460BAA24C5395E00771F34 /* UNIQLO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "BaseProject" */;
+			buildConfigurationList = EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "UNIQLO" */;
 			buildPhases = (
 				41E3882893942D753CC31BD4 /* [CP] Check Pods Manifest.lock */,
 				EC460BA724C5395E00771F34 /* Sources */,
@@ -562,9 +562,9 @@
 			);
 			dependencies = (
 			);
-			name = BaseProject;
+			name = UNIQLO;
 			productName = DoctorTest;
-			productReference = EC460BAB24C5395E00771F34 /* BaseProject.app */;
+			productReference = EC460BAB24C5395E00771F34 /* UNIQLO.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC460BC324C5396100771F34 /* DoctorTestTests */ = {
@@ -618,7 +618,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC460BAA24C5395E00771F34 /* BaseProject */,
+				EC460BAA24C5395E00771F34 /* UNIQLO */,
 				EC460BC324C5396100771F34 /* DoctorTestTests */,
 			);
 		};
@@ -802,7 +802,7 @@
 /* Begin PBXTargetDependency section */
 		EC460BC624C5396100771F34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC460BAA24C5395E00771F34 /* BaseProject */;
+			target = EC460BAA24C5395E00771F34 /* UNIQLO */;
 			targetProxy = EC460BC524C5396100771F34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -938,7 +938,8 @@
 			baseConfigurationReference = F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -946,8 +947,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.barcoderreadere;
+				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.uniqlo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = test;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -958,7 +960,8 @@
 			baseConfigurationReference = 07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -966,8 +969,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.barcoderreadere;
+				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.uniqlo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = test;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1031,7 +1035,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "BaseProject" */ = {
+		EC460BCD24C5396100771F34 /* Build configuration list for PBXNativeTarget "UNIQLO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC460BCE24C5396100771F34 /* Debug */,

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EC460BAA24C5395E00771F34"
-               BuildableName = "BaseProject.app"
-               BlueprintName = "BaseProject"
+               BuildableName = "UNIQLO.app"
+               BlueprintName = "UNIQLO"
                ReferencedContainer = "container:DoctorTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC460BAA24C5395E00771F34"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
+            BuildableName = "UNIQLO.app"
+            BlueprintName = "UNIQLO"
             ReferencedContainer = "container:DoctorTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC460BAA24C5395E00771F34"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
+            BuildableName = "UNIQLO.app"
+            BlueprintName = "UNIQLO"
             ReferencedContainer = "container:DoctorTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

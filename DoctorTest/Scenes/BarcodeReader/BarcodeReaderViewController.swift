@@ -55,6 +55,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         scanner = MTBBarcodeScanner(previewView: self.previewView)
+        self.nextButton.backgroundColor = Constants.Colors.uniqlo
     }
     
     override func viewDidAppear(_ animated: Bool) {

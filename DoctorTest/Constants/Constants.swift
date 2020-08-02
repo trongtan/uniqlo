@@ -16,4 +16,8 @@ struct Constants {
         static let serverURL = "serverURL"
         static let serverPort = "serverPort"
     }
+    
+    struct Colors {
+        static let uniqlo = UIColor(hex: "#f60000").withAlphaComponent(0.8)
+    }
 }

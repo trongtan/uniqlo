@@ -115,8 +115,8 @@ class InformationViewController: ViewController, BindableType {
             $0.bankNameTrigger = bankNameTextField.rx.text.orEmpty.asDriver()
             $0.bankAccountTrigger = bankAccountTextField.rx.text.orEmpty.asDriver()
             $0.noteTrigger = noteTextField.rx.text.orEmpty.asDriver()
-            $0.personalCusTrigger = Driver.merge(Driver.just(""), personalCusButton.rx.tap.map { "Personal" }.asDriverOnErrorJustComplete())
-            $0.companyCusTrigger = Driver.merge(Driver.just(""), companyCusButton.rx.tap.map { "Company" }.asDriverOnErrorJustComplete())
+            $0.personalCusTrigger = Driver.merge(Driver.just("Personal"), personalCusButton.rx.tap.map { "Personal" }.asDriverOnErrorJustComplete())
+            $0.companyCusTrigger = companyCusButton.rx.tap.map { "Company" }.asDriverOnErrorJustComplete()
         }
         
         let input = InformationViewModel.Input(builder: inputBuilder)
@@ -146,6 +146,26 @@ class InformationViewController: ViewController, BindableType {
         output.error
             .drive(receiptErrorBinder)
             .disposed(by: disposeBag)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.nextButton.backgroundColor = Constants.Colors.uniqlo
+        self.backButton.backgroundColor = Constants.Colors.uniqlo
+        self.submitButton.backgroundColor = Constants.Colors.uniqlo
+        self.backToFillButton.backgroundColor = Constants.Colors.uniqlo
+        
+        self.personalCusButton.tintColor = Constants.Colors.uniqlo
+        
+        self.companyCusButton.rx.tap.subscribe(onNext: { _ in
+            self.personalCusButton.tintColor = .lightGray
+            self.companyCusButton.tintColor = Constants.Colors.uniqlo
+            }).disposed(by: disposeBag)
+        
+        self.personalCusButton.rx.tap.subscribe(onNext: { _ in
+            self.companyCusButton.tintColor = .lightGray
+            self.personalCusButton.tintColor = Constants.Colors.uniqlo
+            }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

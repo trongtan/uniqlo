@@ -32,9 +32,7 @@ class LoginViewController: ViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TEST
-        self.emailTextField.text = "ttt@gmail.com"
-        self.passwordTextField.text = "12122012gv!"
+        self.loginButton.backgroundColor = Constants.Colors.uniqlo
     }
     
     // MARK: BindableType

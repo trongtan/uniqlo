@@ -76,26 +76,34 @@ class InformationViewModel: ViewModelType {
             input.emailTrigger,
             input.bankNameTrigger,
             input.bankAccountTrigger,
-            input.noteTrigger,
-            input.personalCusTrigger,
-            input.companyCusTrigger
+            input.noteTrigger
         )
         
         let info = Driver.combineLatest(infoFirst, infoSecond).map { tuble -> CustomerInfo in
-            var type = tuble.1.4
-            if type.isEmpty {
-                type = tuble.1.5
-            }
-            
-            return CustomerInfo(type: type, name: tuble.0.0, company: tuble.0.1, tax: tuble.0.2, address: tuble.0.3, state: tuble.0.4, city: tuble.0.5, phone: tuble.0.6, fax: tuble.0.7, email: tuble.1.0, bankName: tuble.1.1, bankAccount: tuble.1.2, note: tuble.1.3)
+            return CustomerInfo(type: "", name: tuble.0.0, company: tuble.0.1, tax: tuble.0.2, address: tuble.0.3, state: tuble.0.4, city: tuble.0.5, phone: tuble.0.6, fax: tuble.0.7, email: tuble.1.0, bankName: tuble.1.1, bankAccount: tuble.1.2, note: tuble.1.3)
         }
         
-        let previewEnable = Driver.merge( info.map { $0.isValid }, input.backToFillTrigger.map { false })
+        let perInfo = Driver.combineLatest(input.personalCusTrigger, info).map { tuple -> CustomerInfo in
+            var info = tuple.1
+            info.type = tuple.0
+            return info
+        }
+        
+        let comInfo = Driver.combineLatest(input.companyCusTrigger, info).map { tuple -> CustomerInfo in
+            var info = tuple.1
+            info.type = tuple.0
+            return info
+        }
+        
+        let customerInfo = Driver.merge(perInfo, comInfo)
+        
+        let previewEnable = Driver.merge( customerInfo.map { $0.isValid },
+                                          input.backToFillTrigger.map { true })
         
         let preview: Driver<Bool> = Driver.merge(Driver.just(false), input.nextTrigger.map { true }, input.backToFillTrigger.map { false })
         
         let submit: Driver<Void> = input.submitTrigger
-            .withLatestFrom(info)
+            .withLatestFrom(customerInfo)
             .flatMapLatest {
                 self.interactor.submitCustomerInfo(info: $0)
                     .trackError(errorTracker)

@@ -25,6 +25,16 @@ class ServerConfigViewController: ViewController, BindableType {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.urlTextField.text = UserDefaults.standard.value(forKey: Constants.Key.serverURL) as? String ?? ""
+        self.portTextField.text = UserDefaults.standard.value(forKey: Constants.Key.serverPort) as? String ?? ""
+        
+        self.saveButton.backgroundColor = Constants.Colors.uniqlo
+    }
+    
+    
+    
     // MARK: BindableType
     
     func bindViewModel() {

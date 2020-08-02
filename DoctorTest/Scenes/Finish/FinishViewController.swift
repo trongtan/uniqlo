@@ -16,6 +16,13 @@ class FinishViewController: ViewController, BindableType {
     var viewModel: FinishViewModel!
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var finishImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.backButton.backgroundColor = Constants.Colors.uniqlo
+        finishImageView.tintColor = Constants.Colors.uniqlo
+    }
     
     // MARK: BindableType
     
