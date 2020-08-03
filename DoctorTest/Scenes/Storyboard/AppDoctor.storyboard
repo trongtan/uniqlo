@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="ZHI-Mi-pef">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Zl-Cc-yNF" customClass="LoginViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Zl-Cc-yNF" customClass="LoginViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rN9-1G-pCI">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Barcode Reader View Controller-->
         <scene sceneID="sSW-54-vf2">
             <objects>
-                <viewController storyboardIdentifier="BarcodeReaderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="706-tB-TGo" customClass="BarcodeReaderViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarcodeReaderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="706-tB-TGo" customClass="BarcodeReaderViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJD-Cd-4eu">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,13 +158,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0y-aw-7Rq">
+                                <rect key="frame" x="740" y="54" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z0s-2b-zuh"/>
+                                    <constraint firstAttribute="width" constant="50" id="amA-Ad-0eF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="V0y-aw-7Rq" firstAttribute="top" secondItem="fe9-xe-qCT" secondAttribute="top" id="2sV-Re-PxD"/>
                             <constraint firstItem="fe9-xe-qCT" firstAttribute="height" secondItem="PJD-Cd-4eu" secondAttribute="height" multiplier="0.45" id="3Dl-dt-xBQ"/>
                             <constraint firstItem="EDi-Kx-ZIp" firstAttribute="leading" secondItem="oJ8-Iu-etW" secondAttribute="leading" id="Bzc-nW-8ms"/>
                             <constraint firstItem="45g-Pm-do3" firstAttribute="trailing" secondItem="fe9-xe-qCT" secondAttribute="trailing" constant="100" id="Gw6-gN-aUl"/>
                             <constraint firstItem="fe9-xe-qCT" firstAttribute="bottom" secondItem="45g-Pm-do3" secondAttribute="centerY" id="KUQ-aU-JXd"/>
+                            <constraint firstItem="45g-Pm-do3" firstAttribute="trailing" secondItem="V0y-aw-7Rq" secondAttribute="trailing" constant="20" id="OVa-5M-QsO"/>
                             <constraint firstItem="oJ8-Iu-etW" firstAttribute="top" secondItem="MTd-Qm-ZgY" secondAttribute="bottom" constant="30" id="RVL-H3-NfR"/>
                             <constraint firstItem="EDi-Kx-ZIp" firstAttribute="top" secondItem="oJ8-Iu-etW" secondAttribute="bottom" constant="20" id="fH4-LE-UkA"/>
                             <constraint firstItem="oJ8-Iu-etW" firstAttribute="trailing" secondItem="fe9-xe-qCT" secondAttribute="trailing" id="gtg-Cy-7Hx"/>
@@ -179,6 +189,7 @@
                     </view>
                     <connections>
                         <outlet property="barCodeTextField" destination="oJ8-Iu-etW" id="YwC-3Q-hgm"/>
+                        <outlet property="logoutButton" destination="V0y-aw-7Rq" id="GIm-5H-aOC"/>
                         <outlet property="nextButton" destination="EDi-Kx-ZIp" id="a9L-ac-7fg"/>
                         <outlet property="previewView" destination="fe9-xe-qCT" id="jJA-Uj-9wU"/>
                     </connections>
@@ -190,7 +201,7 @@
         <!--Information View Controller-->
         <scene sceneID="0FT-aw-gBM">
             <objects>
-                <viewController storyboardIdentifier="InformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IzS-FW-ftO" customClass="InformationViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IzS-FW-ftO" customClass="InformationViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdL-EF-URc">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -647,7 +658,7 @@
         <!--Finish View Controller-->
         <scene sceneID="jLc-fd-RlH">
             <objects>
-                <viewController storyboardIdentifier="FinishViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bu1-kO-Zgf" customClass="FinishViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinishViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bu1-kO-Zgf" customClass="FinishViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AbR-YR-01U">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -752,7 +763,7 @@
         <!--Verify View Controller-->
         <scene sceneID="67s-EQ-P7M">
             <objects>
-                <viewController storyboardIdentifier="VerifyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ndi-Jp-SrP" customClass="VerifyViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerifyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ndi-Jp-SrP" customClass="VerifyViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iNn-ig-DeZ">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -857,7 +868,7 @@
         <!--Server Config View Controller-->
         <scene sceneID="w1R-74-WvE">
             <objects>
-                <viewController storyboardIdentifier="ServerConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irW-9H-Kyl" customClass="ServerConfigViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServerConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irW-9H-Kyl" customClass="ServerConfigViewController" customModule="UNIQLO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jdx-jB-9Up">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -949,5 +960,6 @@
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="config" width="50" height="50"/>
         <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
+        <image name="logout" width="50" height="50"/>
     </resources>
 </document>

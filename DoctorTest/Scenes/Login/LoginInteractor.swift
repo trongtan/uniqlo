@@ -22,11 +22,12 @@ struct LoginInteractor: LoginInteractorType {
     let usecase: NetworkUseCaseType
     
     func validateEmail(email: String) -> (isValid: Bool, message: String) {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//
+//        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        
-        return (emailPred.evaluate(with: email), "")
+//        return (emailPred.evaluate(with: email), "")
+        return (!email.isEmpty, "")
     }
     
     func validatePassword(pass: String) -> (isValid: Bool, message: String) {

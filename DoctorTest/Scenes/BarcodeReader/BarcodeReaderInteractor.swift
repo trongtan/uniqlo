@@ -12,6 +12,7 @@ import RxCocoa
 
 protocol BarcodeReaderInteractorType {
     func receipt(barcode: String) -> Observable<Receipt>
+    func logout() -> Observable<Void>
     
 }
 
@@ -20,5 +21,11 @@ struct BarcodeReaderInteractor: BarcodeReaderInteractorType {
     
     func receipt(barcode: String) -> Observable<Receipt> {
         return usecase.receipt(barcode: barcode)
+    }
+    
+    func logout() -> Observable<Void> {
+        //TODO: Clear token
+        
+        return Observable.just(())
     }
 }

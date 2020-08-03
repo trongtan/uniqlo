@@ -20,6 +20,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var previewView: UIView!
     
+    @IBOutlet weak var logoutButton: UIButton!
     var scanner: MTBBarcodeScanner?
     
     private var receiptErrorBinder: Binder<Error> {
@@ -33,6 +34,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
         let inputBuilder = BarcodeReaderViewModel.InputBuilder().then {
             $0.barcodeTrigger = barCodeTextField.rx.text.orEmpty.asDriver()
             $0.nextButtonTrigger = nextButton.rx.tap.asDriver()
+            $0.logoutButtonTrigger = logoutButton.rx.tap.asDriver()
         }
         
         let input = BarcodeReaderViewModel.Input(builder: inputBuilder)
@@ -49,6 +51,10 @@ class BarcodeReaderViewController: ViewController, BindableType {
         
         output.error
             .drive(receiptErrorBinder)
+            .disposed(by: disposeBag)
+        
+        output.logout
+            .drive()
             .disposed(by: disposeBag)
     }
     

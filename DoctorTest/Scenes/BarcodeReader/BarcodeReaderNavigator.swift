@@ -12,6 +12,7 @@ import RxCocoa
 
 protocol BarcodeReaderNavigatorType {
     func toFillInformationPage(with receipt: Receipt)
+    func backToLogin()
 }
 
 struct BarcodeReaderNavigator: BarcodeReaderNavigatorType {
@@ -25,5 +26,9 @@ struct BarcodeReaderNavigator: BarcodeReaderNavigatorType {
     func toFillInformationPage(with receipt: Receipt) {
         let informationVC: InformationViewController = defaultAssembler.resolveViewController(receipt: receipt)
         navigator?.pushViewController(informationVC, animated: true)
+    }
+    
+    func backToLogin() {
+        navigator?.popToRootViewController(animated: true)
     }
 }

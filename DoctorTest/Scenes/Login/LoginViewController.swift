@@ -33,6 +33,8 @@ class LoginViewController: ViewController, BindableType {
         super.viewDidLoad()
         
         self.loginButton.backgroundColor = Constants.Colors.uniqlo
+        self.emailTextField.text = "abc@abc.com"
+        self.passwordTextField.text = "abc"
     }
     
     // MARK: BindableType

@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationItem.backBarButtonItem?.title = ""
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.navigationBar.tintColor = UIColor.white
+//        navigationController?.navigationItem.backBarButtonItem?.title = ""
         
         self.view.rx.tapGesture().subscribe(onNext: { _ in
             self.view.endEditing(true)

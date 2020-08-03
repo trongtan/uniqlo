@@ -23,10 +23,12 @@ class BarcodeReaderViewModel: ViewModelType {
     struct Input {
         let barcodeTrigger: Driver<String>
         let nextButtonTrigger: Driver<Void>
+        let logoutButtonTrigger: Driver<Void>
     }
     
     struct Output {
         let next: Driver<Receipt>
+        let logout: Driver<Void>
         let nextButtonEnable: Driver<Bool>
         let error: Driver<Error>
     }
@@ -48,7 +50,16 @@ class BarcodeReaderViewModel: ViewModelType {
         let nextButtonEnable = input.barcodeTrigger
             .map { !$0.isEmpty }
         
+        let logout = input.logoutButtonTrigger.flatMapLatest {
+            self.interactor
+                .logout()
+                .asDriverOnErrorJustComplete()
+        }.do(onNext: { _ in
+            self.navigator.backToLogin()
+        })
+        
         return Output(next: next,
+                      logout: logout,
                       nextButtonEnable: nextButtonEnable,
                       error: errorTracker.asDriver())
     }
@@ -58,12 +69,14 @@ extension BarcodeReaderViewModel {
     final class InputBuilder: Then {
         var barcodeTrigger: Driver<String> = Driver.empty()
         var nextButtonTrigger: Driver<Void> = Driver.empty()
+        var logoutButtonTrigger: Driver<Void> = Driver.empty()
     }
 }
 
 extension BarcodeReaderViewModel.Input {
     init(builder: BarcodeReaderViewModel.InputBuilder) {
         self.init(barcodeTrigger: builder.barcodeTrigger,
-                  nextButtonTrigger: builder.nextButtonTrigger)
+                  nextButtonTrigger: builder.nextButtonTrigger,
+                  logoutButtonTrigger: builder.logoutButtonTrigger)
     }
 }
