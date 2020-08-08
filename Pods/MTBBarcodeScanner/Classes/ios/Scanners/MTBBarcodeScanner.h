@@ -327,4 +327,7 @@ typedef NS_ENUM(NSUInteger, MTBTorchMode) {
  */
 - (BOOL)isCapturingStillImage;
 
+
+- (void)refreshVideoOrientation;
+
 @end
