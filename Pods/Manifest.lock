@@ -21,6 +21,9 @@ PODS:
   - RxAppState (1.4.1):
     - RxCocoa (~> 4.3)
     - RxSwift (~> 4.3)
+  - RxBiBinding (0.1.7):
+    - RxCocoa (~> 4.2)
+    - RxSwift (~> 4.2)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.1.0):
@@ -54,6 +57,7 @@ DEPENDENCIES:
   - Reusable (~> 4.0)
   - RxAlamofire (~> 4.0)
   - RxAppState
+  - RxBiBinding
   - RxCocoa (~> 4.1)
   - RxDataSources (~> 3.0)
   - RxGesture (~> 2.0.1)
@@ -77,6 +81,7 @@ SPEC REPOS:
     - Reusable
     - RxAlamofire
     - RxAppState
+    - RxBiBinding
     - RxCocoa
     - RxDataSources
     - RxGesture
@@ -99,6 +104,7 @@ SPEC CHECKSUMS:
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxAppState: 5f4aea9eb375e597ab394d60c5a41fe0e6fd0f2a
+  RxBiBinding: c3a83fec471d0f146c1e89b0a2f2f8f1e0270829
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxGesture: 26ede4ed13ffc6336d29dbd9a8dff229bdb72de7
@@ -109,6 +115,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 9027ee2b6b2b17c2bf3b9c087435fda05c18b9d1
+PODFILE CHECKSUM: 2fe70a71289abebc668df547a6fca2885f400a93
 
 COCOAPODS: 1.8.4

@@ -25,7 +25,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     
     private var receiptErrorBinder: Binder<Error> {
         return Binder(self) { vc, error in
-            vc.showAlert(title: "Invalid barcode", message: "Your barcode is invalid. Please check")
+            vc.showAlert(title: "Error", message: error.localizedDescription)
         }
     }
     // MARK: BindableType

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B572506F2B7DDD2167C23AA0 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */; };
+		541460F7A44E5432BA72E327 /* Pods_UNIQLO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */; };
 		CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
@@ -99,13 +99,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNIQLO.release.xcconfig"; path = "Target Support Files/Pods-UNIQLO/Pods-UNIQLO.release.xcconfig"; sourceTree = "<group>"; };
 		07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.debug.xcconfig"; sourceTree = "<group>"; };
 		91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.release.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.release.xcconfig"; sourceTree = "<group>"; };
-		E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UNIQLO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNIQLO.debug.xcconfig"; path = "Target Support Files/Pods-UNIQLO/Pods-UNIQLO.debug.xcconfig"; sourceTree = "<group>"; };
 		EC460BAB24C5395E00771F34 /* UNIQLO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNIQLO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAE24C5395E00771F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC460BB224C5395E00771F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B572506F2B7DDD2167C23AA0 /* Pods_BaseProject.framework in Frameworks */,
+				541460F7A44E5432BA72E327 /* Pods_UNIQLO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +221,8 @@
 				91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */,
 				F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */,
 				07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */,
+				A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */,
+				061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -540,7 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */,
-				E54A5DB22C6F4478B5E5D787 /* Pods_BaseProject.framework */,
+				A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -660,7 +664,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseProject-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-UNIQLO-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -695,15 +699,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UNIQLO/Pods-UNIQLO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UNIQLO/Pods-UNIQLO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UNIQLO/Pods-UNIQLO-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -935,12 +939,12 @@
 		};
 		EC460BCE24C5396100771F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */;
+			baseConfigurationReference = A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -958,12 +962,12 @@
 		};
 		EC460BCF24C5396100771F34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */;
+			baseConfigurationReference = 061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

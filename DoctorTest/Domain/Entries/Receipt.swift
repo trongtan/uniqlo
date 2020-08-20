@@ -10,13 +10,30 @@ import Foundation
 
 struct Receipt: Codable {
     
-    static let fakeReceipt = Receipt(code: "2010010199129010101", date: "01/08/2020 16:00:15", total: "500000 VND")
-    var code: String = ""
-    var date: String = ""
-    var total: String = ""
+    static let fakeReceipt = Receipt(receiptCode: "2010010199129010101", totalAmount: 500000)
+    
+    
+    var receiptCode: String = ""
+    var date: Date = Date() //2020-05-28T08:05:51
+    var totalAmount: Int = 0
+    
+    var retailStoreID: Int = 0
+    var isBusiness: Bool = false
+    var name: String = ""
+    var legalName: String = ""
+    var taxCode: String = ""
+    var address: String = ""
+    var city: String = ""
+    var district: String = ""
+    var fax: String = ""
+    var email: String = ""
+    var phone: String = ""
+    var bankAccount: String = ""
+    var bankName: String = ""
+    var notes: String = ""
     
     var displayCode: String {
-        return "Receipt code:  \(code)"
+        return "Receipt code:  \(receiptCode)"
     }
     
     var displayDate: String {
@@ -24,6 +41,8 @@ struct Receipt: Codable {
     }
     
     var displayTotal: String {
-        return "Total:  \(total)"
+        return "Total:  \(totalAmount)"
     }
 }
+
+

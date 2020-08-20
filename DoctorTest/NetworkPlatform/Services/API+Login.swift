@@ -21,11 +21,10 @@ extension API {
     final class LoginInput: APIInput {
         init(email: String, password: String) {
             let parameters: [String: Any] =
-                ["member_id": email,
-                 "member_pw": password,
-                 "gcm_key": 2,
-                 "device_os": "I"
-            ]
+                ["username": email,
+                 "password": password,
+                 "clientId": Constants.Configs.clientID
+                ]
             
             super.init(resource: .login,
                        parameters: parameters,

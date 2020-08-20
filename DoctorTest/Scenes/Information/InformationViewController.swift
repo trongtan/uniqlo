@@ -11,6 +11,7 @@ import Reusable
 import RxCocoa
 import RxSwift
 import Then
+import RxBiBinding
 
 class InformationViewController: ViewController, BindableType {
     var viewModel: InformationViewModel!
@@ -56,6 +57,17 @@ class InformationViewController: ViewController, BindableType {
             vc.receiptCodeLabel.text = receipt.displayCode
             vc.dateLabel.text = receipt.displayDate
             vc.totalLabel.text = receipt.displayTotal
+            
+            vc.nameTextField.text = receipt.name
+            vc.companyNameTextField.text = receipt.legalName
+            vc.taxTextField.text = receipt.taxCode
+            vc.addressTextField.text = receipt.address
+            vc.stateTextField.text = receipt.district
+            vc.cityTextField.text = receipt.city
+            vc.phoneTextField.text = receipt.phone
+            vc.bankAccountTextField.text = receipt.bankAccount
+            vc.bankNameTextField.text = receipt.bankName
+            vc.noteTextField.text = receipt.notes
         }
     }
     
@@ -150,6 +162,7 @@ class InformationViewController: ViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.nextButton.backgroundColor = Constants.Colors.uniqlo
         self.backButton.backgroundColor = Constants.Colors.uniqlo
         self.submitButton.backgroundColor = Constants.Colors.uniqlo

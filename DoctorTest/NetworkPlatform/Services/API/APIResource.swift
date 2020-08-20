@@ -25,11 +25,11 @@ extension API {
         var resource: (method: HTTPMethod, route: String) {
             switch self {
             case .login:
-                return (.post, "login_v_1_0_0/member_login")
+                return (.post, "api/login")
             case .receipt:
-                return (.post, "login_v_1_0_0/member_login")
+                return (.get, "api/customer")
             case .information:
-                return (.post, "login_v_1_0_0/member_login")
+                return (.post, "api/customer")
             case .networkConfig:
                 return (.post, "login_v_1_0_0/member_login")
             case .verifyNetworkConfig:

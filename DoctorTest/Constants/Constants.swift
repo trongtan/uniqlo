@@ -20,4 +20,9 @@ struct Constants {
     struct Colors {
         static let uniqlo = UIColor(hex: "#f60000").withAlphaComponent(0.8)
     }
+    
+    struct Configs {
+        static let clientID = "BD067717-C227-48C8-8135-724CD3C6D4BE"
+        static let receiptCodeLength =  5//26
+    }
 }

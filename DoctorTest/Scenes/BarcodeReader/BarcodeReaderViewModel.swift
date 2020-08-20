@@ -39,9 +39,17 @@ class BarcodeReaderViewModel: ViewModelType {
         let next = input.nextButtonTrigger
             .withLatestFrom(input.barcodeTrigger)
             .flatMapLatest {
-                self.interactor.receipt(barcode: $0)
+                self.interactor
+                    .validateReceiptCode(barcode: $0)
                     .trackError(errorTracker)
                     .asDriverOnErrorJustComplete()
+        }
+        .withLatestFrom(input.barcodeTrigger)
+        .flatMapLatest {
+            self.interactor
+                .receipt(barcode: $0)
+                .trackError(errorTracker)
+                .asDriverOnErrorJustComplete()
         }
         .do(onNext: { receipt in
             self.navigator.toFillInformationPage(with: receipt)

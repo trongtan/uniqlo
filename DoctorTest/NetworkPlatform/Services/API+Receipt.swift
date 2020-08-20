@@ -22,11 +22,11 @@ extension API {
     final class ReceiptInput: APIInput {
         init(barcode: String) {
             let parameters: [String: Any] =
-                ["barcode": barcode]
+                ["receiptCode": barcode]
             
             super.init(resource: .receipt,
                        parameters: parameters,
-                       requireAccessToken: false)
+                       requireAccessToken: true)
             
         }
     }

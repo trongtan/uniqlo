@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BaseProjectVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BaseProjectVersionString[];
+FOUNDATION_EXPORT double RxBiBindingVersionNumber;
+FOUNDATION_EXPORT const unsigned char RxBiBindingVersionString[];
 
