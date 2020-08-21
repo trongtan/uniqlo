@@ -17,7 +17,7 @@ protocol RepositoryType {
 protocol NetworkRepositoryType: RepositoryType {
     func login(email: String, password: String) ->  Observable<Login?>
     func receipt(barcode: String) -> Observable<Receipt>
-    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void>
+    func submitCustomerInfo(info: Receipt) -> Observable<Void>
     func verifyServerConfig(password: String) -> Observable<Void>
 }
 
@@ -33,49 +33,44 @@ final class NetworkRepository: NetworkRepositoryType {
     }
     
     func login(email: String, password: String) ->  Observable<Login?> {
-        Observable.just(Login(code: "1000", codeMsg: "", memberIdx: "", memberId: "", memberName: ""))
-//
-//        let input = API.LoginInput(email: email, password: password)
-//        return api.login(input).map { output -> Login in
-//            guard let login = output.login else {
-//                throw API.APIError.invalidResponseData
-//            }
-//            return login
-//        }
+        let input = API.LoginInput(email: email, password: password)
+        return api.login(input).map { output -> Login in
+            guard let login = output.login else {
+                throw API.APIError.customError(localizeDescription: output.message)
+            }
+            return login
+        }
     }
     
     func receipt(barcode: String) -> Observable<Receipt> {
-        Observable.just(Receipt.fakeReceipt)
-        //        let input = API.ReceiptInput(barcode: barcode)
-        //        return api.receipt(input).map { output -> Receipt in
-        //            guard let receipt = output.receipt else {
-        //                throw API.APIError.invalidResponseData
-        //            }
-        //            return receipt
-        //        }
+        let input = API.ReceiptInput(barcode: barcode)
+        return api.receipt(input).map { output -> Receipt in
+            guard let receipt = output.receipt else {
+                throw API.APIError.customError(localizeDescription: output.message)
+            }
+            return receipt
+        }
     }
     
-    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void> {
-        return Observable.just(())
-        
-        //        let input = API.CustomerInfoInput(info: info)
-        //        return api.submitCustomerInfo(input).map { output -> Void in
-        //            guard let isSuccess = output.isSuccess, isSuccess else {
-        //                throw API.APIError.invalidResponseData
-        //            }
-        //            return ()
-        //        }
+    func submitCustomerInfo(info: Receipt) -> Observable<Void> {
+        let input = API.CustomerInfoInput(info: info)
+        return api.submitCustomerInfo(input).map { output -> Void in
+            guard let _ = output.isSuccess  else {
+                throw API.APIError.invalidResponseData
+            }
+            return ()
+        }
     }
     
     func verifyServerConfig(password: String) -> Observable<Void> {
-        return Observable.just(())
-        
-//        let input = API.ServerConfigInput(password: password)
-//        return api.verifyServerConfig(input).map { output -> Void in
-//            guard let isSuccess = output.isSuccess, isSuccess else {
-//                throw API.APIError.invalidResponseData
-//            }
-//            return ()
-//        }
+        return Observable.create { observable in
+            if password == Constants.Configs.defaultPassword {
+                observable.onNext(())
+            } else {
+                observable.onError(API.APIError.customError(localizeDescription: "Vui lòng kiểm tra lại mật khẩu."))
+            }
+
+            return Disposables.create()
+        }
     }
 }

@@ -16,10 +16,6 @@ extension Login: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        memberId <- map["member_id"]
-        memberIdx <- map["member_idx"]
-        memberName <- map["member_name"]
-        codeMsg <- map["code_msg"]
-        code <- map["code"]
+        accessToken <- map["accessToken"]
     }
 }

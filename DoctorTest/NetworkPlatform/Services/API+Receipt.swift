@@ -36,7 +36,7 @@ extension API {
 
         override func mapping(map: Map) {
             super.mapping(map: map)
-            receipt = Receipt(map: map)
+            receipt <- map["data"]
         }
     }
 }

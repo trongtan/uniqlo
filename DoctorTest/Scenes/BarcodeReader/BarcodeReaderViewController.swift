@@ -25,7 +25,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     
     private var receiptErrorBinder: Binder<Error> {
         return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: error.localizedDescription)
+            vc.showAlert(title: "Error", message: "\(error)")
         }
     }
     // MARK: BindableType
@@ -66,7 +66,8 @@ class BarcodeReaderViewController: ViewController, BindableType {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        barCodeTextField.text = "66202005291727060009010007"
+
         MTBBarcodeScanner.requestCameraPermission(success: { success in
             if success {
                 do {

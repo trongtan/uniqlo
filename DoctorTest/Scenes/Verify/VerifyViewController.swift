@@ -26,7 +26,7 @@ class VerifyViewController: ViewController, BindableType {
     // MARK: BindableType
     private var errorBinder: Binder<Error> {
         return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: "\(error.localizedDescription)")
+            vc.showAlert(title: "Error", message: "\(error)")
         }
     }
     

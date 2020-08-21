@@ -22,20 +22,20 @@ class NetworkUseCase: NetworkUseCaseType {
         self.networkRepository = networkRepository
     }
     
-    func login(email: String, password: String) -> Observable<Login> {
-        return self.networkRepository.login(email: email, password: password).map { login -> Login in
-            if let login = login, !login.isSuccess {
-                throw NetworkError.loginFail(localizeDescription: login.codeMsg)
-            }
-            return login!
-        }
+    func login(email: String, password: String) -> Observable<Bool> {
+        return self.networkRepository.login(email: email, password: password)
+            .do(onNext: { login in
+                if let token = login?.accessToken {
+                    UserDefaults.standard.setValue(token, forKey: Constants.Key.token)
+                }
+            }).map { $0 != nil }
     }
     
     func receipt(barcode: String) -> Observable<Receipt> {
         return self.networkRepository.receipt(barcode: barcode)
     }
     
-    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void> {
+    func submitCustomerInfo(info: Receipt) -> Observable<Void> {
         return self.networkRepository.submitCustomerInfo(info: info)
     }
     

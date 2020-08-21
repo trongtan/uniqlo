@@ -80,7 +80,6 @@
 		EC7EFCDC24D500F2002AA9F3 /* Receipt+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDB24D500F2002AA9F3 /* Receipt+Mapping.swift */; };
 		EC7EFCDE24D52412002AA9F3 /* API+CustomerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */; };
 		EC7EFCE024D52486002AA9F3 /* CustomerInfo+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCDF24D52486002AA9F3 /* CustomerInfo+Mapping.swift */; };
-		EC7EFCE224D5B392002AA9F3 /* API+VerfifyServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */; };
 		EC7EFCE824D65539002AA9F3 /* VerifyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE324D65538002AA9F3 /* VerifyAssembler.swift */; };
 		EC7EFCE924D65539002AA9F3 /* VerifyNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE424D65538002AA9F3 /* VerifyNavigator.swift */; };
 		EC7EFCEA24D65539002AA9F3 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */; };
@@ -183,7 +182,6 @@
 		EC7EFCDB24D500F2002AA9F3 /* Receipt+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+Mapping.swift"; sourceTree = "<group>"; };
 		EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+CustomerInfo.swift"; sourceTree = "<group>"; };
 		EC7EFCDF24D52486002AA9F3 /* CustomerInfo+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomerInfo+Mapping.swift"; sourceTree = "<group>"; };
-		EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+VerfifyServerConfig.swift"; sourceTree = "<group>"; };
 		EC7EFCE324D65538002AA9F3 /* VerifyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAssembler.swift; sourceTree = "<group>"; };
 		EC7EFCE424D65538002AA9F3 /* VerifyNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyNavigator.swift; sourceTree = "<group>"; };
 		EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
@@ -405,7 +403,6 @@
 				EC7EFCDD24D52412002AA9F3 /* API+CustomerInfo.swift */,
 				EC460C0924C53A4D00771F34 /* API */,
 				EC460C8224C9707400771F34 /* CustomEncoding.swift */,
-				EC7EFCE124D5B392002AA9F3 /* API+VerfifyServerConfig.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -765,7 +762,6 @@
 				EC460C3724C53A5300771F34 /* AppNavigator.swift in Sources */,
 				EC460BFA24C53A4700771F34 /* UIView+Ext.swift in Sources */,
 				EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */,
-				EC7EFCE224D5B392002AA9F3 /* API+VerfifyServerConfig.swift in Sources */,
 				EC7EFCCD24D4582B002AA9F3 /* ServerConfigViewModel.swift in Sources */,
 				EC7EFCA924D3B94F002AA9F3 /* BarcodeReaderNavigator.swift in Sources */,
 				EC7EFCDC24D500F2002AA9F3 /* Receipt+Mapping.swift in Sources */,

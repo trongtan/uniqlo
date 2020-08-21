@@ -9,14 +9,14 @@
 import ObjectMapper
 
 class APIOutput: APIOutputBase {
-    private(set) var code: Int!
-    private(set) var field: ErrorField!
+    private(set) var statusCode: Int!
+    private(set) var error: ErrorField!
     private(set) var message: String!
 
     override func mapping(map: Map) {
-        code <- map["errors.code"]
-        field <- map["errors.field"]
-        message <- map["errors.message"]
+        statusCode <- map["statusCode"]
+        error <- map["error"]
+        message <- map["message"]
     }
 }
 

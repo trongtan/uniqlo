@@ -13,7 +13,7 @@ import RxCocoa
 protocol LoginInteractorType: InteractorType {
     func validateEmail(email: String) -> (isValid: Bool, message: String)
     func validatePassword(pass: String) -> (isValid: Bool, message: String)
-    func login(email: String, password: String) -> Observable<Login>
+    func login(email: String, password: String) -> Observable<Void>
     func verifyServerConfig(password: String) -> Observable<Void>
     
 }
@@ -34,11 +34,8 @@ struct LoginInteractor: LoginInteractorType {
         return (!pass.isEmpty, "")
     }
     
-    func login(email: String, password: String) -> Observable<Login> {
-        return usecase.login(email: email, password: password)
-            .do(onNext: { login in
-                UserDefaults.standard.setValue(login.memberIdx, forKey: "MemberIdx")
-            })
+    func login(email: String, password: String) -> Observable<Void> {
+        return usecase.login(email: email, password: password).mapToVoid()
     }
     
     func verifyServerConfig(password: String) -> Observable<Void> {

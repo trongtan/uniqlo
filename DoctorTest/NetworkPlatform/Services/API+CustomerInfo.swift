@@ -20,13 +20,31 @@ extension API {
 // MARK: - Login
 extension API {
     final class CustomerInfoInput: APIInput {
-        init(info: CustomerInfo) {
+        init(info: Receipt) {
             let parameters: [String: Any] =
-                ["barcode": "barcode"]
+                [
+                    "receiptCode": info.receiptCode,
+                    "date": info.date,
+                    "totalAmount": info.totalAmount,
+                    "retailStoreID": info.retailStoreID,
+                    "isBusiness": info.isBusiness,
+                    "name": info.name,
+                    "legalName": info.legalName,
+                    "taxCode": info.taxCode,
+                    "address": info.address,
+                    "city": info.city,
+                    "district": info.district,
+                    "fax": info.fax,
+                    "email": info.email,
+                    "phone": info.phone,
+                    "bankAccount": info.bankAccount,
+                    "bankName": info.bankName,
+                    "notes": info.notes
+            ]
             
             super.init(resource: .information,
                        parameters: parameters,
-                       requireAccessToken: false)
+                       requireAccessToken: true)
             
         }
     }
@@ -36,8 +54,7 @@ extension API {
 
         override func mapping(map: Map) {
             super.mapping(map: map)
-            isSuccess = true
-//            receipt = Receipt(map: map)
+            isSuccess <- map["data"]
         }
     }
 }

@@ -34,8 +34,7 @@ class InformationViewModel: ViewModelType {
         let bankNameTrigger: Driver<String>
         let bankAccountTrigger: Driver<String>
         let noteTrigger: Driver<String>
-        let personalCusTrigger: Driver<String>
-        let companyCusTrigger: Driver<String>
+        let isBusineessTrigger: Driver<Bool>
         
         let backTrigger: Driver<Void>
         let submitTrigger: Driver<Void>
@@ -79,31 +78,32 @@ class InformationViewModel: ViewModelType {
             input.noteTrigger
         )
         
-        let info = Driver.combineLatest(infoFirst, infoSecond).map { tuble -> CustomerInfo in
-            return CustomerInfo(type: "", name: tuble.0.0, company: tuble.0.1, tax: tuble.0.2, address: tuble.0.3, state: tuble.0.4, city: tuble.0.5, phone: tuble.0.6, fax: tuble.0.7, email: tuble.1.0, bankName: tuble.1.1, bankAccount: tuble.1.2, note: tuble.1.3)
+        let info = Driver.combineLatest(receipt, infoFirst, infoSecond, input.isBusineessTrigger).map { tuble -> Receipt in
+            var receipt = tuble.0
+            receipt.isBusiness = tuble.3
+            receipt.name = tuble.1.0
+            receipt.legalName = tuble.1.1
+            receipt.taxCode = tuble.1.2
+            receipt.address = tuble.1.3
+            receipt.district = tuble.1.4
+            receipt.city = tuble.1.5
+            receipt.phone = tuble.1.6
+            receipt.fax = tuble.1.7
+            receipt.email = tuble.2.0
+            receipt.bankName = tuble.2.1
+            receipt.bankAccount = tuble.2.2
+            receipt.notes = tuble.2.3
+
+            return receipt
         }
-        
-        let perInfo = Driver.combineLatest(input.personalCusTrigger, info).map { tuple -> CustomerInfo in
-            var info = tuple.1
-            info.type = tuple.0
-            return info
-        }
-        
-        let comInfo = Driver.combineLatest(input.companyCusTrigger, info).map { tuple -> CustomerInfo in
-            var info = tuple.1
-            info.type = tuple.0
-            return info
-        }
-        
-        let customerInfo = Driver.merge(perInfo, comInfo)
-        
-        let previewEnable = Driver.merge( customerInfo.map { $0.isValid },
+
+        let previewEnable = Driver.merge( info.map { $0.isValid },
                                           input.backToFillTrigger.map { true })
         
         let preview: Driver<Bool> = Driver.merge(Driver.just(false), input.nextTrigger.map { true }, input.backToFillTrigger.map { false })
         
         let submit: Driver<Void> = input.submitTrigger
-            .withLatestFrom(customerInfo)
+            .withLatestFrom(info)
             .flatMapLatest {
                 self.interactor.submitCustomerInfo(info: $0)
                     .trackError(errorTracker)
@@ -136,8 +136,7 @@ extension InformationViewModel {
         var bankNameTrigger: Driver<String> = Driver.empty()
         var bankAccountTrigger: Driver<String> = Driver.empty()
         var noteTrigger: Driver<String> = Driver.empty()
-        var personalCusTrigger: Driver<String> = Driver.empty()
-        var companyCusTrigger: Driver<String> = Driver.empty()
+        var isBusineessTrigger: Driver<Bool> = Driver.empty()
         var backTrigger: Driver<Void> = Driver.empty()
         var nextTrigger: Driver<Void> = Driver.empty()
         var submitTrigger: Driver<Void> = Driver.empty()
@@ -160,8 +159,7 @@ extension InformationViewModel.Input {
                   bankNameTrigger: builder.bankNameTrigger,
                   bankAccountTrigger: builder.bankAccountTrigger,
                   noteTrigger: builder.noteTrigger,
-                  personalCusTrigger: builder.personalCusTrigger,
-                  companyCusTrigger: builder.companyCusTrigger,
+                  isBusineessTrigger: builder.isBusineessTrigger,
                   backTrigger: builder.backTrigger,
                   submitTrigger: builder.submitTrigger,
                   nextTrigger: builder.nextTrigger,

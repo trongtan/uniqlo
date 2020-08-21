@@ -40,7 +40,7 @@ extension API {
             case .invalidResponseData:
                 return .others
             case let .error(response):
-                return response.field ?? .others
+                return response.error ?? .others
             case .invalidToken:
                 return .others
             case .customError:
@@ -53,7 +53,7 @@ extension API {
         var code: Int {
             switch self {
             case let .error(response):
-                return response.code ?? 0
+                return response.statusCode ?? 0
             default:
                 return 0
             }

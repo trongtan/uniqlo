@@ -122,12 +122,11 @@ extension API {
         return Observable.deferred {
             if input.requireAccessToken {
                 // MARK: get token
-                
-                let token = UserDefaults.standard.value(forKey: Constants.Key.token) as! String
+
                 var headers = input.headers
-                headers["Authorization"] = "Bearer \(token)"
+                headers["Authorization"] = "Bearer \(UserDefaults.accessToken)"
                 input.headers = headers
-                input.accessToken = token
+                input.accessToken = UserDefaults.accessToken
                 return Observable.just(input)
             } else {
                 return Observable.just(input)

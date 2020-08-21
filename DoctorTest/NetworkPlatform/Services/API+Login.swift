@@ -38,7 +38,7 @@ extension API {
 
         override func mapping(map: Map) {
             super.mapping(map: map)
-            login = Login(map: map)
+            login <- map["data"]
         }
     }
 }

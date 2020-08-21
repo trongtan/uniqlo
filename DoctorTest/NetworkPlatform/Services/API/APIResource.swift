@@ -11,7 +11,7 @@ import Alamofire
 
 extension API {
     enum ServerURL: String {
-        case dev = "http://dev-api.martjangbogo.com/"
+        case dev = "http://192.168.1.225:8080"
     }
     
     enum APIResource {
@@ -25,11 +25,11 @@ extension API {
         var resource: (method: HTTPMethod, route: String) {
             switch self {
             case .login:
-                return (.post, "api/login")
+                return (.post, "/api/login")
             case .receipt:
-                return (.get, "api/customer")
+                return (.get, "/api/customer")
             case .information:
-                return (.post, "api/customer")
+                return (.post, "/api/customer")
             case .networkConfig:
                 return (.post, "login_v_1_0_0/member_login")
             case .verifyNetworkConfig:

@@ -25,8 +25,7 @@ struct BarcodeReaderInteractor: BarcodeReaderInteractorType {
     }
     
     func logout() -> Observable<Void> {
-        //TODO: Clear token
-        
+        UserDefaults.standard.set(nil, forKey: Constants.Key.token)
         return Observable.just(())
     }
     
@@ -35,7 +34,7 @@ struct BarcodeReaderInteractor: BarcodeReaderInteractorType {
             if barcode.count == Constants.Configs.receiptCodeLength {
                 observable.onNext(true)
             } else {
-                observable.onError(NSError(domain: "Error", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid receipt code."]))
+                observable.onError(API.APIError.customError(localizeDescription: "Invalid receipt code."))
             }
             
             return Disposables.create()

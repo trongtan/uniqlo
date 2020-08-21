@@ -31,7 +31,7 @@ class LoginViewModel: ViewModelType {
     }
     
     struct Output {
-        let login: Driver<Login>
+        let login: Driver<Void>
         let loginEnable: Driver<Bool>
         let error: Driver<Error>
         let errorEmailVerification: Driver<Error>

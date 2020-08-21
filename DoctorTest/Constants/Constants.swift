@@ -23,6 +23,7 @@ struct Constants {
     
     struct Configs {
         static let clientID = "BD067717-C227-48C8-8135-724CD3C6D4BE"
-        static let receiptCodeLength =  5//26
+        static let receiptCodeLength = 26
+        static let defaultPassword = "lego123"
     }
 }

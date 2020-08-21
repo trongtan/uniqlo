@@ -70,6 +70,7 @@ class LoginViewController: ViewController, BindableType {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//        initServerConfig()
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -81,4 +82,12 @@ class LoginViewController: ViewController, BindableType {
 
 extension LoginViewController: StoryboardSceneBased {
     static var sceneStoryboard = AppStoryboard.appDoctor.instance
+}
+
+extension LoginViewController {
+    private func initServerConfig() {
+        if let serverURL = UserDefaults.serverURL as? String, serverURL.isEmpty {
+            self.showAlert(title: "Error", message: "Please config your server.")
+        }
+    }
 }

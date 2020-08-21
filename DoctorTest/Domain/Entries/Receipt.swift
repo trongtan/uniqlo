@@ -14,7 +14,7 @@ struct Receipt: Codable {
     
     
     var receiptCode: String = ""
-    var date: Date = Date() //2020-05-28T08:05:51
+    var date: String = ""
     var totalAmount: Int = 0
     
     var retailStoreID: Int = 0
@@ -37,11 +37,26 @@ struct Receipt: Codable {
     }
     
     var displayDate: String {
-        return "Date: \(date)"  
+        return "Date: \(date.replacingOccurrences(of: "T", with: " "))"
     }
     
     var displayTotal: String {
-        return "Total:  \(totalAmount)"
+        return "Total:  \(totalAmount) VND"
+    }
+
+    var isValid: Bool {
+        return true
+//        return !name.isEmpty &&
+//            !legalName.isEmpty &&
+//            !taxCode.isEmpty &&
+//            !address.isEmpty &&
+//            !district.isEmpty &&
+//            !city.isEmpty &&
+//            !phone.isEmpty &&
+//            !fax.isEmpty &&
+//            !email.isEmpty &&
+//            !bankName.isEmpty &&
+//            !bankAccount.isEmpty
     }
 }
 

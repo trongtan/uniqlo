@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
         navigationController = initNavi()
-        initServerConfig()
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
@@ -105,18 +104,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func initNavi() -> UINavigationController {
-        let rootVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
+        let loginVC: LoginViewController = DefaultAssembler.shared.resolveViewController()
+        let barCodeVC: BarcodeReaderViewController = DefaultAssembler.shared.resolveViewController()
         
-        let navigationVc = UINavigationController(rootViewController: rootVC)
+        let navigationVc = UINavigationController(rootViewController: loginVC)
+        if !UserDefaults.accessToken.isEmpty {
+            navigationVc.pushViewController(barCodeVC, animated: false)
+        }
+
         navigationVc.navigationBar.tintColor = .white
         return navigationVc
-    }
-    
-    func initServerConfig() {
-        if let serverURL = UserDefaults.serverURL as? String, let serverPort = UserDefaults.serverPort as? String, serverURL.isEmpty || serverPort.isEmpty {
-            UserDefaults.standard.setValue("http://pleasegiveme.com", forKey: Constants.Key.serverURL)
-            UserDefaults.standard.setValue("80", forKey: Constants.Key.serverPort)
-        }
     }
 }
 
@@ -129,12 +126,16 @@ extension UIApplication {
 }
 
 extension UserDefaults {
-    static var serverURL: String? {
-        return UserDefaults.standard.value(forKey: Constants.Key.serverURL) as? String
+    static var serverURL: String {
+        return UserDefaults.standard.value(forKey: Constants.Key.serverURL) as? String ?? ""
     }
     
-    static var serverPort: String? {
-        return UserDefaults.standard.value(forKey: Constants.Key.serverPort) as? String
+    static var serverPort: String {
+        return UserDefaults.standard.value(forKey: Constants.Key.serverPort) as? String ?? ""
+    }
+
+    static var accessToken: String {
+        return UserDefaults.standard.value(forKey: Constants.Key.token) as? String ?? ""
     }
 }
 

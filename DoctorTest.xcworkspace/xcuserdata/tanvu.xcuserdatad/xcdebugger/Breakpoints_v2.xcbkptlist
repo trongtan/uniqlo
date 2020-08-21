@@ -135,31 +135,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "447E9E96-7941-46FC-8CA8-E2B12A102C05"
-            shouldBeEnabled = "Yes"
+            uuid = "9CC8024B-232F-4587-B7CB-E7680D23EBE6"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/BarcodeReader/BarcodeReaderInteractor.swift"
+            filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "validateReceiptCode(barcode:)"
-            landmarkType = "7">
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "receiptBinder"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "66C06AC2-D933-494F-8657-B3B2A321C23B"
-            shouldBeEnabled = "Yes"
+            uuid = "71B8437C-4AD6-4F23-A6A3-CB15C0F5B1EC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/BarcodeReader/BarcodeReaderViewModel.swift"
+            filePath = "DoctorTest/Scenes/Information/InformationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "transform(_:)"
             landmarkType = "7">
          </BreakpointContent>

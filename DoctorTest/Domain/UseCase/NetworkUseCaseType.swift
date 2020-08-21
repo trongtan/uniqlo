@@ -10,8 +10,8 @@ import Foundation
 import RxSwift
 
 protocol NetworkUseCaseType: UseCaseType {
-    func login(email: String, password: String) ->  Observable<Login>
+    func login(email: String, password: String) ->  Observable<Bool>
     func receipt(barcode: String) -> Observable<Receipt>
-    func submitCustomerInfo(info: CustomerInfo) -> Observable<Void>
+    func submitCustomerInfo(info: Receipt) -> Observable<Void>
     func verifyServerConfig(password: String) -> Observable<Void>
 }

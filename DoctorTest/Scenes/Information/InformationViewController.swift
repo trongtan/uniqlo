@@ -45,6 +45,8 @@ class InformationViewController: ViewController, BindableType {
     
     var receipt: Receipt!
     private var isFilling: Bool = true
+
+    private var isBusinessSubject: PublishSubject<Bool> = PublishSubject()
     
     private var receiptErrorBinder: Binder<Error> {
         return Binder(self) { vc, error in
@@ -68,6 +70,14 @@ class InformationViewController: ViewController, BindableType {
             vc.bankAccountTextField.text = receipt.bankAccount
             vc.bankNameTextField.text = receipt.bankName
             vc.noteTextField.text = receipt.notes
+
+            if receipt.isBusiness {
+                vc.companyCusButton.sendActions(for: .touchUpInside)
+                vc.isBusinessSubject.onNext(true)
+            } else {
+                vc.personalCusButton.sendActions(for: .touchUpInside)
+                vc.isBusinessSubject.onNext(false)
+            }
         }
     }
     
@@ -127,8 +137,7 @@ class InformationViewController: ViewController, BindableType {
             $0.bankNameTrigger = bankNameTextField.rx.text.orEmpty.asDriver()
             $0.bankAccountTrigger = bankAccountTextField.rx.text.orEmpty.asDriver()
             $0.noteTrigger = noteTextField.rx.text.orEmpty.asDriver()
-            $0.personalCusTrigger = Driver.merge(Driver.just("Personal"), personalCusButton.rx.tap.map { "Personal" }.asDriverOnErrorJustComplete())
-            $0.companyCusTrigger = companyCusButton.rx.tap.map { "Company" }.asDriverOnErrorJustComplete()
+            $0.isBusineessTrigger = Driver.merge(Driver.just(receipt.isBusiness), isBusinessSubject.asDriverOnErrorJustComplete())
         }
         
         let input = InformationViewModel.Input(builder: inputBuilder)
@@ -168,16 +177,16 @@ class InformationViewController: ViewController, BindableType {
         self.submitButton.backgroundColor = Constants.Colors.uniqlo
         self.backToFillButton.backgroundColor = Constants.Colors.uniqlo
         
-        self.personalCusButton.tintColor = Constants.Colors.uniqlo
-        
         self.companyCusButton.rx.tap.subscribe(onNext: { _ in
             self.personalCusButton.tintColor = .lightGray
             self.companyCusButton.tintColor = Constants.Colors.uniqlo
+            self.isBusinessSubject.onNext(true)
             }).disposed(by: disposeBag)
         
         self.personalCusButton.rx.tap.subscribe(onNext: { _ in
             self.companyCusButton.tintColor = .lightGray
             self.personalCusButton.tintColor = Constants.Colors.uniqlo
+            self.isBusinessSubject.onNext(false)
             }).disposed(by: disposeBag)
     }
     
