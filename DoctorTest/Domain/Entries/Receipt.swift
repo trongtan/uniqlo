@@ -41,6 +41,12 @@ struct Receipt: Codable {
     }
     
     var displayTotal: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        if let formattedTotalAmountt = formatter.string(from: totalAmount as NSNumber) {
+            return "\("Total".localization):  \(formattedTotalAmountt) VND"
+        }
+        
         return "\("Total".localization):  \(totalAmount) VND"
     }
     

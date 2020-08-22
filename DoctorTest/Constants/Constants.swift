@@ -19,6 +19,8 @@ struct Constants {
     
     struct Colors {
         static let uniqlo = UIColor(hex: "#f60000").withAlphaComponent(0.8)
+        static let textColor = UIColor(hex: "#9099A0")
+        
     }
     
     struct Configs {

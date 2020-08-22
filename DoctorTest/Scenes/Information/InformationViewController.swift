@@ -203,12 +203,16 @@ class InformationViewController: ViewController, BindableType {
         self.companyCusButton.rx.tap.subscribe(onNext: { _ in
             self.personalCusButton.tintColor = .lightGray
             self.companyCusButton.tintColor = Constants.Colors.uniqlo
+            self.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+            self.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
             self.isBusinessSubject.onNext(true)
             }).disposed(by: disposeBag)
         
         self.personalCusButton.rx.tap.subscribe(onNext: { _ in
             self.companyCusButton.tintColor = .lightGray
             self.personalCusButton.tintColor = Constants.Colors.uniqlo
+            self.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+            self.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
             self.isBusinessSubject.onNext(false)
             }).disposed(by: disposeBag)
     }

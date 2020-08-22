@@ -194,53 +194,6 @@
             endingLineNumber = "40"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A4962737-F276-4483-AE6F-4DE3DE079338 - 6c561d8afbcc5e36"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[2] = [Constant Propagated Function : generic not re-abstracted specialization &lt;UNIQLO.API.LoginOutput&gt; of closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) throws -&gt; A in UNIQLO.API.request&lt;A where A: ObjectMapper.Mappable&gt;(UNIQLO.APIInputBase) -&gt; RxSwift.Observable&lt;A&gt;]&gt; of reabstraction thunk helper &lt;A where A: ObjectMapper.Mappable&gt; from @escaping @callee_guaranteed (@guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error) to @escaping @callee_guaranteed (@in_guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error)"
-                  moduleName = "UNIQLO"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanvu/Documents/works/BarcodeReader/DoctorTest/NetworkPlatform/Services/API/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "107">
-               </Location>
-               <Location
-                  uuid = "A4962737-F276-4483-AE6F-4DE3DE079338 - 99682fc57eff970"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[2] = [Constant Propagated Function : generic not re-abstracted specialization &lt;UNIQLO.API.ReceiptOutput&gt; of closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) throws -&gt; A in UNIQLO.API.request&lt;A where A: ObjectMapper.Mappable&gt;(UNIQLO.APIInputBase) -&gt; RxSwift.Observable&lt;A&gt;]&gt; of reabstraction thunk helper &lt;A where A: ObjectMapper.Mappable&gt; from @escaping @callee_guaranteed (@guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error) to @escaping @callee_guaranteed (@in_guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error)"
-                  moduleName = "UNIQLO"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanvu/Documents/works/BarcodeReader/DoctorTest/NetworkPlatform/Services/API/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "107">
-               </Location>
-               <Location
-                  uuid = "A4962737-F276-4483-AE6F-4DE3DE079338 - 6961cf1befa8107f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[2] = [Constant Propagated Function : generic not re-abstracted specialization &lt;UNIQLO.API.CustomerInfoOutput&gt; of closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) throws -&gt; A in UNIQLO.API.request&lt;A where A: ObjectMapper.Mappable&gt;(UNIQLO.APIInputBase) -&gt; RxSwift.Observable&lt;A&gt;]&gt; of reabstraction thunk helper &lt;A where A: ObjectMapper.Mappable&gt; from @escaping @callee_guaranteed (@guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error) to @escaping @callee_guaranteed (@in_guaranteed Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; (@out A, @error @owned Swift.Error)"
-                  moduleName = "UNIQLO"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanvu/Documents/works/BarcodeReader/DoctorTest/NetworkPlatform/Services/API/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "107">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -375,7 +328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "17D7D2F7-7580-47C3-A4EC-1F56E4D789AF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoctorTest/NetworkPlatform/Entries/Receipt+Mapping.swift"
@@ -417,6 +370,38 @@
             endingLineNumber = "99"
             landmarkName = "process(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42DFEFF5-0A8E-40DA-9BF8-B6975113248A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorTest/NetworkPlatform/Services/API/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "preprocess(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "937C7546-06CC-4510-A969-D213A9E61507"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorTest/Domain/Entries/Receipt.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "displayTotal"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
