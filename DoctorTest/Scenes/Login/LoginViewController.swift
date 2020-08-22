@@ -17,24 +17,24 @@ import SnapKit
 class LoginViewController: ViewController, BindableType {
     var viewModel: LoginViewModel!
     
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    
     @IBOutlet weak var configButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private var loginErrorBinder: Binder<Error> {
-        return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: "\(error)")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.loginButton.backgroundColor = Constants.Colors.uniqlo
+        
+        #if DEBUG
         self.emailTextField.text = "1243934" //1441859
         self.passwordTextField.text = "965250" //0920
+        #endif
     }
     
     // MARK: BindableType
@@ -60,11 +60,15 @@ class LoginViewController: ViewController, BindableType {
             .disposed(by: disposeBag)
         
         output.error
-            .drive(loginErrorBinder)
+            .drive(errorBinder)
             .disposed(by: disposeBag)
         
         output.verifyServerConfig
             .drive()
+            .disposed(by: disposeBag)
+        
+        output.activityIndicator
+            .drive(activityIndicatorViewBinder)
             .disposed(by: disposeBag)
     }
     

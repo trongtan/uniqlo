@@ -18,7 +18,7 @@ struct ServerConfigInteractor: ServerConfigInteractorType {
     func saveServerConfig(serverURL: String, port: String) -> Observable<Void> {
         return Observable.create { observable in
             if serverURL.isEmpty || port.isEmpty {
-                observable.onError(API.APIError.customError(localizeDescription: "Server URL or Port is empty."))
+                observable.onError(API.APIError.customError(localizeDescription: "Server URL or Port is empty.".localization))
             }
             
             UserDefaults.standard.setValue(serverURL, forKey: Constants.Key.serverURL)

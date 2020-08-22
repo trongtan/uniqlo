@@ -18,7 +18,7 @@ target 'UNIQLO' do
     pod 'RxDataSources', '~> 3.0'
     pod 'RxAlamofire', '~> 4.0'
     pod 'RxGesture', '~> 2.0.1'
-    pod 'RxBiBinding'
+    pod "RxSwiftUtilities"
     pod 'Pageboy', '~> 3.2'
     pod 'IQKeyboardManagerSwift', '6.2.0'
     pod 'SnapKit', '4.2.0'

@@ -16,6 +16,7 @@ import MTBBarcodeScanner
 class BarcodeReaderViewController: ViewController, BindableType {
     var viewModel: BarcodeReaderViewModel!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var barCodeTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var previewView: UIView!
@@ -23,11 +24,6 @@ class BarcodeReaderViewController: ViewController, BindableType {
     @IBOutlet weak var logoutButton: UIButton!
     var scanner: MTBBarcodeScanner?
     
-    private var receiptErrorBinder: Binder<Error> {
-        return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: "\(error)")
-        }
-    }
     // MARK: BindableType
     
     func bindViewModel() {
@@ -50,11 +46,15 @@ class BarcodeReaderViewController: ViewController, BindableType {
             .disposed(by: disposeBag)
         
         output.error
-            .drive(receiptErrorBinder)
+            .drive(errorBinder)
             .disposed(by: disposeBag)
         
         output.logout
             .drive()
+            .disposed(by: disposeBag)
+        
+        output.activityIndicator
+            .drive(activityIndicatorViewBinder)
             .disposed(by: disposeBag)
     }
     
@@ -64,9 +64,15 @@ class BarcodeReaderViewController: ViewController, BindableType {
         self.nextButton.backgroundColor = Constants.Colors.uniqlo
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        #if DEBUG
+        barCodeTextField.text = "66202005291727060009010007"
+        #endif
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        barCodeTextField.text = "66202005291727060009010007"
 
         MTBBarcodeScanner.requestCameraPermission(success: { success in
             if success {
@@ -76,6 +82,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
                             for code in codes {
                                 let stringValue = code.stringValue!
                                 self.barCodeTextField.text = stringValue
+                                self.barCodeTextField.sendActions(for: .valueChanged)
                                 print("Found code: \(stringValue)")
                             }
                         }
@@ -84,7 +91,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
                     NSLog("Unable to start scanning")
                 }
             } else {
-                self.showAlert(title: "Scanning Unavailable", message: "This app does not have permission to access the camera")
+                self.showAlert(title: "Error".localization, message: "This app does not have permission to access the camera".localization)
             }
         })
         
@@ -94,7 +101,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
         self.scanner?.stopScanning()
         
         super.viewWillDisappear(animated)
-        self.barCodeTextField.text = ""
+//        self.barCodeTextField.text = ""
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -102,6 +109,10 @@ class BarcodeReaderViewController: ViewController, BindableType {
         coordinator.animate(alongsideTransition: { context in
             self.scanner?.refreshVideoOrientation()
         })
+    }
+    
+    func resetUI() {
+        self.barCodeTextField.text = ""
     }
 }
 

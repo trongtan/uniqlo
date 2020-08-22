@@ -15,15 +15,11 @@ import Then
 class ServerConfigViewController: ViewController, BindableType {
     var viewModel: ServerConfigViewModel!
     
+    @IBOutlet weak var serverPortLabel: UILabel!
+    @IBOutlet weak var serverURLLabel: UILabel!
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var portTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
-    
-    private var errorBinder: Binder<Error> {
-        return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: "\(error)")
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +44,9 @@ class ServerConfigViewController: ViewController, BindableType {
         let output = viewModel.transform(input)
         
         output.save
+//            .do(onNext: {
+//                self.checkIsConnectedToNetwork()
+//            })
             .drive()
             .disposed(by: disposeBag)
         
@@ -55,6 +54,28 @@ class ServerConfigViewController: ViewController, BindableType {
             .drive(errorBinder)
             .disposed(by: disposeBag)
     }
+    
+//    func checkIsConnectedToNetwork() {
+//        let hostUrl: String = "\(UserDefaults.serverURL):\(UserDefaults.serverPort)"
+//       if let url = URL(string: hostUrl) {
+//          var request = URLRequest(url: url)
+//          request.httpMethod = "HEAD"
+//          URLSession(configuration: .default)
+//          .dataTask(with: request) { (_, response, error) -> Void in
+//             guard error == nil else {
+//                print("Error:", error ?? "")
+//                return
+//             }
+//             guard (response as? HTTPURLResponse)?
+//             .statusCode == 200 else {
+//                print("The host is down")
+//                return
+//             }
+//             print("The host is up and running")
+//          }
+//          .resume()
+//       }
+//    }
 }
 
 extension ServerConfigViewController: StoryboardSceneBased {

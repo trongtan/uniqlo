@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Then
+import RxSwiftUtilities
 
 class BarcodeReaderViewModel: ViewModelType {
     private let navigator: BarcodeReaderNavigatorType
@@ -31,10 +32,12 @@ class BarcodeReaderViewModel: ViewModelType {
         let logout: Driver<Void>
         let nextButtonEnable: Driver<Bool>
         let error: Driver<Error>
+        let activityIndicator: Driver<Bool>
     }
     
     func transform(_ input: BarcodeReaderViewModel.Input) -> BarcodeReaderViewModel.Output {
         let errorTracker = ErrorTracker()
+        let activityIndicator = ActivityIndicator()
         
         let next = input.nextButtonTrigger
             .withLatestFrom(input.barcodeTrigger)
@@ -49,6 +52,7 @@ class BarcodeReaderViewModel: ViewModelType {
             self.interactor
                 .receipt(barcode: $0)
                 .trackError(errorTracker)
+                .trackActivity(activityIndicator)
                 .asDriverOnErrorJustComplete()
         }
         .do(onNext: { receipt in
@@ -69,7 +73,8 @@ class BarcodeReaderViewModel: ViewModelType {
         return Output(next: next,
                       logout: logout,
                       nextButtonEnable: nextButtonEnable,
-                      error: errorTracker.asDriver())
+                      error: errorTracker.asDriver(),
+                      activityIndicator: activityIndicator.asDriver())
     }
 }
 

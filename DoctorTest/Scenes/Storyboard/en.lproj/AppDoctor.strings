@@ -1,0 +1,125 @@
+/* Class = "UIButton"; normalTitle = "Review"; ObjectID = "050-Qe-lHp"; */
+"050-Qe-lHp.normalTitle" = "Review";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "2kl-hj-jML"; */
+"2kl-hj-jML.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "49R-vO-Ad4"; */
+"49R-vO-Ad4.normalTitle" = "Submit";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "4SN-9r-LMK"; */
+"4SN-9r-LMK.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "56H-jZ-VDW"; */
+"56H-jZ-VDW.normalTitle" = "Back";
+
+/* Class = "UITextField"; placeholder = "Port"; ObjectID = "5TU-FH-LCr"; */
+"5TU-FH-LCr.placeholder" = "Port";
+
+/* Class = "UILabel"; text = "Total:  230000 VND"; ObjectID = "DOb-Tx-C6D"; */
+"DOb-Tx-C6D.text" = "Total:  230000 VND";
+
+/* Class = "UIButton"; normalTitle = "KH Cá Nhân"; ObjectID = "E4F-xz-YOf"; */
+"E4F-xz-YOf.normalTitle" = "Personal";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "EDi-Kx-ZIp"; */
+"EDi-Kx-ZIp.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Tên  ngân hàng "; ObjectID = "FOu-nx-Ru9"; */
+"FOu-nx-Ru9.text" = "Bank name";
+
+/* Class = "UILabel"; text = "Tên"; ObjectID = "FzZ-Dm-7TZ"; */
+"FzZ-Dm-7TZ.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "KUH-hp-OJq"; */
+"KUH-hp-OJq.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "Địa chỉ"; ObjectID = "L4u-RD-X9E"; */
+"L4u-RD-X9E.text" = "Address";
+
+/* Class = "UILabel"; text = "Ghi chú"; ObjectID = "L5F-6m-6Vd"; */
+"L5F-6m-6Vd.text" = "Note";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "MKK-2R-qRh"; */
+"MKK-2R-qRh.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Please scan or fill the receipt code"; ObjectID = "MTd-Qm-ZgY"; */
+"MTd-Qm-ZgY.text" = "Please scan or fill the receipt code";
+
+/* Class = "UILabel"; text = "Date: 30/07/2020 16:00:15"; ObjectID = "Meg-Hh-hqb"; */
+"Meg-Hh-hqb.text" = "Date: 30/07/2020 16:00:15";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "TMo-CD-HwX"; */
+"TMo-CD-HwX.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Quận/Huyện"; ObjectID = "WDt-PI-1Ug"; */
+"WDt-PI-1Ug.text" = "District";
+
+/* Class = "UILabel"; text = "Tên công ty"; ObjectID = "X7f-Ge-olm"; */
+"X7f-Ge-olm.text" = "Company name";
+
+/* Class = "UILabel"; text = "Port"; ObjectID = "XEx-Am-sF0"; */
+"XEx-Am-sF0.text" = "Port";
+
+/* Class = "UILabel"; text = "Please enter password"; ObjectID = "XdP-oa-JJ5"; */
+"XdP-oa-JJ5.text" = "Please enter password";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "XuP-Np-vMY"; */
+"XuP-Np-vMY.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Xvv-Jq-o77"; */
+"Xvv-Jq-o77.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Receipt code:  2010010199129010101"; ObjectID = "Zwq-05-cPF"; */
+"Zwq-05-cPF.text" = "Receipt code:  2010010199129010101";
+
+/* Class = "UILabel"; text = "If this is not your receipt, please try again"; ObjectID = "ama-kQ-ufU"; */
+"ama-kQ-ufU.text" = "If this is not your receipt, please try again";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "chf-rI-ijo"; */
+"chf-rI-ijo.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Điện thoại "; ObjectID = "cu3-uQ-Vdi"; */
+"cu3-uQ-Vdi.text" = "Mobile";
+
+/* Class = "UIButton"; normalTitle = "KH Doanh Nghiệp"; ObjectID = "eln-5o-kmq"; */
+"eln-5o-kmq.normalTitle" = "Business";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "gIK-1f-UeX"; */
+"gIK-1f-UeX.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Mã số thuế"; ObjectID = "iUi-sd-vl5"; */
+"iUi-sd-vl5.text" = "Tax number";
+
+/* Class = "UITextField"; placeholder = "Server URL"; ObjectID = "j6x-LX-Qf1"; */
+"j6x-LX-Qf1.placeholder" = "Server URL";
+
+/* Class = "UILabel"; text = "Fax "; ObjectID = "jCi-e0-Axm"; */
+"jCi-e0-Axm.text" = "Fax ";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "khv-mG-TWR"; */
+"khv-mG-TWR.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "lVF-Up-gL2"; */
+"lVF-Up-gL2.text" = "Username";
+
+/* Class = "UILabel"; text = "Server URL"; ObjectID = "mi2-XG-j4V"; */
+"mi2-XG-j4V.text" = "Server URL";
+
+/* Class = "UITextField"; placeholder = "Nhập mã code"; ObjectID = "oJ8-Iu-etW"; */
+"oJ8-Iu-etW.placeholder" = "Enter code";
+
+/* Class = "UILabel"; text = "Tỉnh/Thành"; ObjectID = "rDs-fQ-x3Q"; */
+"rDs-fQ-x3Q.text" = "City/Province";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "tPZ-hy-5Q3"; */
+"tPZ-hy-5Q3.text" = "Password";
+
+/* Class = "UILabel"; text = "Your information is updated"; ObjectID = "uXc-Ad-UnJ"; */
+"uXc-Ad-UnJ.text" = "Your information is updated";
+
+/* Class = "UILabel"; text = "TK  ngân hàng "; ObjectID = "wi4-FV-Bu6"; */
+"wi4-FV-Bu6.text" = "Bank account";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "xLr-Ob-VUE"; */
+"xLr-Ob-VUE.normalTitle" = "Back";

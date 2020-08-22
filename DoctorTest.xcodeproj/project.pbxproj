@@ -44,7 +44,6 @@
 		EC460C3824C53A5300771F34 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C2624C53A5300771F34 /* AppViewModel.swift */; };
 		EC460C3924C53A5300771F34 /* AppUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C2724C53A5300771F34 /* AppUseCase.swift */; };
 		EC460C3A24C53A5300771F34 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C2924C53A5300771F34 /* Storyboard.swift */; };
-		EC460C3B24C53A5300771F34 /* AppDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC460C2A24C53A5300771F34 /* AppDoctor.storyboard */; };
 		EC460C3D24C53A5300771F34 /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C2E24C53A5300771F34 /* LoginAssembler.swift */; };
 		EC460C3E24C53A5300771F34 /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C2F24C53A5300771F34 /* LoginNavigator.swift */; };
 		EC460C3F24C53A5300771F34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C3024C53A5300771F34 /* LoginViewController.swift */; };
@@ -85,6 +84,8 @@
 		EC7EFCEA24D65539002AA9F3 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */; };
 		EC7EFCEB24D65539002AA9F3 /* VerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */; };
 		EC7EFCEC24D65539002AA9F3 /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */; };
+		ECD1A97024F0DF2C00960C74 /* AppDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */; };
+		ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97B24F0E50100960C74 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +147,6 @@
 		EC460C2624C53A5300771F34 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		EC460C2724C53A5300771F34 /* AppUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUseCase.swift; sourceTree = "<group>"; };
 		EC460C2924C53A5300771F34 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		EC460C2A24C53A5300771F34 /* AppDoctor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppDoctor.storyboard; sourceTree = "<group>"; };
 		EC460C2E24C53A5300771F34 /* LoginAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		EC460C2F24C53A5300771F34 /* LoginNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		EC460C3024C53A5300771F34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +187,12 @@
 		EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyInteractor.swift; sourceTree = "<group>"; };
 		EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
+		ECD1A96F24F0DF1700960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ECD1A97124F0DF2C00960C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AppDoctor.storyboard; sourceTree = "<group>"; };
+		ECD1A97424F0DF6200960C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppDoctor.strings; sourceTree = "<group>"; };
+		ECD1A97624F0DF6500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/AppDoctor.strings; sourceTree = "<group>"; };
+		ECD1A97A24F0E50100960C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ECD1A97C24F0E50500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +268,7 @@
 				EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */,
 				EC460BBF24C5396000771F34 /* Info.plist */,
 				EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */,
+				ECD1A97B24F0E50100960C74 /* Localizable.strings */,
 			);
 			path = DoctorTest;
 			sourceTree = "<group>";
@@ -452,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				EC460C2924C53A5300771F34 /* Storyboard.swift */,
-				EC460C2A24C53A5300771F34 /* AppDoctor.storyboard */,
+				ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -613,6 +620,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = EC460BA224C5395E00771F34;
 			productRefGroup = EC460BAC24C5395E00771F34 /* Products */;
@@ -631,8 +639,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC460BBE24C5396000771F34 /* LaunchScreen.storyboard in Resources */,
+				ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */,
 				EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */,
-				EC460C3B24C53A5300771F34 /* AppDoctor.storyboard in Resources */,
+				ECD1A97024F0DF2C00960C74 /* AppDoctor.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,8 +821,28 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC460BBD24C5396000771F34 /* Base */,
+				ECD1A96F24F0DF1700960C74 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD1A97124F0DF2C00960C74 /* Base */,
+				ECD1A97424F0DF6200960C74 /* en */,
+				ECD1A97624F0DF6500960C74 /* vi */,
+			);
+			name = AppDoctor.storyboard;
+			sourceTree = "<group>";
+		};
+		ECD1A97B24F0E50100960C74 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD1A97A24F0E50100960C74 /* en */,
+				ECD1A97C24F0E50500960C74 /* vi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -823,6 +852,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -883,6 +913,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -940,7 +971,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -963,7 +994,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = RWM9AH4F57;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

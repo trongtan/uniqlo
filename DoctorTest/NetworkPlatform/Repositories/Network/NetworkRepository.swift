@@ -67,7 +67,7 @@ final class NetworkRepository: NetworkRepositoryType {
             if password == Constants.Configs.defaultPassword {
                 observable.onNext(())
             } else {
-                observable.onError(API.APIError.customError(localizeDescription: "Vui lòng kiểm tra lại mật khẩu."))
+                observable.onError(API.APIError.customError(localizeDescription: "Password is incorrect. \nPlease try again.".localization))
             }
 
             return Disposables.create()

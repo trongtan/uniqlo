@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Then
+import RxSwiftUtilities
 
 class InformationViewModel: ViewModelType {
     private let navigator: InformationNavigatorType
@@ -49,10 +50,13 @@ class InformationViewModel: ViewModelType {
         let preview: Driver<Bool>
         let previewEnable: Driver<Bool>
         let error: Driver<Error>
+        let activityIndicator: Driver<Bool>
+        let isBusiness: Driver<Bool>
     }
     
     func transform(_ input: InformationViewModel.Input) -> InformationViewModel.Output {
         let errorTracker = ErrorTracker()
+        let activityIndicator = ActivityIndicator()
         
         let receipt: Driver<Receipt> = input.receiptTrigger
         
@@ -107,17 +111,22 @@ class InformationViewModel: ViewModelType {
             .flatMapLatest {
                 self.interactor.submitCustomerInfo(info: $0)
                     .trackError(errorTracker)
+                    .trackActivity(activityIndicator)
                     .asDriverOnErrorJustComplete()
         }.do(onNext: { _ in
             self.navigator.toFinishView()
         })
+        
+        let isBusiness = input.isBusineessTrigger
         
         return Output(receipt: receipt,
                       back: back,
                       submit: submit,
                       preview: preview,
                       previewEnable: previewEnable,
-                      error: errorTracker.asDriver())
+                      error: errorTracker.asDriver(),
+                      activityIndicator: activityIndicator.asDriver(),
+                      isBusiness: isBusiness)
     }
 }
 

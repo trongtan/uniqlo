@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  DoctorTest
+
+  Created by tan vu on 8/22/20.
+  Copyright © 2020 tan vu. All rights reserved.
+*/
+
+"Error" = "Error";
+"Server URL or Port is empty." = "Server URL or Port is empty.";
+"Your receipt code is invalid. Please check." = "Your receipt code is invalid. Please check.";
+"Password is incorrect. \nPlease try again." = "Password is incorrect. \nPlease try again.";
+"Receipt code" = "Receipt code";
+"Date" = "Date";
+"Total" = "Total";
+"This app does not have permission to access the camera" = "This app does not have permission to access the camera";

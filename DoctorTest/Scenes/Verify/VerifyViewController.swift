@@ -18,16 +18,16 @@ class VerifyViewController: ViewController, BindableType {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backButton.backgroundColor = Constants.Colors.uniqlo
         self.nextButton.backgroundColor = Constants.Colors.uniqlo
-    }
-    // MARK: BindableType
-    private var errorBinder: Binder<Error> {
-        return Binder(self) { vc, error in
-            vc.showAlert(title: "Error", message: "\(error)")
-        }
+        
+        #if DEBUG
+        self.passwordTextField.text = Constants.Configs.defaultPassword
+        #endif
+        
     }
     
     func bindViewModel() {

@@ -23,7 +23,8 @@ struct FinishNavigator: FinishNavigatorType {
     }
     
     func backToBarCodeReader() {
-        if let  vc =  navigator?.viewControllers.filter({$0 is BarcodeReaderViewController}).first {
+        if let vc =  navigator?.viewControllers.filter({$0 is BarcodeReaderViewController}).first as? BarcodeReaderViewController {
+            vc.resetUI()
             navigator?.popToViewController(vc, animated: true)
         }
     }

@@ -21,9 +21,6 @@ PODS:
   - RxAppState (1.4.1):
     - RxCocoa (~> 4.3)
     - RxSwift (~> 4.3)
-  - RxBiBinding (0.1.7):
-    - RxCocoa (~> 4.2)
-    - RxSwift (~> 4.2)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.1.0):
@@ -42,6 +39,9 @@ PODS:
   - RxSwiftExt/RxCocoa (3.4.0):
     - RxCocoa (~> 4.0)
     - RxSwiftExt/Core
+  - RxSwiftUtilities (2.1.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - SnapKit (4.2.0)
   - SwiftDate (6.1.0)
   - Then (2.7.0)
@@ -57,12 +57,12 @@ DEPENDENCIES:
   - Reusable (~> 4.0)
   - RxAlamofire (~> 4.0)
   - RxAppState
-  - RxBiBinding
   - RxCocoa (~> 4.1)
   - RxDataSources (~> 3.0)
   - RxGesture (~> 2.0.1)
   - RxSwift (~> 4.1)
   - RxSwiftExt (~> 3.1)
+  - RxSwiftUtilities
   - SnapKit (= 4.2.0)
   - SwiftDate
   - Then (~> 2.3)
@@ -81,12 +81,12 @@ SPEC REPOS:
     - Reusable
     - RxAlamofire
     - RxAppState
-    - RxBiBinding
     - RxCocoa
     - RxDataSources
     - RxGesture
     - RxSwift
     - RxSwiftExt
+    - RxSwiftUtilities
     - SnapKit
     - SwiftDate
     - Then
@@ -104,17 +104,17 @@ SPEC CHECKSUMS:
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxAppState: 5f4aea9eb375e597ab394d60c5a41fe0e6fd0f2a
-  RxBiBinding: c3a83fec471d0f146c1e89b0a2f2f8f1e0270829
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxGesture: 26ede4ed13ffc6336d29dbd9a8dff229bdb72de7
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
+  RxSwiftUtilities: b486df7454cc867c3ea626ce24110511159e7044
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 2fe70a71289abebc668df547a6fca2885f400a93
+PODFILE CHECKSUM: 4ad1b0bddf376a46cc73357dfc61c895b105bf3d
 
 COCOAPODS: 1.8.4

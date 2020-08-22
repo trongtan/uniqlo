@@ -88,7 +88,7 @@ extension API {
                 // MARK: Add call refresh token
                 return this.request(input)
             }
-            throw error
+            throw API.APIError.customError(localizeDescription: error.localizedDescription)
         })
         
         return urlRequest
@@ -122,15 +122,23 @@ extension API {
         return Observable.deferred {
             if input.requireAccessToken {
                 // MARK: get token
-
+                
                 var headers = input.headers
                 headers["Authorization"] = "Bearer \(UserDefaults.accessToken)"
                 input.headers = headers
                 input.accessToken = UserDefaults.accessToken
-                return Observable.just(input)
-            } else {
-                return Observable.just(input)
             }
+            
+            input.headers["UILanguageCode"] = Locale.myLanguageCode
+            print("UILanguageCode = \(Locale.myLanguageCode)")
+            return Observable.just(input)
         }
+    }
+}
+
+extension Locale {
+    static var myLanguageCode: String {
+        let lang = Locale.components(fromIdentifier: Locale.preferredLanguages.first!)["kCFLocaleLanguageCodeKey"] ?? "en"
+        return lang == "vi" ? "vi-VN" : "en-US"
     }
 }

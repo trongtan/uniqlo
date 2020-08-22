@@ -11,10 +11,23 @@ import Reusable
 import RxCocoa
 import RxSwift
 import Then
-import RxBiBinding
 
 class InformationViewController: ViewController, BindableType {
     var viewModel: InformationViewModel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var companyNameLabel: NSLayoutConstraint!
+    @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var addressLabel: NSLayoutConstraint!
+    @IBOutlet weak var districtLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var faxLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var bankNameLabel: UILabel!
+    @IBOutlet weak var bankAccountLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var companyNameTextField: UITextField!
@@ -48,11 +61,11 @@ class InformationViewController: ViewController, BindableType {
 
     private var isBusinessSubject: PublishSubject<Bool> = PublishSubject()
     
-    private var receiptErrorBinder: Binder<Error> {
-        return Binder(self) { vc, error in
-            vc.showAlert(title: "Invalid barcode", message: "Your barcode is invalid. Please check")
-        }
-    }
+//    private var receiptErrorBinder: Binder<Error> {
+//        return Binder(self) { vc, error in
+//            vc.showAlert(title: "Invalid barcode", message: "Your barcode is invalid. Please check")
+//        }
+//    }
     
     private var receiptBinder: Binder<Receipt> {
         return Binder(self) { vc, receipt in
@@ -70,6 +83,8 @@ class InformationViewController: ViewController, BindableType {
             vc.bankAccountTextField.text = receipt.bankAccount
             vc.bankNameTextField.text = receipt.bankName
             vc.noteTextField.text = receipt.notes
+            vc.emailTextField.text = receipt.email
+            vc.faxTextField.text = receipt.fax
 
             if receipt.isBusiness {
                 vc.companyCusButton.sendActions(for: .touchUpInside)
@@ -165,7 +180,15 @@ class InformationViewController: ViewController, BindableType {
             .disposed(by: disposeBag)
         
         output.error
-            .drive(receiptErrorBinder)
+            .drive(errorBinder)
+            .disposed(by: disposeBag)
+        
+        output.activityIndicator
+            .drive(activityIndicatorViewBinder)
+            .disposed(by: disposeBag)
+        
+        output.isBusiness
+            .drive(self.companyNameTextField.rx.isEnabled)
             .disposed(by: disposeBag)
     }
     

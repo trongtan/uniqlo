@@ -33,19 +33,21 @@ struct Receipt: Codable {
     var notes: String = ""
     
     var displayCode: String {
-        return "Receipt code:  \(receiptCode)"
+        return "\("Receipt code".localization):  \(receiptCode)"
     }
     
     var displayDate: String {
-        return "Date: \(date.replacingOccurrences(of: "T", with: " "))"
+        return "\("Date".localization): \(date.replacingOccurrences(of: "T", with: " "))"
     }
     
     var displayTotal: String {
-        return "Total:  \(totalAmount) VND"
+        return "\("Total".localization):  \(totalAmount) VND"
     }
-
+    
     var isValid: Bool {
+//        #if DEBUG
         return true
+//        #else
 //        return !name.isEmpty &&
 //            !legalName.isEmpty &&
 //            !taxCode.isEmpty &&
@@ -57,6 +59,7 @@ struct Receipt: Codable {
 //            !email.isEmpty &&
 //            !bankName.isEmpty &&
 //            !bankAccount.isEmpty
+//        #endif
     }
 }
 

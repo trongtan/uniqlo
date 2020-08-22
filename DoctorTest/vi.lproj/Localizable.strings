@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  DoctorTest
+
+  Created by tan vu on 8/22/20.
+  Copyright © 2020 tan vu. All rights reserved.
+*/
+
+"Error" = "Lỗi";
+"Server URL or Port is empty." = "Nhập thông địa chỉ server hoặc port.";
+"Your receipt code is invalid. Please check." = "Hóa đơn không hợp lệ. \nVui lòng kiểm tra lại.";
+"Password is incorrect. \nPlease try again." = "Vui lòng kiểm tra lại mật khẩu.";
+"Receipt code" = "Mã đơn hàng";
+"Date" = "Thời gian";
+"Total" = "Tổng";
+"This app does not have permission to access the camera" = "Ứng dụng không có quyền sử dựng camera. \nVui lòng kiểm tra lại.";

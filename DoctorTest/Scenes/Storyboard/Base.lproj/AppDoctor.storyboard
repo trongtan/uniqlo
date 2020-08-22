@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -55,7 +55,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4SN-9r-LMK">
                                         <rect key="frame" x="173" y="217" width="464" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -104,7 +104,9 @@
                         <outlet property="configButton" destination="iry-ie-tvE" id="YWA-G7-AVv"/>
                         <outlet property="emailTextField" destination="KUH-hp-OJq" id="t7d-wo-QAE"/>
                         <outlet property="loginButton" destination="XuP-Np-vMY" id="yhv-5E-1C3"/>
+                        <outlet property="passwordLabel" destination="tPZ-hy-5Q3" id="vX8-iy-2WJ"/>
                         <outlet property="passwordTextField" destination="4SN-9r-LMK" id="gTK-ZC-cnD"/>
+                        <outlet property="usernameLabel" destination="lVF-Up-gL2" id="CjP-GB-x0H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iI7-OC-2Ao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,6 +194,7 @@
                         <outlet property="logoutButton" destination="V0y-aw-7Rq" id="GIm-5H-aOC"/>
                         <outlet property="nextButton" destination="EDi-Kx-ZIp" id="a9L-ac-7fg"/>
                         <outlet property="previewView" destination="fe9-xe-qCT" id="jJA-Uj-9wU"/>
+                        <outlet property="titleLabel" destination="MTd-Qm-ZgY" id="mss-qu-glx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nj5-BE-2Co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -627,27 +630,40 @@
                         <viewLayoutGuide key="safeArea" id="KMe-Oi-U1y"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="1R0-pk-pH6" id="uIM-tZ-HEa"/>
                         <outlet property="addressTextField" destination="EcL-IH-9b5" id="I8U-Py-Y2B"/>
                         <outlet property="backButton" destination="khv-mG-TWR" id="2ZC-oL-0fw"/>
                         <outlet property="backToFillButton" destination="xLr-Ob-VUE" id="mS3-w5-27U"/>
+                        <outlet property="bankAccountLabel" destination="wi4-FV-Bu6" id="LsS-1R-wzU"/>
                         <outlet property="bankAccountTextField" destination="y02-9r-foy" id="Yj8-z8-4iH"/>
+                        <outlet property="bankNameLabel" destination="FOu-nx-Ru9" id="1G6-lC-YSO"/>
                         <outlet property="bankNameTextField" destination="WTv-MK-WB8" id="o19-gT-zyR"/>
+                        <outlet property="cityLabel" destination="rDs-fQ-x3Q" id="QAW-fH-Oln"/>
                         <outlet property="cityTextField" destination="qPr-Wg-ZQM" id="FZC-Rf-A9i"/>
                         <outlet property="companyCusButton" destination="eln-5o-kmq" id="9h8-zN-8Vb"/>
+                        <outlet property="companyNameLabel" destination="8iP-yr-lHz" id="Dcb-k0-ala"/>
                         <outlet property="companyNameTextField" destination="2hE-Uz-gBc" id="oGk-xQ-iOH"/>
                         <outlet property="dateLabel" destination="Meg-Hh-hqb" id="xxj-df-rki"/>
+                        <outlet property="districtLabel" destination="WDt-PI-1Ug" id="3Rx-Ik-63d"/>
+                        <outlet property="emailLabel" destination="2kl-hj-jML" id="nuB-kW-tWi"/>
                         <outlet property="emailTextField" destination="r1o-aI-e7B" id="Csf-Yx-6Wp"/>
+                        <outlet property="faxLabel" destination="jCi-e0-Axm" id="Wtt-zK-svT"/>
                         <outlet property="faxTextField" destination="19h-oF-Xj9" id="d6u-TR-OO4"/>
+                        <outlet property="nameLabel" destination="FzZ-Dm-7TZ" id="0mA-WK-VjB"/>
                         <outlet property="nameTextField" destination="pkS-v3-RGu" id="OFB-pW-zFy"/>
                         <outlet property="nextButton" destination="Xvv-Jq-o77" id="QdS-fd-Bxb"/>
+                        <outlet property="noteLabel" destination="L5F-6m-6Vd" id="Irp-0b-UbB"/>
                         <outlet property="noteTextField" destination="OS0-BP-A8F" id="pwV-HB-yya"/>
                         <outlet property="personalCusButton" destination="E4F-xz-YOf" id="F6N-yf-eVo"/>
+                        <outlet property="phoneLabel" destination="cu3-uQ-Vdi" id="nJJ-Im-MGl"/>
                         <outlet property="phoneTextField" destination="F9m-WZ-54B" id="auL-AK-cSJ"/>
                         <outlet property="receiptCodeLabel" destination="Zwq-05-cPF" id="Cyo-5C-Q6G"/>
                         <outlet property="reviewModeButton" destination="050-Qe-lHp" id="fLk-St-8iG"/>
                         <outlet property="stateTextField" destination="YoO-Lp-H9r" id="8Ga-cp-iCf"/>
                         <outlet property="submitButton" destination="49R-vO-Ad4" id="wiV-R2-iaz"/>
+                        <outlet property="taxLabel" destination="iUi-sd-vl5" id="kv6-Jl-OtC"/>
                         <outlet property="taxTextField" destination="82P-I8-pw7" id="otx-qr-ydv"/>
+                        <outlet property="titleLabel" destination="ama-kQ-ufU" id="FBe-Vb-qeC"/>
                         <outlet property="totalLabel" destination="DOb-Tx-C6D" id="b8m-yd-bbq"/>
                     </connections>
                 </viewController>
@@ -710,6 +726,7 @@
                     <connections>
                         <outlet property="backButton" destination="56H-jZ-VDW" id="aKI-EF-lKw"/>
                         <outlet property="finishImageView" destination="mxq-RZ-9Qh" id="xV6-XY-00a"/>
+                        <outlet property="titleLabel" destination="uXc-Ad-UnJ" id="2II-PG-Xae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IR4-uT-i0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -783,7 +800,7 @@
                                             <constraint firstAttribute="height" constant="45" id="gF6-Zb-CCB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chf-rI-ijo">
                                         <rect key="frame" x="33" y="147.5" width="174.5" height="50"/>
@@ -859,6 +876,7 @@
                         <outlet property="backButton" destination="chf-rI-ijo" id="e0z-I8-G2n"/>
                         <outlet property="nextButton" destination="MKK-2R-qRh" id="QKW-TV-JhJ"/>
                         <outlet property="passwordTextField" destination="gIK-1f-UeX" id="BGi-pX-qx8"/>
+                        <outlet property="titleLabel" destination="XdP-oa-JJ5" id="UEu-d8-R4p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tp6-UQ-WMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -948,6 +966,8 @@
                     <connections>
                         <outlet property="portTextField" destination="5TU-FH-LCr" id="EES-dl-bfx"/>
                         <outlet property="saveButton" destination="TMo-CD-HwX" id="bUd-In-PCY"/>
+                        <outlet property="serverPortLabel" destination="XEx-Am-sF0" id="h5N-Z8-zU2"/>
+                        <outlet property="serverURLLabel" destination="mi2-XG-j4V" id="U9B-20-SAV"/>
                         <outlet property="urlTextField" destination="j6x-LX-Qf1" id="jvU-M4-1tz"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Then
+import RxSwiftUtilities
 
 class LoginViewModel: ViewModelType {
     private let navigator: LoginNavigatorType
@@ -36,11 +37,13 @@ class LoginViewModel: ViewModelType {
         let error: Driver<Error>
         let errorEmailVerification: Driver<Error>
         let verifyServerConfig: Driver<Void>
+        let activityIndicator: Driver<Bool>
     }
     
     func transform(_ input: LoginViewModel.Input) -> LoginViewModel.Output {
         let errorTracker = ErrorTracker()
         let errorEmailVerificationTracker = ErrorTracker()
+        let activityIndicator = ActivityIndicator()
         
         let emailPhoneValidation = input.emailTrigger
             .map {
@@ -64,6 +67,7 @@ class LoginViewModel: ViewModelType {
             .flatMapLatest { email, password in
                 self.interactor.login(email: email, password: password)
                     .trackError(errorTracker)
+                    .trackActivity(activityIndicator)
                     .asDriverOnErrorJustComplete()
         }.do(onNext: { _ in
             self.navigator.toBarCodeReader()
@@ -77,7 +81,8 @@ class LoginViewModel: ViewModelType {
                       loginEnable: loginEnable,
                       error: errorTracker.asDriver(),
                       errorEmailVerification: errorEmailVerificationTracker.asDriver(),
-                      verifyServerConfig: verifyServerConfig)
+                      verifyServerConfig: verifyServerConfig,
+                      activityIndicator: activityIndicator.asDriver())
     }
 }
 

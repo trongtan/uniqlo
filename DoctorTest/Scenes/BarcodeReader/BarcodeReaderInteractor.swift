@@ -34,7 +34,7 @@ struct BarcodeReaderInteractor: BarcodeReaderInteractorType {
             if barcode.count == Constants.Configs.receiptCodeLength {
                 observable.onNext(true)
             } else {
-                observable.onError(API.APIError.customError(localizeDescription: "Invalid receipt code."))
+                observable.onError(API.APIError.customError(localizeDescription: "Your receipt code is invalid. Please check.".localization))
             }
             
             return Disposables.create()

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double RxBiBindingVersionNumber;
-FOUNDATION_EXPORT const unsigned char RxBiBindingVersionString[];
+FOUNDATION_EXPORT double RxSwiftUtilitiesVersionNumber;
+FOUNDATION_EXPORT const unsigned char RxSwiftUtilitiesVersionString[];
 

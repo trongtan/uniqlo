@@ -8,12 +8,42 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     var disposeBag: DisposeBag = DisposeBag()
+    var activityIndicatorView: UIActivityIndicatorView!
+    
+    var activityIndicatorViewBinder: Binder<Bool> {
+        return Binder(self) { vc, isAnimating in
+            isAnimating ? vc.activityIndicatorView.startAnimating() : vc.activityIndicatorView.stopAnimating()
+            vc.activityIndicatorView.isHidden = !isAnimating
+            vc.view.alpha = isAnimating ? 0.8 : 1
+            vc.view.isUserInteractionEnabled = !isAnimating
+        }
+    }
+    
+    
+    var errorBinder: Binder<Error> {
+        return Binder(self) { vc, error in
+            vc.showAlert(title: "Error".localization, message: "\(error)")
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
+            activityIndicatorView.style = .large
+        } else {
+            activityIndicatorView.style = .gray
+        }
+        activityIndicatorView.color = Constants.Colors.uniqlo
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.snp.makeConstraints { make in
+            make.center.equalTo(self.view)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,5 +76,12 @@ extension ViewController {
         let defaultButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(defaultButton)
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+
+extension String {
+    var localization: String {
+        return Bundle.main.localizedString(forKey: self, value: self, table: nil)
     }
 }

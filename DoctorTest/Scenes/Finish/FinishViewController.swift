@@ -15,6 +15,7 @@ import Then
 class FinishViewController: ViewController, BindableType {
     var viewModel: FinishViewModel!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var finishImageView: UIImageView!
     
