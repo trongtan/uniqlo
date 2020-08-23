@@ -55,7 +55,8 @@ class InformationViewController: ViewController, BindableType {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
-    
+    @IBOutlet weak var errorLabel: UILabel!
+
     var receipt: Receipt!
     private var isFilling: Bool = true
 
@@ -189,6 +190,10 @@ class InformationViewController: ViewController, BindableType {
         
         output.isBusiness
             .drive(self.companyNameTextField.rx.isEnabled)
+            .disposed(by: disposeBag)
+
+        output.validateErrorMessage
+            .drive(self.errorLabel.rx.text)
             .disposed(by: disposeBag)
     }
     

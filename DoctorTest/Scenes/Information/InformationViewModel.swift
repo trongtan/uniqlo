@@ -52,6 +52,7 @@ class InformationViewModel: ViewModelType {
         let error: Driver<Error>
         let activityIndicator: Driver<Bool>
         let isBusiness: Driver<Bool>
+        let validateErrorMessage: Driver<String>
     }
     
     func transform(_ input: InformationViewModel.Input) -> InformationViewModel.Output {
@@ -101,7 +102,7 @@ class InformationViewModel: ViewModelType {
             return receipt
         }
 
-        let previewEnable = Driver.merge( info.map { $0.isValid },
+        let previewEnable = Driver.merge( info.map { $0.validate.isValid },
                                           input.backToFillTrigger.map { true })
         
         let preview: Driver<Bool> = Driver.merge(Driver.just(false), input.nextTrigger.map { true }, input.backToFillTrigger.map { false })
@@ -118,6 +119,8 @@ class InformationViewModel: ViewModelType {
         })
         
         let isBusiness = input.isBusineessTrigger
+
+        let validateErrorMessage = info.map { $0.validate.message }
         
         return Output(receipt: receipt,
                       back: back,
@@ -126,7 +129,8 @@ class InformationViewModel: ViewModelType {
                       previewEnable: previewEnable,
                       error: errorTracker.asDriver(),
                       activityIndicator: activityIndicator.asDriver(),
-                      isBusiness: isBusiness)
+                      isBusiness: isBusiness,
+                      validateErrorMessage: validateErrorMessage)
     }
 }
 

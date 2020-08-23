@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -486,7 +486,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvv-Jq-o77">
-                                                        <rect key="frame" x="149" y="569" width="512" height="50"/>
+                                                        <rect key="frame" x="149" y="557" width="512" height="50"/>
                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="BYM-jb-c8t"/>
@@ -502,7 +502,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49R-vO-Ad4" userLabel="Submit Button">
-                                                        <rect key="frame" x="149" y="569" width="512" height="50"/>
+                                                        <rect key="frame" x="149" y="557" width="512" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="eOQ-S9-j26"/>
@@ -517,6 +517,12 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b1-V8-FhG">
+                                                        <rect key="frame" x="149" y="527" width="512" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -526,7 +532,9 @@
                                                     <constraint firstItem="49R-vO-Ad4" firstAttribute="trailing" secondItem="Xvv-Jq-o77" secondAttribute="trailing" id="3Bn-u6-1H3"/>
                                                     <constraint firstItem="pkS-v3-RGu" firstAttribute="top" secondItem="cOl-5A-moZ" secondAttribute="bottom" constant="20" id="3a0-XA-w1X"/>
                                                     <constraint firstItem="WDt-PI-1Ug" firstAttribute="centerY" secondItem="YoO-Lp-H9r" secondAttribute="centerY" id="3a4-aD-ODx"/>
+                                                    <constraint firstItem="Xvv-Jq-o77" firstAttribute="top" secondItem="1b1-V8-FhG" secondAttribute="bottom" constant="30" id="3pu-a4-veG"/>
                                                     <constraint firstItem="Xvv-Jq-o77" firstAttribute="trailing" secondItem="OS0-BP-A8F" secondAttribute="trailing" id="48I-Xz-0EO"/>
+                                                    <constraint firstItem="1b1-V8-FhG" firstAttribute="top" secondItem="OS0-BP-A8F" secondAttribute="bottom" constant="8" id="6Mt-Vu-GVI"/>
                                                     <constraint firstItem="2kl-hj-jML" firstAttribute="centerY" secondItem="r1o-aI-e7B" secondAttribute="centerY" id="7RZ-Dl-Dcj"/>
                                                     <constraint firstItem="jCi-e0-Axm" firstAttribute="centerY" secondItem="19h-oF-Xj9" secondAttribute="centerY" id="8TN-is-vIR"/>
                                                     <constraint firstItem="X7f-Ge-olm" firstAttribute="centerY" secondItem="2hE-Uz-gBc" secondAttribute="centerY" id="8iP-yr-lHz"/>
@@ -553,7 +561,6 @@
                                                     <constraint firstItem="49R-vO-Ad4" firstAttribute="top" secondItem="Xvv-Jq-o77" secondAttribute="top" id="JCV-Er-OBu"/>
                                                     <constraint firstItem="F9m-WZ-54B" firstAttribute="top" secondItem="YoO-Lp-H9r" secondAttribute="bottom" constant="17" id="K2L-F3-oAv"/>
                                                     <constraint firstItem="r1o-aI-e7B" firstAttribute="leading" secondItem="2kl-hj-jML" secondAttribute="trailing" constant="10" id="Kwh-91-Lvu"/>
-                                                    <constraint firstItem="Xvv-Jq-o77" firstAttribute="top" secondItem="OS0-BP-A8F" secondAttribute="bottom" constant="50" id="LgG-5e-tAI"/>
                                                     <constraint firstItem="L5F-6m-6Vd" firstAttribute="centerY" secondItem="OS0-BP-A8F" secondAttribute="centerY" id="MW7-fW-rEe"/>
                                                     <constraint firstItem="qPr-Wg-ZQM" firstAttribute="width" secondItem="EcL-IH-9b5" secondAttribute="width" multiplier="0.35" id="N0b-iY-7VA"/>
                                                     <constraint firstItem="cu3-uQ-Vdi" firstAttribute="centerY" secondItem="F9m-WZ-54B" secondAttribute="centerY" id="N0j-VR-c4g"/>
@@ -573,6 +580,7 @@
                                                     <constraint firstItem="WTv-MK-WB8" firstAttribute="trailing" secondItem="F9m-WZ-54B" secondAttribute="trailing" id="bpl-9N-QTz"/>
                                                     <constraint firstItem="EcL-IH-9b5" firstAttribute="trailing" secondItem="82P-I8-pw7" secondAttribute="trailing" id="csB-Py-NfH"/>
                                                     <constraint firstItem="2hE-Uz-gBc" firstAttribute="leading" secondItem="pkS-v3-RGu" secondAttribute="leading" id="eIM-0E-qxa"/>
+                                                    <constraint firstItem="1b1-V8-FhG" firstAttribute="trailing" secondItem="OS0-BP-A8F" secondAttribute="trailing" id="fnb-kh-uSP"/>
                                                     <constraint firstItem="2hE-Uz-gBc" firstAttribute="trailing" secondItem="pkS-v3-RGu" secondAttribute="trailing" id="iGa-kv-JSH"/>
                                                     <constraint firstItem="2hE-Uz-gBc" firstAttribute="centerX" secondItem="iSQ-uW-xcj" secondAttribute="centerX" id="ksG-bv-ZbU"/>
                                                     <constraint firstItem="WTv-MK-WB8" firstAttribute="top" secondItem="r1o-aI-e7B" secondAttribute="bottom" constant="17" id="lek-2l-a80"/>
@@ -590,6 +598,7 @@
                                                     <constraint firstItem="FOu-nx-Ru9" firstAttribute="centerY" secondItem="WTv-MK-WB8" secondAttribute="centerY" id="xj0-zb-il7"/>
                                                     <constraint firstItem="wi4-FV-Bu6" firstAttribute="centerY" secondItem="y02-9r-foy" secondAttribute="centerY" id="xxr-6v-BfR"/>
                                                     <constraint firstItem="82P-I8-pw7" firstAttribute="leading" secondItem="iUi-sd-vl5" secondAttribute="trailing" constant="10" id="yR7-gl-FxG"/>
+                                                    <constraint firstItem="1b1-V8-FhG" firstAttribute="leading" secondItem="OS0-BP-A8F" secondAttribute="leading" id="zMa-kL-OKf"/>
                                                     <constraint firstItem="qPr-Wg-ZQM" firstAttribute="top" secondItem="EcL-IH-9b5" secondAttribute="bottom" constant="17" id="zOO-dT-bHd"/>
                                                 </constraints>
                                             </view>
@@ -647,6 +656,7 @@
                         <outlet property="districtLabel" destination="WDt-PI-1Ug" id="3Rx-Ik-63d"/>
                         <outlet property="emailLabel" destination="2kl-hj-jML" id="nuB-kW-tWi"/>
                         <outlet property="emailTextField" destination="r1o-aI-e7B" id="Csf-Yx-6Wp"/>
+                        <outlet property="errorLabel" destination="1b1-V8-FhG" id="IiJ-LV-bXp"/>
                         <outlet property="faxLabel" destination="jCi-e0-Axm" id="Wtt-zK-svT"/>
                         <outlet property="faxTextField" destination="19h-oF-Xj9" id="d6u-TR-OO4"/>
                         <outlet property="nameLabel" destination="FzZ-Dm-7TZ" id="0mA-WK-VjB"/>

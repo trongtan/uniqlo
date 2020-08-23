@@ -50,22 +50,86 @@ struct Receipt: Codable {
         return "\("Total".localization):  \(totalAmount) VND"
     }
     
-    var isValid: Bool {
-//        #if DEBUG
+    var validate: (isValid: Bool, message: String) {
+        #if DEBUG
         return true
-//        #else
-//        return !name.isEmpty &&
-//            !legalName.isEmpty &&
-//            !taxCode.isEmpty &&
-//            !address.isEmpty &&
-//            !district.isEmpty &&
-//            !city.isEmpty &&
-//            !phone.isEmpty &&
-//            !fax.isEmpty &&
-//            !email.isEmpty &&
-//            !bankName.isEmpty &&
-//            !bankAccount.isEmpty
-//        #endif
+        #else
+
+        var valid = true
+        var message = ""
+
+        if email.count > 0 {
+            if !self.validateEmail(email: email) {
+                valid = false
+                message = "\("Email is not right format".localization)\n"
+            }
+        }
+
+        var tmp: [String] = []
+
+        if name.count > 255 {
+            valid = false
+            tmp.append("Name".localization)
+        }
+        if legalName.count > 255 {
+            valid = false
+            tmp.append("Company name".localization)
+        }
+        if taxCode.count > 20 {
+            valid = false
+            tmp.append("Taxcode".localization)
+        }
+        if address.count > 255 {
+            valid = false
+            tmp.append("Address".localization)
+        }
+        if district.count > 50 {
+            valid = false
+            tmp.append("District".localization)
+        }
+        if city.count > 25 {
+            valid = false
+            tmp.append("City".localization)
+        }
+        if phone.count > 20 {
+            valid = false
+            tmp.append("Phone".localization)
+        }
+        if fax.count > 20 {
+            valid = false
+            tmp.append("Fax".localization)
+        }
+        if email.count > 500 {
+            valid = false
+            tmp.append("Email".localization)
+        }
+        if bankName.count > 100 {
+            valid = false
+            tmp.append("Bank name".localization)
+        }
+        if bankAccount.count > 20 {
+            valid = false
+            tmp.append("Bank account".localization)
+        }
+        if notes.count > 255 {
+            valid = false
+            tmp.append("Notes".localization)
+        }
+
+        let verb = tmp.count > 1 ? "are".localization : (tmp.count == 0 ? "" : "is".localization)
+        let msg = tmp.count == 0 ? "" : "invalid".localization
+        return (valid, "\(message)\(tmp.joined(separator: ", ")) \(verb) \(msg)")
+
+        #endif
+    }
+
+    //    (isValid: Bool, message: String)
+    private func validateEmail(email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+
+        return emailPred.evaluate(with: email)
     }
 }
 
