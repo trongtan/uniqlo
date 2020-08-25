@@ -52,7 +52,7 @@ struct Receipt: Codable {
     
     var validate: (isValid: Bool, message: String) {
         #if DEBUG
-        return true
+        return (true, "")
         #else
 
         var valid = true

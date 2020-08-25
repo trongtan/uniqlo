@@ -53,6 +53,7 @@
 		EC460C5A24C6971100771F34 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5924C6971100771F34 /* Login.swift */; };
 		EC460C5C24C6976300771F34 /* Login+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C5B24C6976300771F34 /* Login+Mapping.swift */; };
 		EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460C8224C9707400771F34 /* CustomEncoding.swift */; };
+		EC56F30B24F556CA0098E51F /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56F30A24F556CA0098E51F /* TextField+Extension.swift */; };
 		EC7EFCA824D3B94F002AA9F3 /* BarcodeReaderAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */; };
 		EC7EFCA924D3B94F002AA9F3 /* BarcodeReaderNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */; };
 		EC7EFCAA24D3B94F002AA9F3 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */; };
@@ -156,6 +157,7 @@
 		EC460C5924C6971100771F34 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EC460C5B24C6976300771F34 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
 		EC460C8224C9707400771F34 /* CustomEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncoding.swift; sourceTree = "<group>"; };
+		EC56F30A24F556CA0098E51F /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderAssembler.swift; sourceTree = "<group>"; };
 		EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderNavigator.swift; sourceTree = "<group>"; };
 		EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				EC460C4624C53A6300771F34 /* Utilities.swift */,
+				EC56F30A24F556CA0098E51F /* TextField+Extension.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -741,6 +744,7 @@
 				EC7EFCC024D457F7002AA9F3 /* FinishViewController.swift in Sources */,
 				EC460C3E24C53A5300771F34 /* LoginNavigator.swift in Sources */,
 				EC7EFCDA24D50066002AA9F3 /* API+Receipt.swift in Sources */,
+				EC56F30B24F556CA0098E51F /* TextField+Extension.swift in Sources */,
 				EC7EFCB324D457C5002AA9F3 /* InformationAssembler.swift in Sources */,
 				EC460C1424C53A4D00771F34 /* NetworkRepository.swift in Sources */,
 				EC460C1A24C53A4D00771F34 /* APIInputBase.swift in Sources */,
@@ -970,9 +974,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = RWM9AH4F57;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -993,9 +997,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = RWM9AH4F57;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (

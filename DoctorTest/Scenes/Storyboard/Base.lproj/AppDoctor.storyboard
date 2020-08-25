@@ -168,6 +168,10 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="logout"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUS-kh-y7D">
+                                <rect key="frame" x="740" y="137" width="50" height="50"/>
+                                <state key="normal" title="Fill"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -176,11 +180,15 @@
                             <constraint firstItem="EDi-Kx-ZIp" firstAttribute="leading" secondItem="oJ8-Iu-etW" secondAttribute="leading" id="Bzc-nW-8ms"/>
                             <constraint firstItem="45g-Pm-do3" firstAttribute="trailing" secondItem="fe9-xe-qCT" secondAttribute="trailing" constant="100" id="Gw6-gN-aUl"/>
                             <constraint firstItem="fe9-xe-qCT" firstAttribute="bottom" secondItem="45g-Pm-do3" secondAttribute="centerY" id="KUQ-aU-JXd"/>
+                            <constraint firstItem="OUS-kh-y7D" firstAttribute="trailing" secondItem="V0y-aw-7Rq" secondAttribute="trailing" id="N4b-Zf-NRh"/>
                             <constraint firstItem="45g-Pm-do3" firstAttribute="trailing" secondItem="V0y-aw-7Rq" secondAttribute="trailing" constant="20" id="OVa-5M-QsO"/>
                             <constraint firstItem="oJ8-Iu-etW" firstAttribute="top" secondItem="MTd-Qm-ZgY" secondAttribute="bottom" constant="30" id="RVL-H3-NfR"/>
+                            <constraint firstItem="OUS-kh-y7D" firstAttribute="leading" secondItem="V0y-aw-7Rq" secondAttribute="leading" id="bqb-ZX-2SX"/>
+                            <constraint firstItem="OUS-kh-y7D" firstAttribute="height" secondItem="V0y-aw-7Rq" secondAttribute="height" id="eEr-aj-Ja5"/>
                             <constraint firstItem="EDi-Kx-ZIp" firstAttribute="top" secondItem="oJ8-Iu-etW" secondAttribute="bottom" constant="20" id="fH4-LE-UkA"/>
                             <constraint firstItem="oJ8-Iu-etW" firstAttribute="trailing" secondItem="fe9-xe-qCT" secondAttribute="trailing" id="gtg-Cy-7Hx"/>
                             <constraint firstItem="oJ8-Iu-etW" firstAttribute="leading" secondItem="fe9-xe-qCT" secondAttribute="leading" id="h8A-OA-McB"/>
+                            <constraint firstItem="OUS-kh-y7D" firstAttribute="top" secondItem="V0y-aw-7Rq" secondAttribute="bottom" constant="33" id="mio-aK-DvH"/>
                             <constraint firstItem="fe9-xe-qCT" firstAttribute="leading" secondItem="45g-Pm-do3" secondAttribute="leading" constant="100" id="qZy-Nv-1x4"/>
                             <constraint firstItem="EDi-Kx-ZIp" firstAttribute="trailing" secondItem="oJ8-Iu-etW" secondAttribute="trailing" id="t4u-gE-hFO"/>
                             <constraint firstItem="MTd-Qm-ZgY" firstAttribute="leading" secondItem="45g-Pm-do3" secondAttribute="leading" constant="10" id="uGJ-Jw-ZC9"/>
@@ -191,6 +199,7 @@
                     </view>
                     <connections>
                         <outlet property="barCodeTextField" destination="oJ8-Iu-etW" id="YwC-3Q-hgm"/>
+                        <outlet property="fillDebugButton" destination="OUS-kh-y7D" id="Q5Z-Uq-780"/>
                         <outlet property="logoutButton" destination="V0y-aw-7Rq" id="GIm-5H-aOC"/>
                         <outlet property="nextButton" destination="EDi-Kx-ZIp" id="a9L-ac-7fg"/>
                         <outlet property="previewView" destination="fe9-xe-qCT" id="jJA-Uj-9wU"/>

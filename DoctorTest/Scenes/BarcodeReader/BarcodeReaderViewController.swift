@@ -24,6 +24,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     @IBOutlet weak var logoutButton: UIButton!
     var scanner: MTBBarcodeScanner?
     
+    @IBOutlet weak var fillDebugButton: UIButton!
     // MARK: BindableType
     
     func bindViewModel() {
@@ -67,7 +68,10 @@ class BarcodeReaderViewController: ViewController, BindableType {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         #if DEBUG
-        barCodeTextField.text = "66202005291727060009010007"
+        fillDebugButton.rx.tap.subscribe(onNext: { [unowned self] _ in
+            self.barCodeTextField.rxSetText(text: "66202005291727060009010007")
+        }).disposed(by: disposeBag)
+
         #endif
     }
     
@@ -81,8 +85,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
                         if let codes = codes {
                             for code in codes {
                                 let stringValue = code.stringValue!
-                                self.barCodeTextField.text = stringValue
-                                self.barCodeTextField.sendActions(for: .valueChanged)
+                                self.barCodeTextField.rxSetText(text: stringValue)
                                 print("Found code: \(stringValue)")
                             }
                         }
@@ -101,7 +104,8 @@ class BarcodeReaderViewController: ViewController, BindableType {
         self.scanner?.stopScanning()
         
         super.viewWillDisappear(animated)
-//        self.barCodeTextField.text = ""
+        resetUI()
+
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -111,8 +115,8 @@ class BarcodeReaderViewController: ViewController, BindableType {
         })
     }
     
-    func resetUI() {
-        self.barCodeTextField.text = ""
+    private func resetUI() {
+        self.barCodeTextField.rxSetText(text: "")
     }
 }
 

@@ -9,17 +9,19 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import JGProgressHUD
 
 class ViewController: UIViewController {
     var disposeBag: DisposeBag = DisposeBag()
-    var activityIndicatorView: UIActivityIndicatorView!
+    let hud = JGProgressHUD(style: .dark)
     
     var activityIndicatorViewBinder: Binder<Bool> {
         return Binder(self) { vc, isAnimating in
-            isAnimating ? vc.activityIndicatorView.startAnimating() : vc.activityIndicatorView.stopAnimating()
-            vc.activityIndicatorView.isHidden = !isAnimating
-            vc.view.alpha = isAnimating ? 0.8 : 1
-            vc.view.isUserInteractionEnabled = !isAnimating
+            if isAnimating {
+                vc.hud.show(in: self.view)
+            } else {
+                vc.hud.dismiss()
+            }
         }
     }
     
@@ -33,17 +35,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicatorView = UIActivityIndicatorView()
-        if #available(iOS 13.0, *) {
-            activityIndicatorView.style = .large
-        } else {
-            activityIndicatorView.style = .gray
-        }
-        activityIndicatorView.color = Constants.Colors.uniqlo
-        self.view.addSubview(activityIndicatorView)
-        activityIndicatorView.snp.makeConstraints { make in
-            make.center.equalTo(self.view)
-        }
+        hud.textLabel.text = "Loading"
     }
     
     override func viewWillAppear(_ animated: Bool) {

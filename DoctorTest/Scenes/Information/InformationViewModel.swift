@@ -35,12 +35,13 @@ class InformationViewModel: ViewModelType {
         let bankNameTrigger: Driver<String>
         let bankAccountTrigger: Driver<String>
         let noteTrigger: Driver<String>
-        let isBusineessTrigger: Driver<Bool>
         
         let backTrigger: Driver<Void>
         let submitTrigger: Driver<Void>
         let nextTrigger: Driver<Void>
         let backToFillTrigger: Driver<Void>
+        let personalButtonTrigger: Driver<Void>
+        let businessButtonTrigger: Driver<Void>
     }
     
     struct Output {
@@ -53,6 +54,8 @@ class InformationViewModel: ViewModelType {
         let activityIndicator: Driver<Bool>
         let isBusiness: Driver<Bool>
         let validateErrorMessage: Driver<String>
+        let personalButton: Driver<Bool>
+        let companyButton: Driver<Bool>
     }
     
     func transform(_ input: InformationViewModel.Input) -> InformationViewModel.Output {
@@ -82,8 +85,15 @@ class InformationViewModel: ViewModelType {
             input.bankAccountTrigger,
             input.noteTrigger
         )
+
+        let personalButton = input.personalButtonTrigger.map { false }.asDriver()
+        let companyButton = input.businessButtonTrigger.map { true }.asDriver()
+
+        let isBusiness = Driver.merge(input.receiptTrigger.map { $0.isBusiness },
+                                      personalButton,
+                                      companyButton)
         
-        let info = Driver.combineLatest(receipt, infoFirst, infoSecond, input.isBusineessTrigger).map { tuble -> Receipt in
+        let info = Driver.combineLatest(receipt, infoFirst, infoSecond, isBusiness).map { tuble -> Receipt in
             var receipt = tuble.0
             receipt.isBusiness = tuble.3
             receipt.name = tuble.1.0
@@ -117,8 +127,6 @@ class InformationViewModel: ViewModelType {
         }.do(onNext: { _ in
             self.navigator.toFinishView()
         })
-        
-        let isBusiness = input.isBusineessTrigger
 
         let validateErrorMessage = info.map { $0.validate.message }
         
@@ -130,7 +138,9 @@ class InformationViewModel: ViewModelType {
                       error: errorTracker.asDriver(),
                       activityIndicator: activityIndicator.asDriver(),
                       isBusiness: isBusiness,
-                      validateErrorMessage: validateErrorMessage)
+                      validateErrorMessage: validateErrorMessage,
+                      personalButton: personalButton,
+                      companyButton: companyButton)
     }
 }
 
@@ -149,11 +159,12 @@ extension InformationViewModel {
         var bankNameTrigger: Driver<String> = Driver.empty()
         var bankAccountTrigger: Driver<String> = Driver.empty()
         var noteTrigger: Driver<String> = Driver.empty()
-        var isBusineessTrigger: Driver<Bool> = Driver.empty()
         var backTrigger: Driver<Void> = Driver.empty()
         var nextTrigger: Driver<Void> = Driver.empty()
         var submitTrigger: Driver<Void> = Driver.empty()
         var backToFillTrigger: Driver<Void> = Driver.empty()
+        var personalButtonTrigger: Driver<Void> = Driver.empty()
+        var businessButtonTrigger: Driver<Void> = Driver.empty()
     }
 }
 
@@ -172,10 +183,11 @@ extension InformationViewModel.Input {
                   bankNameTrigger: builder.bankNameTrigger,
                   bankAccountTrigger: builder.bankAccountTrigger,
                   noteTrigger: builder.noteTrigger,
-                  isBusineessTrigger: builder.isBusineessTrigger,
                   backTrigger: builder.backTrigger,
                   submitTrigger: builder.submitTrigger,
                   nextTrigger: builder.nextTrigger,
-                  backToFillTrigger: builder.backToFillTrigger)
+                  backToFillTrigger: builder.backToFillTrigger,
+                  personalButtonTrigger: builder.personalButtonTrigger,
+                  businessButtonTrigger: builder.businessButtonTrigger)
     }
 }

@@ -6,7 +6,7 @@ target 'UNIQLO' do
     use_frameworks!
 
   # Pods for DemoCleanArchitecture-IOS
-    pod 'ObjectMapper', '~> 3.3'
+    pod 'ObjectMapper'
     pod 'Reusable', '~> 4.0'
     pod 'Then', '~> 2.3'
     
@@ -22,6 +22,7 @@ target 'UNIQLO' do
     pod 'Pageboy', '~> 3.2'
     pod 'IQKeyboardManagerSwift', '6.2.0'
     pod 'SnapKit', '4.2.0'
+    pod 'JGProgressHUD'
 #    pod 'RealmSwift', '~> 3.20.0'
     pod 'Toast', '~> 4.0.0'
     pod "RxAppState"

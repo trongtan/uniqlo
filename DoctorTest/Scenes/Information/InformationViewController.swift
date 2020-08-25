@@ -57,10 +57,11 @@ class InformationViewController: ViewController, BindableType {
     
     @IBOutlet weak var errorLabel: UILabel!
 
+
     var receipt: Receipt!
     private var isFilling: Bool = true
 
-    private var isBusinessSubject: PublishSubject<Bool> = PublishSubject()
+//    private var isBusinessSubject: PublishSubject<Bool> = PublishSubject()
     
 //    private var receiptErrorBinder: Binder<Error> {
 //        return Binder(self) { vc, error in
@@ -87,13 +88,13 @@ class InformationViewController: ViewController, BindableType {
             vc.emailTextField.text = receipt.email
             vc.faxTextField.text = receipt.fax
 
-            if receipt.isBusiness {
-                vc.companyCusButton.sendActions(for: .touchUpInside)
-                vc.isBusinessSubject.onNext(true)
-            } else {
-                vc.personalCusButton.sendActions(for: .touchUpInside)
-                vc.isBusinessSubject.onNext(false)
-            }
+//            if receipt.isBusiness {
+//                vc.companyCusButton.sendActions(for: .touchUpInside)
+////                vc.isBusinessSubject.onNext(true)
+//            } else {
+//                vc.personalCusButton.sendActions(for: .touchUpInside)
+////                vc.isBusinessSubject.onNext(false)
+//            }
         }
     }
     
@@ -131,6 +132,24 @@ class InformationViewController: ViewController, BindableType {
         }
     }
 
+    private var personalButtonBinder: Binder<Bool> {
+        return Binder(self) { vc, _ in
+            vc.companyCusButton.tintColor = .lightGray
+            vc.personalCusButton.tintColor = Constants.Colors.uniqlo
+            vc.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+            vc.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+        }
+    }
+
+    private var companyButtonBinder: Binder<Bool> {
+        return Binder(self) { vc, _ in
+            vc.personalCusButton.tintColor = .lightGray
+            vc.companyCusButton.tintColor = Constants.Colors.uniqlo
+            vc.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+            vc.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+        }
+    }
+
     // MARK: BindableType
     
     func bindViewModel() {
@@ -153,7 +172,9 @@ class InformationViewController: ViewController, BindableType {
             $0.bankNameTrigger = bankNameTextField.rx.text.orEmpty.asDriver()
             $0.bankAccountTrigger = bankAccountTextField.rx.text.orEmpty.asDriver()
             $0.noteTrigger = noteTextField.rx.text.orEmpty.asDriver()
-            $0.isBusineessTrigger = Driver.merge(Driver.just(receipt.isBusiness), isBusinessSubject.asDriverOnErrorJustComplete())
+//            $0.isBusineessTrigger = Driver.merge(Driver.just(receipt.isBusiness), isBusinessSubject.asDriverOnErrorJustComplete())
+            $0.personalButtonTrigger = personalCusButton.rx.tap.asDriverOnErrorJustComplete()
+            $0.businessButtonTrigger = companyCusButton.rx.tap.asDriverOnErrorJustComplete()
         }
         
         let input = InformationViewModel.Input(builder: inputBuilder)
@@ -195,6 +216,16 @@ class InformationViewController: ViewController, BindableType {
         output.validateErrorMessage
             .drive(self.errorLabel.rx.text)
             .disposed(by: disposeBag)
+
+        output.personalButton
+            .debug()
+            .drive(personalButtonBinder)
+            .disposed(by: disposeBag)
+
+        output.companyButton
+            .debug()
+            .drive(companyButtonBinder)
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLoad() {
@@ -205,21 +236,21 @@ class InformationViewController: ViewController, BindableType {
         self.submitButton.backgroundColor = Constants.Colors.uniqlo
         self.backToFillButton.backgroundColor = Constants.Colors.uniqlo
         
-        self.companyCusButton.rx.tap.subscribe(onNext: { _ in
-            self.personalCusButton.tintColor = .lightGray
-            self.companyCusButton.tintColor = Constants.Colors.uniqlo
-            self.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
-            self.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
-            self.isBusinessSubject.onNext(true)
-            }).disposed(by: disposeBag)
-        
-        self.personalCusButton.rx.tap.subscribe(onNext: { _ in
-            self.companyCusButton.tintColor = .lightGray
-            self.personalCusButton.tintColor = Constants.Colors.uniqlo
-            self.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
-            self.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
-            self.isBusinessSubject.onNext(false)
-            }).disposed(by: disposeBag)
+//        self.companyCusButton.rx.tap.subscribe(onNext: { _ in
+//            self.personalCusButton.tintColor = .lightGray
+//            self.companyCusButton.tintColor = Constants.Colors.uniqlo
+//            self.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+//            self.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+//            self.isBusinessSubject.onNext(true)
+//            }).disposed(by: disposeBag)
+//
+//        self.personalCusButton.rx.tap.subscribe(onNext: { _ in
+//            self.companyCusButton.tintColor = .lightGray
+//            self.personalCusButton.tintColor = Constants.Colors.uniqlo
+//            self.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+//            self.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+//            self.isBusinessSubject.onNext(false)
+//            }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
