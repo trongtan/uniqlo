@@ -11,10 +11,16 @@ import RxSwift
 import RxCocoa
 
 protocol ServerConfigInteractorType {
+    func serverConfig() -> Observable<(serverURL: String ,port: String)>
     func saveServerConfig(serverURL: String, port: String) -> Observable<Void>
 }
 
 struct ServerConfigInteractor: ServerConfigInteractorType {
+
+    func serverConfig() -> Observable<(serverURL: String ,port: String)> {
+        return Observable.just((UserDefaults.serverURL, UserDefaults.serverPort))
+    }
+    
     func saveServerConfig(serverURL: String, port: String) -> Observable<Void> {
         return Observable.create { observable in
             if serverURL.isEmpty || port.isEmpty {

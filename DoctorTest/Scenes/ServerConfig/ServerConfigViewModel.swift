@@ -24,11 +24,14 @@ class ServerConfigViewModel: ViewModelType {
         let serverURLTrigger: Driver<String>
         let serverPortTrigger: Driver<String>
         let saveTrigger: Driver<Void>
+        let cancelTrigger: Driver<Void>
     }
     
     struct Output {
+        let config: Driver<(serverURL: String, port: String)>
         let save: Driver<Void>
         let error: Driver<Error>
+        let cancel: Driver<Void>
     }
     
     func transform(_ input: ServerConfigViewModel.Input) -> ServerConfigViewModel.Output {
@@ -44,8 +47,17 @@ class ServerConfigViewModel: ViewModelType {
         .do(onNext: { _ in
             self.navigator.dismiss()
         })
-        
-        return Output(save: save, error: errorTracker.asDriver())
+
+        let cancel = input.cancelTrigger.do(onNext: { _ in
+            self.navigator.dismiss()
+        })
+
+        let config = self.interactor.serverConfig().asDriverOnErrorJustComplete()
+
+        return Output(config: config,
+                      save: save,
+                      error: errorTracker.asDriver(),
+                      cancel: cancel)
     }
 }
 
@@ -54,6 +66,7 @@ extension ServerConfigViewModel {
         var serverURLTrigger: Driver<String> = Driver.empty()
         var serverPortTrigger: Driver<String> = Driver.empty()
         var saveTrigger: Driver<Void> = Driver.empty()
+        var cancelTrigger: Driver<Void> = Driver.empty()
     }
 }
 
@@ -61,6 +74,7 @@ extension ServerConfigViewModel.Input {
     init(builder: ServerConfigViewModel.InputBuilder) {
         self.init(serverURLTrigger: builder.serverURLTrigger,
                   serverPortTrigger: builder.serverPortTrigger,
-                  saveTrigger: builder.saveTrigger)
+                  saveTrigger: builder.saveTrigger,
+                  cancelTrigger: builder.cancelTrigger)
     }
 }

@@ -20,17 +20,15 @@ class ServerConfigViewController: ViewController, BindableType {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var portTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.urlTextField.text = UserDefaults.standard.value(forKey: Constants.Key.serverURL) as? String ?? ""
-        self.portTextField.text = UserDefaults.standard.value(forKey: Constants.Key.serverPort) as? String ?? ""
-        
-        self.saveButton.backgroundColor = Constants.Colors.uniqlo
+    @IBOutlet weak var cancelButton: UIButton!
+
+    private var configBinder: Binder<(serverURL: String, port: String)> {
+        return Binder(self) { vc, configs in
+            vc.urlTextField.text = configs.serverURL
+            vc.portTextField.text = configs.port
+        }
     }
-    
-    
-    
+
     // MARK: BindableType
     
     func bindViewModel() {
@@ -38,15 +36,21 @@ class ServerConfigViewController: ViewController, BindableType {
             $0.serverURLTrigger = urlTextField.rx.text.orEmpty.asDriver()
             $0.serverPortTrigger = portTextField.rx.text.orEmpty.asDriver()
             $0.saveTrigger = saveButton.rx.tap.asDriverOnErrorJustComplete()
+            $0.cancelTrigger = cancelButton.rx.tap.asDriverOnErrorJustComplete()
         }
         
         let input = ServerConfigViewModel.Input(builder: inputBuilder)
         let output = viewModel.transform(input)
-        
+
+        output.config
+            .drive(configBinder)
+            .disposed(by: disposeBag)
+
         output.save
-//            .do(onNext: {
-//                self.checkIsConnectedToNetwork()
-//            })
+            .drive()
+            .disposed(by: disposeBag)
+
+        output.cancel
             .drive()
             .disposed(by: disposeBag)
         
@@ -54,28 +58,6 @@ class ServerConfigViewController: ViewController, BindableType {
             .drive(errorBinder)
             .disposed(by: disposeBag)
     }
-    
-//    func checkIsConnectedToNetwork() {
-//        let hostUrl: String = "\(UserDefaults.serverURL):\(UserDefaults.serverPort)"
-//       if let url = URL(string: hostUrl) {
-//          var request = URLRequest(url: url)
-//          request.httpMethod = "HEAD"
-//          URLSession(configuration: .default)
-//          .dataTask(with: request) { (_, response, error) -> Void in
-//             guard error == nil else {
-//                print("Error:", error ?? "")
-//                return
-//             }
-//             guard (response as? HTTPURLResponse)?
-//             .statusCode == 200 else {
-//                print("The host is down")
-//                return
-//             }
-//             print("The host is up and running")
-//          }
-//          .resume()
-//       }
-//    }
 }
 
 extension ServerConfigViewController: StoryboardSceneBased {

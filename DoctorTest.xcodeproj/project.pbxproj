@@ -158,6 +158,7 @@
 		EC460C5B24C6976300771F34 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
 		EC460C8224C9707400771F34 /* CustomEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncoding.swift; sourceTree = "<group>"; };
 		EC56F30A24F556CA0098E51F /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		EC56F30E24F559F90098E51F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppDoctor.strings; sourceTree = "<group>"; };
 		EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderAssembler.swift; sourceTree = "<group>"; };
 		EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderNavigator.swift; sourceTree = "<group>"; };
 		EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		ECD1A96F24F0DF1700960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		ECD1A97124F0DF2C00960C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AppDoctor.storyboard; sourceTree = "<group>"; };
-		ECD1A97424F0DF6200960C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppDoctor.strings; sourceTree = "<group>"; };
 		ECD1A97624F0DF6500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/AppDoctor.strings; sourceTree = "<group>"; };
 		ECD1A97A24F0E50100960C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECD1A97C24F0E50500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -834,8 +834,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				ECD1A97124F0DF2C00960C74 /* Base */,
-				ECD1A97424F0DF6200960C74 /* en */,
 				ECD1A97624F0DF6500960C74 /* vi */,
+				EC56F30E24F559F90098E51F /* en */,
 			);
 			name = AppDoctor.storyboard;
 			sourceTree = "<group>";

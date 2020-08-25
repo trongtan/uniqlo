@@ -68,6 +68,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         #if DEBUG
+        fillDebugButton.isHidden = false
         fillDebugButton.rx.tap.subscribe(onNext: { [unowned self] _ in
             self.barCodeTextField.rxSetText(text: "66202005291727060009010007")
         }).disposed(by: disposeBag)

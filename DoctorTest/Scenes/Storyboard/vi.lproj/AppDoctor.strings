@@ -125,3 +125,5 @@
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "xLr-Ob-VUE"; */
 "xLr-Ob-VUE.normalTitle" = "Quay lại";
 
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "149-KN-heW"; */
+"149-KN-heW.normalTitle" = "Huỷ";
