@@ -19,15 +19,15 @@ target 'UNIQLO' do
     pod 'RxAlamofire', '~> 4.0'
     pod 'RxGesture', '~> 2.0.1'
     pod "RxSwiftUtilities"
-    pod 'Pageboy', '~> 3.2'
+#    pod 'Pageboy', '~> 3.2'
     pod 'IQKeyboardManagerSwift', '6.2.0'
     pod 'SnapKit', '4.2.0'
     pod 'JGProgressHUD'
 #    pod 'RealmSwift', '~> 3.20.0'
-    pod 'Toast', '~> 4.0.0'
+#    pod 'Toast', '~> 4.0.0'
     pod "RxAppState"
     pod "SwiftDate"
-    pod "Nuke"
+#    pod "Nuke"
     pod "MTBBarcodeScanner"
 #    pod 'QueryKit'
     

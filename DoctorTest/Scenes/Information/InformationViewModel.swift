@@ -125,7 +125,7 @@ class InformationViewModel: ViewModelType {
                     .trackActivity(activityIndicator)
                     .asDriverOnErrorJustComplete()
         }.do(onNext: { _ in
-            self.navigator.toFinishView()
+            self.navigator.backToBarCodeReader()
         })
 
         let validateErrorMessage = info.map { $0.validate.message }

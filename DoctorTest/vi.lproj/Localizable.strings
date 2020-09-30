@@ -7,6 +7,7 @@
 */
 
 "Error" = "Lỗi";
+"Error.Message" = "Có lỗi xảy ra, vui lòng liên hệ nhân viên.";
 "Server URL or Port is empty." = "Nhập thông địa chỉ server hoặc port.";
 "Your receipt code is invalid. Please check." = "Hóa đơn không hợp lệ. \nVui lòng kiểm tra lại.";
 "Password is incorrect. \nPlease try again." = "Vui lòng kiểm tra lại mật khẩu.";

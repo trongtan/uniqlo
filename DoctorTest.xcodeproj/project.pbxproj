@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541460F7A44E5432BA72E327 /* Pods_UNIQLO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */; };
 		CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
@@ -203,7 +202,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541460F7A44E5432BA72E327 /* Pods_UNIQLO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,19 +971,19 @@
 			baseConfigurationReference = A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = WV2K63BU2A;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.uniqlo.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dis_2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -996,19 +994,19 @@
 			baseConfigurationReference = 061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = WV2K63BU2A;
 				INFOPLIST_FILE = DoctorTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.uniqlo.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = dis_2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

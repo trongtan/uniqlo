@@ -45,7 +45,7 @@
 "MKK-2R-qRh.normalTitle" = "Tiếp theo";
 
 /* Class = "UILabel"; text = "Please scan or fill the receipt code"; ObjectID = "MTd-Qm-ZgY"; */
-"MTd-Qm-ZgY.text" = "Scan hoặc nhập mã đơn hàng";
+"MTd-Qm-ZgY.text" = "Quét hoặc nhập mã đơn hàng";
 
 /* Class = "UILabel"; text = "Date: 30/07/2020 16:00:15"; ObjectID = "Meg-Hh-hqb"; */
 "Meg-Hh-hqb.text" = "Thời gian: 30/07/2020 16:00:15";

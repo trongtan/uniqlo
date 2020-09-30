@@ -7,6 +7,7 @@
 */
 
 "Error" = "Error";
+"Error.Message" = "We got an error, please contact staff.";
 "Server URL or Port is empty." = "Server URL or Port is empty.";
 "Your receipt code is invalid. Please check." = "Your receipt code is invalid. Please check.";
 "Password is incorrect. \nPlease try again." = "Password is incorrect. \nPlease try again.";
