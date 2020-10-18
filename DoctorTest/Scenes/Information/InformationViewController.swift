@@ -20,8 +20,6 @@ class InformationViewController: ViewController, BindableType {
     @IBOutlet weak var companyNameLabel: NSLayoutConstraint!
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var addressLabel: NSLayoutConstraint!
-    @IBOutlet weak var districtLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var faxLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -33,8 +31,6 @@ class InformationViewController: ViewController, BindableType {
     @IBOutlet weak var companyNameTextField: UITextField!
     @IBOutlet weak var taxTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var faxTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -79,8 +75,6 @@ class InformationViewController: ViewController, BindableType {
             vc.companyNameTextField.text = receipt.legalName
             vc.taxTextField.text = receipt.taxCode
             vc.addressTextField.text = receipt.address
-            vc.stateTextField.text = receipt.district
-            vc.cityTextField.text = receipt.city
             vc.phoneTextField.text = receipt.phone
             vc.bankAccountTextField.text = receipt.bankAccount
             vc.bankNameTextField.text = receipt.bankName
@@ -88,13 +82,11 @@ class InformationViewController: ViewController, BindableType {
             vc.emailTextField.text = receipt.email
             vc.faxTextField.text = receipt.fax
 
-//            if receipt.isBusiness {
-//                vc.companyCusButton.sendActions(for: .touchUpInside)
-////                vc.isBusinessSubject.onNext(true)
-//            } else {
-//                vc.personalCusButton.sendActions(for: .touchUpInside)
-////                vc.isBusinessSubject.onNext(false)
-//            }
+            if receipt.isBusiness {
+                vc.hightlightCompanyButton()
+            } else {
+                vc.hightlightPersonalButton()
+            }
         }
     }
     
@@ -105,8 +97,6 @@ class InformationViewController: ViewController, BindableType {
             vc.companyNameTextField.isEnabled = !isPreviewing
             vc.taxTextField.isEnabled = !isPreviewing
             vc.addressTextField.isEnabled = !isPreviewing
-            vc.stateTextField.isEnabled = !isPreviewing
-            vc.cityTextField.isEnabled = !isPreviewing
             vc.phoneTextField.isEnabled = !isPreviewing
             vc.faxTextField.isEnabled = !isPreviewing
             vc.emailTextField.isEnabled = !isPreviewing
@@ -134,20 +124,28 @@ class InformationViewController: ViewController, BindableType {
 
     private var personalButtonBinder: Binder<Bool> {
         return Binder(self) { vc, _ in
-            vc.companyCusButton.tintColor = .lightGray
-            vc.personalCusButton.tintColor = Constants.Colors.uniqlo
-            vc.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
-            vc.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+            vc.hightlightPersonalButton()
         }
     }
 
     private var companyButtonBinder: Binder<Bool> {
         return Binder(self) { vc, _ in
-            vc.personalCusButton.tintColor = .lightGray
-            vc.companyCusButton.tintColor = Constants.Colors.uniqlo
-            vc.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
-            vc.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+            vc.hightlightCompanyButton()
         }
+    }
+
+    private func hightlightCompanyButton() {
+        personalCusButton.tintColor = .lightGray
+        companyCusButton.tintColor = Constants.Colors.uniqlo
+        personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+        companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+    }
+
+    private func hightlightPersonalButton() {
+        companyCusButton.tintColor = .lightGray
+        personalCusButton.tintColor = Constants.Colors.uniqlo
+        personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+        companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
     }
 
     // MARK: BindableType
@@ -164,15 +162,12 @@ class InformationViewController: ViewController, BindableType {
             $0.companyNameTrigger = companyNameTextField.rx.text.orEmpty.asDriver()
             $0.taxTrigger = taxTextField.rx.text.orEmpty.asDriver()
             $0.addressTrigger = addressTextField.rx.text.orEmpty.asDriver()
-            $0.stateTrigger = stateTextField.rx.text.orEmpty.asDriver()
-            $0.cityTrigger = cityTextField.rx.text.orEmpty.asDriver()
             $0.phoneTrigger = phoneTextField.rx.text.orEmpty.asDriver()
             $0.faxTrigger = faxTextField.rx.text.orEmpty.asDriver()
             $0.emailTrigger = emailTextField.rx.text.orEmpty.asDriver()
             $0.bankNameTrigger = bankNameTextField.rx.text.orEmpty.asDriver()
             $0.bankAccountTrigger = bankAccountTextField.rx.text.orEmpty.asDriver()
             $0.noteTrigger = noteTextField.rx.text.orEmpty.asDriver()
-//            $0.isBusineessTrigger = Driver.merge(Driver.just(receipt.isBusiness), isBusinessSubject.asDriverOnErrorJustComplete())
             $0.personalButtonTrigger = personalCusButton.rx.tap.asDriverOnErrorJustComplete()
             $0.businessButtonTrigger = companyCusButton.rx.tap.asDriverOnErrorJustComplete()
         }
@@ -235,22 +230,6 @@ class InformationViewController: ViewController, BindableType {
         self.backButton.backgroundColor = Constants.Colors.uniqlo
         self.submitButton.backgroundColor = Constants.Colors.uniqlo
         self.backToFillButton.backgroundColor = Constants.Colors.uniqlo
-        
-//        self.companyCusButton.rx.tap.subscribe(onNext: { _ in
-//            self.personalCusButton.tintColor = .lightGray
-//            self.companyCusButton.tintColor = Constants.Colors.uniqlo
-//            self.personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
-//            self.companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
-//            self.isBusinessSubject.onNext(true)
-//            }).disposed(by: disposeBag)
-//
-//        self.personalCusButton.rx.tap.subscribe(onNext: { _ in
-//            self.companyCusButton.tintColor = .lightGray
-//            self.personalCusButton.tintColor = Constants.Colors.uniqlo
-//            self.personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
-//            self.companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
-//            self.isBusinessSubject.onNext(false)
-//            }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

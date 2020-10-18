@@ -27,8 +27,6 @@ class InformationViewModel: ViewModelType {
         let companyNameTrigger: Driver<String>
         let taxTrigger: Driver<String>
         let addressTrigger: Driver<String>
-        let stateTrigger: Driver<String>
-        let cityTrigger: Driver<String>
         let phoneTrigger: Driver<String>
         let faxTrigger: Driver<String>
         let emailTrigger: Driver<String>
@@ -73,8 +71,6 @@ class InformationViewModel: ViewModelType {
             input.companyNameTrigger,
             input.taxTrigger,
             input.addressTrigger,
-            input.stateTrigger,
-            input.cityTrigger,
             input.phoneTrigger,
             input.faxTrigger
         )
@@ -100,10 +96,8 @@ class InformationViewModel: ViewModelType {
             receipt.legalName = tuble.1.1
             receipt.taxCode = tuble.1.2
             receipt.address = tuble.1.3
-            receipt.district = tuble.1.4
-            receipt.city = tuble.1.5
-            receipt.phone = tuble.1.6
-            receipt.fax = tuble.1.7
+            receipt.phone = tuble.1.4
+            receipt.fax = tuble.1.5
             receipt.email = tuble.2.0
             receipt.bankName = tuble.2.1
             receipt.bankAccount = tuble.2.2
@@ -151,8 +145,6 @@ extension InformationViewModel {
         var companyNameTrigger: Driver<String> = Driver.empty()
         var taxTrigger: Driver<String> = Driver.empty()
         var addressTrigger: Driver<String> = Driver.empty()
-        var stateTrigger: Driver<String> = Driver.empty()
-        var cityTrigger: Driver<String> = Driver.empty()
         var phoneTrigger: Driver<String> = Driver.empty()
         var faxTrigger: Driver<String> = Driver.empty()
         var emailTrigger: Driver<String> = Driver.empty()
@@ -175,8 +167,6 @@ extension InformationViewModel.Input {
                   companyNameTrigger: builder.companyNameTrigger,
                   taxTrigger: builder.taxTrigger,
                   addressTrigger: builder.addressTrigger,
-                  stateTrigger: builder.stateTrigger,
-                  cityTrigger: builder.cityTrigger,
                   phoneTrigger: builder.phoneTrigger,
                   faxTrigger: builder.faxTrigger,
                   emailTrigger: builder.emailTrigger,
