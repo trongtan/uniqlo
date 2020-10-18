@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
 		EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */; };
 		EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC460BBA24C5396000771F34 /* Assets.xcassets */; };
 		EC460BBE24C5396000771F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */; };
-		EC460BC924C5396100771F34 /* DoctorTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BC824C5396100771F34 /* DoctorTestTests.swift */; };
 		EC460BD924C53A0D00771F34 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BD524C53A0C00771F34 /* BindableType.swift */; };
 		EC460BDA24C53A0D00771F34 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BD624C53A0C00771F34 /* ErrorTracker.swift */; };
 		EC460BDB24C53A0D00771F34 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BD724C53A0C00771F34 /* ViewModelType.swift */; };
@@ -88,16 +86,6 @@
 		ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97B24F0E50100960C74 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EC460BC524C5396100771F34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC460BA324C5395E00771F34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC460BAA24C5395E00771F34;
-			remoteInfo = DoctorTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNIQLO.release.xcconfig"; path = "Target Support Files/Pods-UNIQLO/Pods-UNIQLO.release.xcconfig"; sourceTree = "<group>"; };
 		07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +103,6 @@
 		EC460BBA24C5396000771F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC460BBD24C5396000771F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC460BBF24C5396000771F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC460BC424C5396100771F34 /* DoctorTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC460BC824C5396100771F34 /* DoctorTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorTestTests.swift; sourceTree = "<group>"; };
-		EC460BCA24C5396100771F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC460BD524C53A0C00771F34 /* BindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		EC460BD624C53A0C00771F34 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		EC460BD724C53A0C00771F34 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -205,14 +190,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC460BC124C5396100771F34 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB0B3829BA3A4CE836A550D1 /* Pods_DoctorTestTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -234,8 +211,7 @@
 		EC460BA224C5395E00771F34 = {
 			isa = PBXGroup;
 			children = (
-				EC460BAD24C5395E00771F34 /* DoctorTest */,
-				EC460BC724C5396100771F34 /* DoctorTestTests */,
+				EC460BAD24C5395E00771F34 /* UNIQLO */,
 				EC460BAC24C5395E00771F34 /* Products */,
 				BD691ECACEEAA76295D0E371 /* Pods */,
 				EF0CFB17F99A6BADE399704B /* Frameworks */,
@@ -246,12 +222,11 @@
 			isa = PBXGroup;
 			children = (
 				EC460BAB24C5395E00771F34 /* UNIQLO.app */,
-				EC460BC424C5396100771F34 /* DoctorTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC460BAD24C5395E00771F34 /* DoctorTest */ = {
+		EC460BAD24C5395E00771F34 /* UNIQLO */ = {
 			isa = PBXGroup;
 			children = (
 				EC460C4524C53A6300771F34 /* Support */,
@@ -270,16 +245,7 @@
 				EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */,
 				ECD1A97B24F0E50100960C74 /* Localizable.strings */,
 			);
-			path = DoctorTest;
-			sourceTree = "<group>";
-		};
-		EC460BC724C5396100771F34 /* DoctorTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				EC460BC824C5396100771F34 /* DoctorTestTests.swift */,
-				EC460BCA24C5396100771F34 /* Info.plist */,
-			);
-			path = DoctorTestTests;
+			path = UNIQLO;
 			sourceTree = "<group>";
 		};
 		EC460BD324C53A0C00771F34 /* Architecture */ = {
@@ -576,25 +542,6 @@
 			productReference = EC460BAB24C5395E00771F34 /* UNIQLO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC460BC324C5396100771F34 /* DoctorTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC460BD024C5396100771F34 /* Build configuration list for PBXNativeTarget "DoctorTestTests" */;
-			buildPhases = (
-				BFB9369285499231A6D68A7E /* [CP] Check Pods Manifest.lock */,
-				EC460BC024C5396100771F34 /* Sources */,
-				EC460BC124C5396100771F34 /* Frameworks */,
-				EC460BC224C5396100771F34 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EC460BC624C5396100771F34 /* PBXTargetDependency */,
-			);
-			name = DoctorTestTests;
-			productName = DoctorTestTests;
-			productReference = EC460BC424C5396100771F34 /* DoctorTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -608,13 +555,9 @@
 					EC460BAA24C5395E00771F34 = {
 						CreatedOnToolsVersion = 11.5;
 					};
-					EC460BC324C5396100771F34 = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = EC460BAA24C5395E00771F34;
-					};
 				};
 			};
-			buildConfigurationList = EC460BA624C5395E00771F34 /* Build configuration list for PBXProject "DoctorTest" */;
+			buildConfigurationList = EC460BA624C5395E00771F34 /* Build configuration list for PBXProject "UNIQLO" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -629,7 +572,6 @@
 			projectRoot = "";
 			targets = (
 				EC460BAA24C5395E00771F34 /* UNIQLO */,
-				EC460BC324C5396100771F34 /* DoctorTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -643,13 +585,6 @@
 				ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */,
 				EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */,
 				ECD1A97024F0DF2C00960C74 /* AppDoctor.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC460BC224C5396100771F34 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,28 +607,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-UNIQLO-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFB9369285499231A6D68A7E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DoctorTestTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -800,23 +713,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC460BC024C5396100771F34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC460BC924C5396100771F34 /* DoctorTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EC460BC624C5396100771F34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC460BAA24C5395E00771F34 /* UNIQLO */;
-			targetProxy = EC460BC524C5396100771F34 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */ = {
@@ -971,19 +868,19 @@
 			baseConfigurationReference = A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = WV2K63BU2A;
-				INFOPLIST_FILE = DoctorTest/Info.plist;
+				DEVELOPMENT_TEAM = RWM9AH4F57;
+				INFOPLIST_FILE = UNIQLO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dis_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -994,74 +891,28 @@
 			baseConfigurationReference = 061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = WV2K63BU2A;
-				INFOPLIST_FILE = DoctorTest/Info.plist;
+				DEVELOPMENT_TEAM = RWM9AH4F57;
+				INFOPLIST_FILE = UNIQLO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dis_2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		EC460BD124C5396100771F34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 295283YKBX;
-				INFOPLIST_FILE = DoctorTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.DoctorTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorTest.app/DoctorTest";
-			};
-			name = Debug;
-		};
-		EC460BD224C5396100771F34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 295283YKBX;
-				INFOPLIST_FILE = DoctorTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tan.vu.DoctorTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctorTest.app/DoctorTest";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC460BA624C5395E00771F34 /* Build configuration list for PBXProject "DoctorTest" */ = {
+		EC460BA624C5395E00771F34 /* Build configuration list for PBXProject "UNIQLO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC460BCB24C5396100771F34 /* Debug */,
@@ -1075,15 +926,6 @@
 			buildConfigurations = (
 				EC460BCE24C5396100771F34 /* Debug */,
 				EC460BCF24C5396100771F34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC460BD024C5396100771F34 /* Build configuration list for PBXNativeTarget "DoctorTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EC460BD124C5396100771F34 /* Debug */,
-				EC460BD224C5396100771F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

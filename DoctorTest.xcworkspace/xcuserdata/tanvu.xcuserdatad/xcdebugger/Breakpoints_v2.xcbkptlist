@@ -126,8 +126,8 @@
             filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "receiptBinder"
             landmarkType = "24">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "DoctorTest/Scenes/Information/InformationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "transform(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -256,8 +256,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -359,15 +359,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8B4A273-03F3-48E5-A2B1-4CCE6EDAE92C"
+            uuid = "18FE730B-99A1-4373-8950-1472D54EF386"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoctorTest/Scenes/Information/InformationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "transform(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,65 +375,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55449AE1-AD4C-4F81-B6AE-585E2BBC0422"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "personalButtonBinder"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E29B6F99-3802-4DE9-A664-06392B718CE0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "companyButtonBinder"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3A2AA44C-E0D7-4BFC-B105-2802E725DB30"
+            uuid = "ABCB78F6-A82E-4D42-8729-BEBA9B369A3F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
+            filePath = "DoctorTest/Scenes/Information/InformationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "bindViewModel()"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "transform(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "01F900C9-68FF-448B-8166-0E5AD03ADB89"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoctorTest/Scenes/Information/InformationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "bindViewModel()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABCB78F6-A82E-4D42-8729-BEBA9B369A3F - be97622d454d0c6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UNIQLO.InformationViewModel.transform(UNIQLO.InformationViewModel.Input) -&gt; UNIQLO.InformationViewModel.Output"
+                  moduleName = "UNIQLO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanvu/work/BarcodeReader/DoctorTest/Scenes/Information/InformationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "3284">
+               </Location>
+               <Location
+                  uuid = "ABCB78F6-A82E-4D42-8729-BEBA9B369A3F - 3fc7f26210112788"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #8 () -&gt; Swift.Bool in UNIQLO.InformationViewModel.transform(UNIQLO.InformationViewModel.Input) -&gt; UNIQLO.InformationViewModel.Output"
+                  moduleName = "UNIQLO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanvu/work/BarcodeReader/DoctorTest/Scenes/Information/InformationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "ABCB78F6-A82E-4D42-8729-BEBA9B369A3F - bfd58b5bcf09bd89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #9 () -&gt; Swift.Bool in UNIQLO.InformationViewModel.transform(UNIQLO.InformationViewModel.Input) -&gt; UNIQLO.InformationViewModel.Output"
+                  moduleName = "UNIQLO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanvu/work/BarcodeReader/DoctorTest/Scenes/Information/InformationViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
