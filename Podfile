@@ -30,12 +30,4 @@ target 'UNIQLO' do
 #    pod "Nuke"
     pod "MTBBarcodeScanner"
 #    pod 'QueryKit'
-    
-  # Pods for DoctorTest
-
-  target 'DoctorTestTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

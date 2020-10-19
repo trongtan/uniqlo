@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21307B5B511504534B07CF8 /* Pods_UNIQLO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
 		EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */; };
@@ -187,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21307B5B511504534B07CF8 /* Pods_UNIQLO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
