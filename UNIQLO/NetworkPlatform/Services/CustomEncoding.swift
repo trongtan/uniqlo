@@ -1,6 +1,6 @@
 //
-//  DoctorTestEncoding.swift
-//  DoctorTest
+//  UniqloEncoding.swift
+//  Uniqlo
 //
 //  Created by tan vu on 7/23/20.
 //  Copyright © 2020 tan vu. All rights reserved.

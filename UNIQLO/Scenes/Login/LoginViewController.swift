@@ -85,7 +85,7 @@ class LoginViewController: ViewController, BindableType {
 }
 
 extension LoginViewController: StoryboardSceneBased {
-    static var sceneStoryboard = AppStoryboard.appDoctor.instance
+    static var sceneStoryboard = AppStoryboard.uniqlo.instance
 }
 
 extension LoginViewController {

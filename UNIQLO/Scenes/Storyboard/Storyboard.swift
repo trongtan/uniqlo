@@ -9,7 +9,7 @@
 import UIKit
 
 enum AppStoryboard: String {
-    case appDoctor
+    case uniqlo
 
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue.capitalizingFirstLetter(), bundle: Bundle.main)

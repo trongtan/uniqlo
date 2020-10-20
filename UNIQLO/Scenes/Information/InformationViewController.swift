@@ -1,6 +1,6 @@
 //
 //  InformationViewController.swift
-//  DoctorTest
+//  Uniqlo
 //
 //  Created by tan vu on 7/31/20.
 //  Copyright (c) 2020 tan vu. All rights reserved.
@@ -240,5 +240,5 @@ class InformationViewController: ViewController, BindableType {
 extension InformationViewController: StoryboardSceneBased {
     // TODO: Please add "Information" to AppStoryboard enum
     // and remove me when you done.
-    static var sceneStoryboard = AppStoryboard.appDoctor.instance
+    static var sceneStoryboard = AppStoryboard.uniqlo.instance
 }

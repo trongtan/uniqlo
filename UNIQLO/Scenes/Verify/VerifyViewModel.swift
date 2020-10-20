@@ -1,6 +1,6 @@
 //
 //  VerifyViewModel.swift
-//  DoctorTest
+//  Uniqlo
 //
 //  Created by tan vu on 8/2/20.
 //  Copyright (c) 2020 tan vu. All rights reserved.

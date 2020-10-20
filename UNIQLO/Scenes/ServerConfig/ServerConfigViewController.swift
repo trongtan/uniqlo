@@ -1,6 +1,6 @@
 //
 //  ServerConfigViewController.swift
-//  DoctorTest
+//  Uniqlo
 //
 //  Created by tan vu on 7/31/20.
 //  Copyright (c) 2020 tan vu. All rights reserved.
@@ -63,5 +63,5 @@ class ServerConfigViewController: ViewController, BindableType {
 extension ServerConfigViewController: StoryboardSceneBased {
     // TODO: Please add "ServerConfig" to AppStoryboard enum
     // and remove me when you done.
-    static var sceneStoryboard = AppStoryboard.appDoctor.instance
+    static var sceneStoryboard = AppStoryboard.uniqlo.instance
 }

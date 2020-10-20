@@ -10,7 +10,6 @@
 		A21307B5B511504534B07CF8 /* Pods_UNIQLO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */; };
 		EC460BAF24C5395E00771F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BAE24C5395E00771F34 /* AppDelegate.swift */; };
 		EC460BB324C5395E00771F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB224C5395E00771F34 /* ViewController.swift */; };
-		EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */; };
 		EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC460BBA24C5396000771F34 /* Assets.xcassets */; };
 		EC460BBE24C5396000771F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */; };
 		EC460BD924C53A0D00771F34 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC460BD524C53A0C00771F34 /* BindableType.swift */; };
@@ -83,7 +82,7 @@
 		EC7EFCEA24D65539002AA9F3 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE524D65538002AA9F3 /* VerifyViewController.swift */; };
 		EC7EFCEB24D65539002AA9F3 /* VerifyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */; };
 		EC7EFCEC24D65539002AA9F3 /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */; };
-		ECD1A97024F0DF2C00960C74 /* AppDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */; };
+		ECD1A97024F0DF2C00960C74 /* Uniqlo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97224F0DF2C00960C74 /* Uniqlo.storyboard */; };
 		ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD1A97B24F0E50100960C74 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +99,6 @@
 		EC460BAB24C5395E00771F34 /* UNIQLO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNIQLO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC460BAE24C5395E00771F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC460BB224C5395E00771F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC460BB824C5395E00771F34 /* DoctorTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoctorTest.xcdatamodel; sourceTree = "<group>"; };
 		EC460BBA24C5396000771F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC460BBD24C5396000771F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC460BBF24C5396000771F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +141,7 @@
 		EC460C5B24C6976300771F34 /* Login+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Mapping.swift"; sourceTree = "<group>"; };
 		EC460C8224C9707400771F34 /* CustomEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEncoding.swift; sourceTree = "<group>"; };
 		EC56F30A24F556CA0098E51F /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
-		EC56F30E24F559F90098E51F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppDoctor.strings; sourceTree = "<group>"; };
+		EC56F30E24F559F90098E51F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Uniqlo.strings; sourceTree = "<group>"; };
 		EC7EFCA324D3B94F002AA9F3 /* BarcodeReaderAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderAssembler.swift; sourceTree = "<group>"; };
 		EC7EFCA424D3B94F002AA9F3 /* BarcodeReaderNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderNavigator.swift; sourceTree = "<group>"; };
 		EC7EFCA524D3B94F002AA9F3 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +174,8 @@
 		EC7EFCE624D65538002AA9F3 /* VerifyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyInteractor.swift; sourceTree = "<group>"; };
 		EC7EFCE724D65539002AA9F3 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		ECD1A96F24F0DF1700960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		ECD1A97124F0DF2C00960C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AppDoctor.storyboard; sourceTree = "<group>"; };
-		ECD1A97624F0DF6500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/AppDoctor.strings; sourceTree = "<group>"; };
+		ECD1A97124F0DF2C00960C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Uniqlo.storyboard; sourceTree = "<group>"; };
+		ECD1A97624F0DF6500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Uniqlo.strings; sourceTree = "<group>"; };
 		ECD1A97A24F0E50100960C74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECD1A97C24F0E50500960C74 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				EC460BBA24C5396000771F34 /* Assets.xcassets */,
 				EC460BBC24C5396000771F34 /* LaunchScreen.storyboard */,
 				EC460BBF24C5396000771F34 /* Info.plist */,
-				EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */,
 				ECD1A97B24F0E50100960C74 /* Localizable.strings */,
 			);
 			path = UNIQLO;
@@ -427,7 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				EC460C2924C53A5300771F34 /* Storyboard.swift */,
-				ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */,
+				ECD1A97224F0DF2C00960C74 /* Uniqlo.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -586,7 +583,7 @@
 				EC460BBE24C5396000771F34 /* LaunchScreen.storyboard in Resources */,
 				ECD1A97924F0E50100960C74 /* Localizable.strings in Resources */,
 				EC460BBB24C5396000771F34 /* Assets.xcassets in Resources */,
-				ECD1A97024F0DF2C00960C74 /* AppDoctor.storyboard in Resources */,
+				ECD1A97024F0DF2C00960C74 /* Uniqlo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +678,6 @@
 				EC7EFCA824D3B94F002AA9F3 /* BarcodeReaderAssembler.swift in Sources */,
 				EC460C1F24C53A4D00771F34 /* APIOutput.swift in Sources */,
 				EC460C8324C9707400771F34 /* CustomEncoding.swift in Sources */,
-				EC460BB924C5395E00771F34 /* DoctorTest.xcdatamodeld in Sources */,
 				EC460C3624C53A5300771F34 /* AppAssembler.swift in Sources */,
 				EC460BDF24C53A1B00771F34 /* Assembler.swift in Sources */,
 				EC460BE224C53A3B00771F34 /* Constants.swift in Sources */,
@@ -727,14 +723,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		ECD1A97224F0DF2C00960C74 /* AppDoctor.storyboard */ = {
+		ECD1A97224F0DF2C00960C74 /* Uniqlo.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ECD1A97124F0DF2C00960C74 /* Base */,
 				ECD1A97624F0DF6500960C74 /* vi */,
 				EC56F30E24F559F90098E51F /* en */,
 			);
-			name = AppDoctor.storyboard;
+			name = Uniqlo.storyboard;
 			sourceTree = "<group>";
 		};
 		ECD1A97B24F0E50100960C74 /* Localizable.strings */ = {
@@ -873,7 +869,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = RWM9AH4F57;
+				DEVELOPMENT_TEAM = WV2K63BU2A;
 				INFOPLIST_FILE = UNIQLO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -896,7 +892,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = RWM9AH4F57;
+				DEVELOPMENT_TEAM = WV2K63BU2A;
 				INFOPLIST_FILE = UNIQLO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -933,19 +929,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EC460BB724C5395E00771F34 /* DoctorTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC460BB824C5395E00771F34 /* DoctorTest.xcdatamodel */,
-			);
-			currentVersion = EC460BB824C5395E00771F34 /* DoctorTest.xcdatamodel */;
-			path = DoctorTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EC460BA324C5395E00771F34 /* Project object */;
 }

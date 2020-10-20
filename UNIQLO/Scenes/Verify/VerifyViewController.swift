@@ -1,6 +1,6 @@
 //
 //  VerifyViewController.swift
-//  DoctorTest
+//  Uniqlo
 //
 //  Created by tan vu on 8/2/20.
 //  Copyright (c) 2020 tan vu. All rights reserved.
@@ -57,5 +57,5 @@ class VerifyViewController: ViewController, BindableType {
 extension VerifyViewController: StoryboardSceneBased {
     // TODO: Please add "Verify" to AppStoryboard enum
     // and remove me when you done.
-    static var sceneStoryboard = AppStoryboard.appDoctor.instance
+    static var sceneStoryboard = AppStoryboard.uniqlo.instance
 }
