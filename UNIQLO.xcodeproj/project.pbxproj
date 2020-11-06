@@ -89,11 +89,7 @@
 /* Begin PBXFileReference section */
 		061203912CC87B888C26ED10 /* Pods-UNIQLO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNIQLO.release.xcconfig"; path = "Target Support Files/Pods-UNIQLO/Pods-UNIQLO.release.xcconfig"; sourceTree = "<group>"; };
 		07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
-		1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A872D16AD066B1259A27820 /* Pods_DoctorTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.debug.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.debug.xcconfig"; sourceTree = "<group>"; };
-		91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTestTests.release.xcconfig"; path = "Target Support Files/Pods-DoctorTestTests/Pods-DoctorTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorTest.release.xcconfig"; path = "Target Support Files/Pods-DoctorTest/Pods-DoctorTest.release.xcconfig"; sourceTree = "<group>"; };
 		A956E5348F929D5F7CB04994 /* Pods_UNIQLO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UNIQLO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNIQLO.debug.xcconfig"; path = "Target Support Files/Pods-UNIQLO/Pods-UNIQLO.debug.xcconfig"; sourceTree = "<group>"; };
 		EC460BAB24C5395E00771F34 /* UNIQLO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNIQLO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,10 +192,6 @@
 		BD691ECACEEAA76295D0E371 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2EC183E6D06A929ECD2D3340 /* Pods-DoctorTest.debug.xcconfig */,
-				92CFCD16210B4B902AE9E002 /* Pods-DoctorTest.release.xcconfig */,
-				1677AD9B07DBC0EF7CC559C0 /* Pods-DoctorTestTests.debug.xcconfig */,
-				91B96FDFF8313EEE87964305 /* Pods-DoctorTestTests.release.xcconfig */,
 				F54A0CD573EE819DDC390286 /* Pods-BaseProject.debug.xcconfig */,
 				07854FA4C81EBE55FAA38D66 /* Pods-BaseProject.release.xcconfig */,
 				A9E0634196BCC3413D18D821 /* Pods-UNIQLO.debug.xcconfig */,
@@ -876,7 +868,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uniqlotp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -899,7 +891,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lado.uniqlo.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uniqlotp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
