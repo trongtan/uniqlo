@@ -127,3 +127,6 @@
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "149-KN-heW"; */
 "149-KN-heW.normalTitle" = "Huỷ";
+
+/* Class = "UILabel"; text = "(Vui lòng nhập thông tin xuất hóa đơn bằng tiếng Việt có dấu)"; ObjectID = "9Z9-XS-GeZ"; */
+"9Z9-XS-GeZ.text" = "(Vui lòng nhập thông tin xuất hóa đơn bằng tiếng Việt có dấu)";

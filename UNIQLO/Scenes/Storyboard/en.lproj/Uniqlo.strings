@@ -126,3 +126,6 @@
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "149-KN-heW"; */
 "149-KN-heW.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "(Vui lòng nhập thông tin xuất hóa đơn bằng tiếng Việt có dấu)"; ObjectID = "9Z9-XS-GeZ"; */
+"9Z9-XS-GeZ.text" = "(Please input data for issuing VAT invoice using Vietnamese language)";

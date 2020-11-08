@@ -12,13 +12,12 @@ struct Receipt: Codable {
     
     static let fakeReceipt = Receipt(receiptCode: "2010010199129010101", totalAmount: 500000)
     
-    
     var receiptCode: String = ""
     var date: String = ""
     var totalAmount: Int = 0
     
     var retailStoreID: Int = 0
-    var isBusiness: Bool = false
+    var isBusiness: Bool = true
     var name: String = ""
     var legalName: String = ""
     var taxCode: String = ""
@@ -51,76 +50,81 @@ struct Receipt: Codable {
     }
     
     var validate: (isValid: Bool, message: String) {
-        #if DEBUG
-        return (true, "")
-        #else
+//        #if DEBUG
+//        return (true, "")
+//        #else
 
         var valid = true
         var message = ""
 
-        if email.count > 0 {
-            if !self.validateEmail(email: email) {
-                valid = false
-                message = "\("Email is not right format".localization)\n"
-            }
+        if !self.validateEmail(email: email) {
+            valid = false
+            message = "\("Email is not right format".localization)\n"
         }
 
         var tmp: [String] = []
 
-        if name.count > 255 {
-            valid = false
-            tmp.append("Name".localization)
-        }
-        if legalName.count > 255 {
-            valid = false
-            tmp.append("Company name".localization)
-        }
-        if taxCode.count > 20 {
+        if isBusiness {
+            if legalName.isEmpty || legalName.count > 255 {
+                valid = false
+                tmp.append("Company name".localization)
+            }
+        } else {
+            if name.isEmpty || name.count > 255 {
+                valid = false
+                tmp.append("Name".localization)
+            }
+        }   
+
+        if taxCode.isEmpty || taxCode.count > 20 {
             valid = false
             tmp.append("Taxcode".localization)
         }
-        if address.count > 255 {
+
+        if address.isEmpty || address.count > 255 {
             valid = false
             tmp.append("Address".localization)
         }
-        if district.count > 50 {
-            valid = false
-            tmp.append("District".localization)
-        }
-        if city.count > 25 {
-            valid = false
-            tmp.append("City".localization)
-        }
-        if phone.count > 20 {
+
+//        if district.count > 50 {
+//            valid = false
+//            tmp.append("District".localization)
+//        }
+//        if city.count > 25 {
+//            valid = false
+//            tmp.append("City".localization)
+//        }
+
+        if phone.isEmpty || phone.count > 20 {
             valid = false
             tmp.append("Phone".localization)
         }
-        if fax.count > 20 {
-            valid = false
-            tmp.append("Fax".localization)
-        }
-        if email.count > 500 {
+//        if fax.count > 20 {
+//            valid = false
+//            tmp.append("Fax".localization)
+//        }
+        if email.isEmpty || email.count > 500 {
             valid = false
             tmp.append("Email".localization)
         }
-        if bankName.count > 100 {
-            valid = false
-            tmp.append("Bank name".localization)
-        }
-        if bankAccount.count > 20 {
-            valid = false
-            tmp.append("Bank account".localization)
-        }
-        if notes.count > 255 {
-            valid = false
-            tmp.append("Notes".localization)
-        }
+//        if bankName.count > 100 {
+//            valid = false
+//            tmp.append("Bank name".localization)
+//        }
+//        if bankAccount.count > 20 {
+//            valid = false
+//            tmp.append("Bank account".localization)
+//        }
+//        if notes.count > 255 {
+//            valid = false
+//            tmp.append("Notes".localization)
+//        }
 
         let verb = tmp.count > 1 ? "are".localization : (tmp.count == 0 ? "" : "is".localization)
         let msg = tmp.count == 0 ? "" : "invalid".localization
         return (valid, "\(message)\(tmp.joined(separator: ", ")) \(verb) \(msg)")
 
-        #endif
+//        #endif
     }
 
     //    (isValid: Bool, message: String)

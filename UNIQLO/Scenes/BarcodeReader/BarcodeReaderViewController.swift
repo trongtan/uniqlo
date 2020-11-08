@@ -26,11 +26,14 @@ class BarcodeReaderViewController: ViewController, BindableType {
     
     @IBOutlet weak var fillDebugButton: UIButton!
     // MARK: BindableType
+
+    private var finishScanBarCode: PublishSubject<Void> = PublishSubject()
     
     func bindViewModel() {
         let inputBuilder = BarcodeReaderViewModel.InputBuilder().then {
             $0.barcodeTrigger = barCodeTextField.rx.text.orEmpty.asDriver()
-            $0.nextButtonTrigger = nextButton.rx.tap.asDriver()
+            $0.nextButtonTrigger = nextButton.rx.tap.mapToVoid().asDriverOnErrorJustComplete()
+            $0.finishScanTrigger = finishScanBarCode.asDriverOnErrorJustComplete()
             $0.logoutButtonTrigger = logoutButton.rx.tap.asDriver()
         }
         
@@ -87,6 +90,7 @@ class BarcodeReaderViewController: ViewController, BindableType {
                             for code in codes {
                                 let stringValue = code.stringValue!
                                 self.barCodeTextField.rxSetText(text: stringValue)
+                                self.finishScanBarCode.onNext(())
                                 print("Found code: \(stringValue)")
                             }
                         }

@@ -53,6 +53,8 @@ class InformationViewController: ViewController, BindableType {
     
     @IBOutlet weak var errorLabel: UILabel!
 
+    @IBOutlet weak var nameRequiredMark: UILabel!
+    @IBOutlet weak var companyNameRequiredMark: UILabel!
 
     var receipt: Receipt!
     private var isFilling: Bool = true
@@ -139,6 +141,9 @@ class InformationViewController: ViewController, BindableType {
         companyCusButton.tintColor = Constants.Colors.uniqlo
         personalCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
         companyCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
+
+        nameRequiredMark.isHidden = true
+        companyNameRequiredMark.isHidden = false
     }
 
     private func hightlightPersonalButton() {
@@ -146,6 +151,9 @@ class InformationViewController: ViewController, BindableType {
         personalCusButton.tintColor = Constants.Colors.uniqlo
         personalCusButton.setTitleColor(Constants.Colors.uniqlo, for: .normal)
         companyCusButton.setTitleColor(Constants.Colors.textColor, for: .normal)
+
+        nameRequiredMark.isHidden = false
+        companyNameRequiredMark.isHidden = true
     }
 
     // MARK: BindableType

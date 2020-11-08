@@ -25,6 +25,7 @@ class BarcodeReaderViewModel: ViewModelType {
         let barcodeTrigger: Driver<String>
         let nextButtonTrigger: Driver<Void>
         let logoutButtonTrigger: Driver<Void>
+        let finishScanTrigger: Driver<Void>
     }
     
     struct Output {
@@ -39,7 +40,7 @@ class BarcodeReaderViewModel: ViewModelType {
         let errorTracker = ErrorTracker()
         let activityIndicator = ActivityIndicator()
         
-        let next = input.nextButtonTrigger
+        let next = Driver.merge(input.nextButtonTrigger, input.finishScanTrigger)
             .withLatestFrom(input.barcodeTrigger)
             .flatMapLatest {
                 self.interactor
@@ -83,6 +84,7 @@ extension BarcodeReaderViewModel {
         var barcodeTrigger: Driver<String> = Driver.empty()
         var nextButtonTrigger: Driver<Void> = Driver.empty()
         var logoutButtonTrigger: Driver<Void> = Driver.empty()
+        var finishScanTrigger: Driver<Void> = Driver.empty()
     }
 }
 
@@ -90,6 +92,7 @@ extension BarcodeReaderViewModel.Input {
     init(builder: BarcodeReaderViewModel.InputBuilder) {
         self.init(barcodeTrigger: builder.barcodeTrigger,
                   nextButtonTrigger: builder.nextButtonTrigger,
-                  logoutButtonTrigger: builder.logoutButtonTrigger)
+                  logoutButtonTrigger: builder.logoutButtonTrigger,
+                  finishScanTrigger: builder.finishScanTrigger)
     }
 }
